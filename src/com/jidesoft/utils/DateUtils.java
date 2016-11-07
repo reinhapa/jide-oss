@@ -252,7 +252,7 @@ public class DateUtils {
      * @param dates the list of Date to calculate the minimum.
      * @return the minimum date in the Date list.
      * @deprecated replaced by {@link #minDates(java.util.List)} to comply with the new compilation regulation. We
-     * have to delete the min(List<Calendar>) in releases earlier than 2.9.4 due to the same reason.
+     * have to delete the min(List&lt;Calendar&gt;) in releases earlier than 2.9.4 due to the same reason.
      */
     @Deprecated
     public static Date min(List<Date> dates) {
@@ -265,7 +265,7 @@ public class DateUtils {
      * @param dates the list of Date to calculate the maximum.
      * @return the maximum date in the Date list.
      * @deprecated replaced by {@link #maxDates(java.util.List)} to comply with the new compilation regulation. We
-     * have to delete the max(List<Calendar>) in releases earlier than 2.9.4 due to the same reason.
+     * have to delete the max(List&lt;Calendar&gt;) in releases earlier than 2.9.4 due to the same reason.
      */
     @Deprecated
     public static Date max(List<Date> dates) {

@@ -13,7 +13,7 @@ import java.awt.*;
 
 /**
  * <code>Resizable</code> is a class that supports the resizable feature.
- * <p/>
+ * <p>
  * To use it and make a component resizable, you just need to create new Resizable(component) and pass in that component
  * to the constructor. <code>Resizable</code> uses {@link #beginResizing(int)}, {@link #resizing(int, int, int, int,
  * int)} and {@link #endResizing(int)} to archive the resizing effect. It should work for most cases. However if it
@@ -151,10 +151,10 @@ public class Resizable {
 
     /**
      * This method is called during the resizing of ResizablePanel. In default implementation, it call
-     * <code><pre>
+     * <pre>
      * setPreferredSize(new Dimension(newW, newH));
      * getParent().doLayout();
-     * </pre></code>
+     * </pre>
      * in fact, depending on where you added this ResizablePanel, you may need to override this method to do something
      * else. For example, {@link ResizableWindow} uses <code>ResizablePanel</code> to implement resizable feature in
      * JWindow. It overrides this method to call setBounds on JWindow itself.
@@ -241,7 +241,7 @@ public class Resizable {
     /**
      * Sets the insets the be used to calculate the resize area.
      *
-     * @param resizeInsets
+     * @param resizeInsets the resize insets
      */
     public void setResizeInsets(Insets resizeInsets) {
         _resizeInsets = resizeInsets;
@@ -261,9 +261,9 @@ public class Resizable {
 
     /**
      * Sets the snap grid size.
-     * <p/>
+     * <p>
      * Snap grid size is used to make resizing easier.
-     * <p/>
+     * <p>
      * By default, the size is 1 pixel.
      *
      * @param snapGridSize the grid size

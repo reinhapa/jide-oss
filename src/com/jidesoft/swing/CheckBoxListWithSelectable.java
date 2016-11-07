@@ -16,17 +16,17 @@ import java.util.Vector;
 /**
  * <code>CheckBoxListWithSelectable</code> is a special JList which uses JCheckBox as the list element. In addition to
  * regular JList feature, it also allows you select any number of elements in the list by selecting the check boxes.
- * <p/>
+ * <p>
  * The element is ListModel should be an instance of {@link Selectable}. If you have your own class that represents the
  * element in the list, you can implement <code>Selectable</code> and implements a few very simple methods. If your
  * elements are already in an array or Vector that you pass in to the constructor of JList, we will convert them to
  * {@link DefaultSelectable} which implements <code>Selectable</code> interface.
- * <p/>
+ * <p>
  * To select an element, user can mouse click on the check box, or highlight the rows and press SPACE key to toggle the
  * selections.
- * <p/>
+ * <p>
  * To listen to the check box selection change, you can call addItemListener to add an ItemListener.
- * <p/>
+ * <p>
  * Please note, there are two implementations of CheckBoxList. CheckBoxListWithSelectable is one. There is also another
  * one call CheckBoxList. CheckBoxListWithSelectable is actually the old implementation. In 1.9.2, we introduced a new
  * implementation and renamed the old implementation to CheckBoxListWithSelectable. The main difference between the two
@@ -78,7 +78,7 @@ public class CheckBoxListWithSelectable extends JList implements ItemSelectable 
     /**
      * Constructs a <code>CheckBoxList</code> that displays the elements in the specified, non-<code>null</code> model.
      * All <code>CheckBoxList</code> constructors delegate to this one.
-     * <p/>
+     * <p>
      * Please note, if you are using this constructor, please make sure all elements in dataModel are instance of {@link
      * Selectable}.
      *

@@ -1,5 +1,5 @@
 /**
- * Copied from JDK source code and modified to provide additional integration between JIDE components and native windows L&F.
+ * Copied from JDK source code and modified to provide additional integration between JIDE components and native windows L&amp;F.
  */
 package com.jidesoft.plaf.windows;
 
@@ -59,7 +59,7 @@ public class XPStyle {
     static {
         invalidateStyle();
 
-        // make sure whenever L&F changes, we clear the xpstyle.
+        // make sure whenever L&amp;F changes, we clear the xpstyle.
         UIManager.addPropertyChangeListener(new PropertyChangeListener() {
             public void propertyChange(PropertyChangeEvent evt) {
                 if ("lookAndFeel".equals(evt.getPropertyName()))
@@ -113,11 +113,12 @@ public class XPStyle {
     /**
      * Get a named <code>String</code> value from the current style
      *
+     * @param c     a <code>Component</code>
      * @param part  a <code>Part</code>
-     * @param state a <code>String</code>
-     * @param prop  a <code>String</code>
+     * @param state a <code>State</code>
+     * @param prop  a <code>Prop</code>
      * @return a <code>String</code> or null if key is not found in the current style
-     * <p/>
+     * <p>
      * This is currently only used by WindowsInternalFrameTitlePane for painting title foreground and can be removed
      * when no longer needed
      */
@@ -146,7 +147,11 @@ public class XPStyle {
     /**
      * Get a named <code>int</code> value from the current style
      *
-     * @param part a <code>Part</code>
+     * @param c     a <code>Component</code>
+     * @param part  a <code>Part</code>
+     * @param state a <code>State</code>
+     * @param prop  a <code>Prop</code>
+     * @param fallback the fall back value
      * @return an <code>int</code> or null if key is not found in the current style
      */
     public int getInt(Component c, Part part, State state, Prop prop, int fallback) {
@@ -158,8 +163,12 @@ public class XPStyle {
     /**
      * Get a named <code>Dimension</code> value from the current style
      *
+     * @param c     a <code>Component</code>
+     * @param part  a <code>Part</code>
+     * @param state a <code>State</code>
+     * @param prop  a <code>Prop</code>
      * @return a <code>Dimension</code> or null if key is not found in the current style
-     * <p/>
+     * <p>
      * This is currently only used by WindowsProgressBarUI and the value should probably be cached there instead of
      * here.
      */
@@ -172,8 +181,12 @@ public class XPStyle {
     /**
      * Get a named <code>Point</code> (e.g. a location or an offset) value from the current style
      *
+     * @param c     a <code>Component</code>
+     * @param part  a <code>Part</code>
+     * @param state a <code>State</code>
+     * @param prop  a <code>Prop</code>
      * @return a <code>Point</code> or null if key is not found in the current style
-     * <p/>
+     * <p>
      * This is currently only used by WindowsInternalFrameTitlePane for painting title foregound and can be removed when
      * no longer needed
      */
@@ -192,8 +205,12 @@ public class XPStyle {
     /**
      * Get a named <code>Insets</code> value from the current style
      *
+     * @param c     a <code>Component</code>
+     * @param part  a <code>Part</code>
+     * @param state a <code>State</code>
+     * @param prop  a <code>Prop</code>
      * @return an <code>Insets</code> object or null if key is not found in the current style
-     * <p/>
+     * <p>
      * This is currently only used to create borders and by WindowsInternalFrameTitlePane for painting title foregound.
      * The return value is already cached in those places.
      */
@@ -207,6 +224,9 @@ public class XPStyle {
     /**
      * Get a named <code>Color</code> value from the current style
      *
+     * @param skin  a <code>Skin</code>
+     * @param prop  a <code>Prop</code>
+     * @param fallback the fall back color
      * @return a <code>Color</code> or null if key is not found in the current style
      */
     public synchronized Color getColor(Skin skin, Prop prop, Color fallback) {
@@ -233,6 +253,7 @@ public class XPStyle {
     /**
      * Get a named <code>Border</code> value from the current style
      *
+     * @param c     a <code>Component</code>
      * @param part a <code>Part</code>
      * @return a <code>Border</code> or null if key is not found in the current style or if the style for the particular
      * part is not defined as "borderfill".
@@ -248,7 +269,7 @@ public class XPStyle {
                         1);
             }
             else {
-                return null;    // Will cause L&F to use classic border
+                return null;    // Will cause L&amp;F to use classic border
             }
         }
         Skin skin = new Skin(c, part, null);
@@ -440,6 +461,7 @@ public class XPStyle {
     /**
      * Get a <code>Skin</code> object from the current style for a named part (component type)
      *
+     * @param c    a <code>Component</code>
      * @param part a <code>Part</code>
      * @return a <code>Skin</code> object
      */

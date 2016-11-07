@@ -10,27 +10,27 @@ import java.util.List;
 
 /**
  * This is a util class to support the four arrow keys navigation in any container. To use it, you can call
- * <code><pre>
+ * <pre>
  * new ArrowKeyNavigationSupport().install(container);
- * </pre></code>
+ * </pre>
  * The container could be any container. A typical use case is the button panel. By default we used it in {@link
  * com.jidesoft.dialog.ButtonPanel} class to enable left/right/up/down key.
- * <p/>
+ * <p>
  * By default, all components will be navigable in the container but you can further define what components are
  * navigable by using the constructor
- * <code><pre>
+ * <pre>
  * new ArrowKeyNavigationSupport(Class[] componentTypes)
- * </pre></code>
+ * </pre>
  * where componentTypes is the list of the classes of the components that you would like to be navigable. For example,
- * <code><pre>
+ * <pre>
  * new ArrowKeyNavigationSupport(new Class[]{ AbstractButton.class }).install(container);
- * </pre></code>
+ * </pre>
  * to only allow any buttons (JButton, JideButton, JCheckBox, JRadioButton) etc.
- * <p/>
+ * <p>
  * You can also allow certain keys to be used. For example.
- * <code><pre>
+ * <pre>
  * new ArrowKeyNavigationSupport(new int[]{ KeyEvent.VK_LEFT, KeyEvent.VK_RIGHT}).install(container);
- * </pre></code>
+ * </pre>
  * if only left and right keys are making sense to navigate in your container.
  */
 public class ArrowKeyNavigationSupport {

@@ -19,7 +19,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 /**
- * A Basic L&F implementation of GripperUI.
+ * A Basic L&amp;F implementation of GripperUI.
  */
 public class BasicGripperUI extends GripperUI {
     private int _size;

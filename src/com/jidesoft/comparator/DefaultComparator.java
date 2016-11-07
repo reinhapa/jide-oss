@@ -11,7 +11,7 @@ public class DefaultComparator implements Comparator<Object> {
 
     /**
      * Constructor.
-     * <p/>
+     * <p>
      * Has protected access to prevent other clients creating instances of the class ... it is
      * stateless so we need only one instance.
      */
@@ -36,7 +36,7 @@ public class DefaultComparator implements Comparator<Object> {
      * @param o1 the first object to be compared
      * @param o2 the second object to be compared
      *
-     * @return 0 if a and b are equal, less than 0 if a < b, grater than 0 if a > b.
+     * @return 0 if a and b are equal, less than 0 if a &lt; b, grater than 0 if a &gt; b.
      */
     public int compare(Object o1, Object o2) {
         if (o1 == null && o2 == null) {

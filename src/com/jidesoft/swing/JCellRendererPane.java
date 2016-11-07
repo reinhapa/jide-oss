@@ -54,7 +54,7 @@ public class JCellRendererPane extends JComponent implements Accessible {
 
 
     /**
-     * If the specified component is already a child of this then we don't bother doing anything - stacking order doesn't matter for cell renderer components (CellRendererPane doesn't paint anyway).<
+     * If the specified component is already a child of this then we don't bother doing anything - stacking order doesn't matter for cell renderer components (CellRendererPane doesn't paint anyway).
      */
     @Override
     protected void addImpl(Component x, Object constraints, int index) {
@@ -72,6 +72,15 @@ public class JCellRendererPane extends JComponent implements Accessible {
      * (effectively) translated to x,y. If it's a JComponent, double buffering is temporarily turned off. After the component is painted it's bounds are reset to -w, -h, 0, 0 so that, if it's the last
      * renderer component painted, it will not start consuming input. The Container p is the component we're actually drawing on, typically it's equal to this.getParent(). If shouldValidate is true
      * the component c will be validated before painted.
+     * 
+     * @param g the graphics object
+     * @param c the component object
+     * @param p the container object
+     * @param x the x value
+     * @param y the y value
+     * @param w the with
+     * @param h the height
+     * @param shouldValidate <code>true</code> if should validate, <code>false</code> otherwise
      */
     public void paintComponent(Graphics g, Component c, Container p, int x, int y, int w, int h, boolean shouldValidate) {
         if (c == null) {
@@ -118,6 +127,14 @@ public class JCellRendererPane extends JComponent implements Accessible {
 
     /**
      * Calls this.paintComponent(g, c, p, x, y, w, h, false).
+     * 
+     * @param g the graphics object
+     * @param c the component object
+     * @param p the container object
+     * @param x the x value
+     * @param y the y value
+     * @param w the with
+     * @param h the height
      */
     public void paintComponent(Graphics g, Component c, Container p, int x, int y, int w, int h) {
         paintComponent(g, c, p, x, y, w, h, false);
@@ -126,6 +143,11 @@ public class JCellRendererPane extends JComponent implements Accessible {
 
     /**
      * Calls this.paintComponent() with the rectangles x,y,width,height fields.
+     * 
+     * @param g the graphics object
+     * @param c the component object
+     * @param p the container object
+     * @param r the rectangle value
      */
     public void paintComponent(Graphics g, Component c, Container p, Rectangle r) {
         paintComponent(g, c, p, r.x, r.y, r.width, r.height);

@@ -53,7 +53,7 @@ public interface Overlayable extends SwingConstants {
     /**
      * Removes an overlay component that was added before.
      *
-     * @param component
+     * @param component the component
      */
     void removeOverlayComponent(JComponent component);
 
@@ -70,6 +70,7 @@ public interface Overlayable extends SwingConstants {
      * SwingConstants#WEST} <li>{@link SwingConstants#EAST} <li>{@link SwingConstants#NORTH_EAST} <li>{@link
      * SwingConstants#NORTH_WEST} <li>{@link SwingConstants#SOUTH_EAST} <li>{@link SwingConstants#SOUTH_WEST} </ul>
      *
+     * @param component the component
      * @param location the overlay component location.
      */
     void setOverlayLocation(JComponent component, int location);
@@ -77,6 +78,7 @@ public interface Overlayable extends SwingConstants {
     /**
      * Gets the overlay component location. If -1, it means the component doesn't exit.
      *
+     * @param component the component
      * @return the overlay component location.
      */
     int getOverlayLocation(JComponent component);

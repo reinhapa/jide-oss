@@ -112,7 +112,7 @@ public class VerticalLabelUI extends BasicLabelUI {
 
     /**
      * Sets the flag indicating if the icon should be rotated.
-     * <p/>
+     * <p>
      * By default the value is true.
      *
      * @param rotateIcon the flag

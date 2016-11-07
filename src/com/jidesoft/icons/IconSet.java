@@ -195,7 +195,7 @@ public class IconSet {
      * @param iconSetName    the icon set name
      * @param availableSizes all available sizes. It must be in order from the smallest to the biggest.
      * @param packageName    the package name where the icons exist. All icons in JIDE icon set are defined under
-     *                       "com.jidesoft.icons.<iconSetName>". Then under this package, there are subfolders for each
+     *                       "com.jidesoft.icons.&lt;iconSetName&gt;". Then under this package, there are subfolders for each
      *                       icon size.
      */
     public IconSet(String iconSetName, int[] availableSizes, String packageName) {

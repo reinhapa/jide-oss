@@ -22,7 +22,7 @@ import java.awt.*;
 public class MetalUtils {
 
     /**
-     * This draws the "Flush 3D Border" which is used throughout the Metal L&F
+     * This draws the "Flush 3D Border" which is used throughout the Metal L&amp;F
      */
     static void drawFlush3DBorder(Graphics g, int x, int y, int w, int h) {
         g.translate(x, y);

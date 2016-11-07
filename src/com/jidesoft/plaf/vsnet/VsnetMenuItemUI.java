@@ -868,7 +868,7 @@ public class VsnetMenuItemUI extends MenuItemUI {
 
     /**
      * Method which renders the text of the current menu item.
-     * <p/>
+     * <p>
      *
      * @param g        Graphics context
      * @param menuItem Current menu item to render

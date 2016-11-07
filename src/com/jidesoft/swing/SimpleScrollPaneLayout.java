@@ -255,24 +255,24 @@ class SimpleScrollPaneLayout extends ScrollPaneLayout {
      * <ul>
      * <li> The row header, if present and visible, gets its preferred
      * width and the viewport's height.
-     * <p/>
+     * <p>
      * <li> The column header, if present and visible, gets its preferred
      * height and the viewport's width.
-     * <p/>
+     * <p>
      * <li> If a vertical scrollbar is needed, i.e. if the viewport's extent
      * height is smaller than its view height or if the <code>displayPolicy</code>
      * is ALWAYS, it's treated like the row header with respect to its
      * dimensions and is made visible.
-     * <p/>
+     * <p>
      * <li> If a horizontal scrollbar is needed, it is treated like the
      * column header (see the paragraph above regarding the vertical scrollbar).
-     * <p/>
+     * <p>
      * <li> If the scrollpane has a non-<code>null</code>
      * <code>viewportBorder</code>, then space is allocated for that.
-     * <p/>
+     * <p>
      * <li> The viewport gets the space available after accounting for
      * the previous constraints.
-     * <p/>
+     * <p>
      * <li> The corner components, if provided, are aligned with the
      * ends of the scrollbars and headers. If there is a vertical
      * scrollbar, the right corners appear; if there is a horizontal

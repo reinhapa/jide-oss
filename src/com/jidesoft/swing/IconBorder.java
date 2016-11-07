@@ -13,7 +13,7 @@ import java.awt.*;
  * IconBorder creates a border that places an Icon in the border on one or several sides. For example, if you want to an
  * icon on the left side, you make the left inset to be the width of the icon, and 0 for the top, right and bottom
  * insets. Then you can call {@link #setHorizontalIconAlignment(int)} and set it to TOP or CENTER or BOTTOM.
- * <p/>
+ * <p>
  * This border is useful when attempting to add Icons to pre-existing components without requiring specialty painting.
  * For example, use in the CellStyle to decorate the cell renderer with an icon.
  *
@@ -92,7 +92,7 @@ public class IconBorder extends MatteBorder {
 
     /**
      * Sets the alignment of the icon relative to the component contents. This must be one of the following
-     * SwingConstants: <pre>
+     * SwingConstants:
      * <ul>
      *     <li> LEADING: respects the component orientation
      *     <li> TRAILING: respects the component orientation
@@ -100,7 +100,6 @@ public class IconBorder extends MatteBorder {
      *     <li> RIGHT
      *     <li> CENTER
      * </ul>
-     * </pre>
      *
      * @param horizontalIconAlignment one of the five SwingConstants listed above.
      */
@@ -119,13 +118,12 @@ public class IconBorder extends MatteBorder {
 
     /**
      * Sets the alignment of the icon relative to the component contents. This must be one of the following
-     * SwingConstants: <pre>
+     * SwingConstants:
      * <ul>
      *     <li> TOP
      *     <li> BOTTOM
      *     <li> CENTER
      * </ul>
-     * </pre>
      *
      * @param verticalIconAlignment one of the three SwingConstants listed above.
      */

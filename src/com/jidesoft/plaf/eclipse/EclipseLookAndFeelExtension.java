@@ -20,7 +20,7 @@ public class EclipseLookAndFeelExtension extends BasicLookAndFeelExtension {
     /**
      * Initializes class defaults with menu components UIDefaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initClassDefaultsWithMenu(UIDefaults table) {
         if (!Beans.isDesignTime()) {
@@ -36,7 +36,7 @@ public class EclipseLookAndFeelExtension extends BasicLookAndFeelExtension {
     /**
      * Initializes class defaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initClassDefaults(UIDefaults table) {
         BasicLookAndFeelExtension.initClassDefaults(table);

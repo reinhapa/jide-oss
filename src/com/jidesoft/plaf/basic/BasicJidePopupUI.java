@@ -21,7 +21,7 @@ import java.beans.PropertyChangeListener;
 
 
 /**
- * A basic L&F implementation of Popup.
+ * A basic L&amp;F implementation of Popup.
  */
 public class BasicJidePopupUI extends PopupUI {
 
@@ -219,6 +219,9 @@ public class BasicJidePopupUI extends PopupUI {
     /**
      * Installs necessary mouse handlers on <code>newPane</code> and adds it to the frame. Reverse process for the
      * <code>currentPane</code>.
+     * 
+     * @param currentPane the current pane
+     * @param newPane the new pane
      */
     protected void replacePane(JComponent currentPane, JComponent newPane) {
         if (currentPane != null) {

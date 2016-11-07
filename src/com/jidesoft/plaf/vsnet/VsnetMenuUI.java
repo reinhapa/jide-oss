@@ -422,7 +422,7 @@ public class VsnetMenuUI extends VsnetMenuItemUI {
     /**
      * Instantiated and used by a menu item to handle the current menu selection from mouse events. A MouseInputHandler
      * processes and forwards all mouse events to a shared instance of the MenuSelectionManager.
-     * <p/>
+     * <p>
      * This class is protected so that it can be subclassed by other look and feels to implement their own mouse
      * handling behavior. All overridden methods should call the parent methods so that the menu selection is correct.
      *
@@ -830,7 +830,7 @@ public class VsnetMenuUI extends VsnetMenuItemUI {
 
     /**
      * Method which renders the text of the current menu item.
-     * <p/>
+     * <p>
      *
      * @param g        Graphics context
      * @param menuItem Current menu item to render

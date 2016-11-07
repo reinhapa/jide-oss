@@ -36,8 +36,8 @@ public class Office2003WindowsUtils extends VsnetWindowsUtils {
     /**
      * Initializes class defaults.
      *
-     * @param table
-     * @param withMenu
+     * @param table the table default
+     * @param withMenu <code>true</code> with menu, <code>false</code> otherwise
      */
     public static void initClassDefaults(UIDefaults table, boolean withMenu) {
         if (withMenu) {
@@ -63,7 +63,7 @@ public class Office2003WindowsUtils extends VsnetWindowsUtils {
     /**
      * Initializes class defaults.
      *
-     * @param table
+     * @param table the table default
      */
     public static void initClassDefaults(UIDefaults table) {
         initClassDefaults(table, true);
@@ -72,7 +72,7 @@ public class Office2003WindowsUtils extends VsnetWindowsUtils {
     /**
      * Initializes components defaults.
      *
-     * @param table
+     * @param table the table default
      */
     public static void initComponentDefaults(UIDefaults table) {
         Toolkit toolkit = Toolkit.getDefaultToolkit();

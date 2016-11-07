@@ -5,7 +5,7 @@
  */
 
 /**
- * Copied from JDK source code and modified to provide additional integration between JIDE components and native windows L&F.
+ * Copied from JDK source code and modified to provide additional integration between JIDE components and native windows L&amp;F.
  */
 package com.jidesoft.plaf.windows;
 
@@ -17,9 +17,9 @@ import java.util.EnumMap;
 
 /**
  * Implements Windows Parts and their States and Properties for the Windows Look and Feel.
- * <p/>
+ * <p>
  * See http://msdn.microsoft.com/library/default.asp?url=/library/en-us/shellcc/platform/commctls/userex/topics/partsandstates.asp
- * See tmschema.h (or vssym32.h & vsstyle.h for MS Vista)
+ * See tmschema.h (or vssym32.h &amp; vsstyle.h for MS Vista)
  *
  * @author Leif Samuelsson
  */

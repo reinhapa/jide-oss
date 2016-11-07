@@ -12,14 +12,14 @@ public interface Selectable {
     /**
      * Sets it as selected.
      *
-     * @param selected
+     * @param selected <code>true</code> to set selected, <code>false</code> otherwise
      */
     void setSelected(boolean selected);
 
     /**
      * Gets the selected status.
      *
-     * @return true if it is selected. Otherwise, false.
+     * @return <code>true</code> if it is selected. Otherwise, <code>false</code>.
      */
     boolean isSelected();
 
@@ -33,7 +33,7 @@ public interface Selectable {
      * setEnable(false) won't make selected become false. In the other word, setEnabled won't change the the value of
      * isSelected().
      *
-     * @param enabled
+     * @param enabled <code>true</code> to set selected, <code>false</code> otherwise
      */
     void setEnabled(boolean enabled);
 

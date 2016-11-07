@@ -20,6 +20,8 @@ public class MetalIconFactory implements Serializable {
 
     /**
      * Returns a checkbox icon.
+     * 
+     * @return the checkbox icon
      */
     public static Icon getCheckBoxIcon() {
         if (checkBoxIcon == null) {

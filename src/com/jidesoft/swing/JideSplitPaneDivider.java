@@ -358,7 +358,6 @@ public class JideSplitPaneDivider extends JPanel
     /**
      * MouseHandler is responsible for converting mouse events (released, dragged...) into the appropriate
      * DragController methods.
-     * <p/>
      */
     protected class MouseHandler extends MouseInputAdapter {
         /**
@@ -754,9 +753,9 @@ public class JideSplitPaneDivider extends JPanel
     private int _lastPosition;
 
     /**
-     * Invoked when the oneTouchExpandable value of the JideSplitPane changes.<p> </p> Responsible for creating the
+     * Invoked when the oneTouchExpandable value of the JideSplitPane changes.<p> Responsible for creating the
      * one-touch buttons and revalidating the UI.
-     * <p/>
+     * <p>
      * #see JideSplitePane#setOneTouchExpandable(boolean)
      */
     protected void oneTouchExpandableChanged() {
@@ -884,7 +883,7 @@ public class JideSplitPaneDivider extends JPanel
 
     /**
      * Gets the current collapse/expand state.
-     * <p/>
+     * <p>
      * The default value is DEFAULT_STATE when {@link com.jidesoft.swing.JideSplitPane#isOneTouchExpandable()} returns false.
      * It could be EXPANDED_STATE or COLLAPSED_STATE when one touch expandable is activated.
      *

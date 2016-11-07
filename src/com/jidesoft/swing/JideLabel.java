@@ -10,7 +10,7 @@ import javax.swing.*;
  * <code>JLabel</code> except it is used on <code>JToolBar</code> or <code>CommandBar</code>. However it doesn't look
  * any different from a regular <code>JLabel</code> unless you override "JideLabel.foreground", "JideLabel.background",
  * or "JideLabel.font" etc UIDefaults.
- * <p/>
+ * <p>
  * <code>JideLabel</code> also can be used in a vertical layout. If you call {@link #setOrientation(int)} and set it to
  * {@link javax.swing.SwingConstants#VERTICAL}, the text and icon on the label will be laid out vertically. As
  * <code>CommandBar</code> supports vertical layout, this is perfect for it. You can also control the rotating direction
@@ -62,7 +62,7 @@ public class JideLabel extends JLabel implements Alignable, AlignmentSupport {
 
 
     /**
-     * Returns a string that specifies the name of the L&F class that renders this component.
+     * Returns a string that specifies the name of the L&amp;F class that renders this component.
      *
      * @return the string "ButtonUI"
      *

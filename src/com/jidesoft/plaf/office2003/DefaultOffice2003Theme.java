@@ -16,8 +16,8 @@ import java.awt.*;
 
 /**
  * The default 2003 theme. This theme doesn't define any color of its own but derive all colors from
- * the underlying L&F. If your application used a customized L&F other than Windows L&F, this is
- * the preferred theme as it will consider the colors defined underlying L&F to make it looks consistent
+ * the underlying L&amp;F. If your application used a customized L&amp;F other than Windows L&amp;F, this is
+ * the preferred theme as it will consider the colors defined underlying L&amp;F to make it looks consistent
  * than hard-coded themes such as BLUE, HOMESTEAD of METALLIC.
  */
 public class DefaultOffice2003Theme extends Office2003Theme {
@@ -253,7 +253,7 @@ public class DefaultOffice2003Theme extends Office2003Theme {
     /**
      * Creates a new <code>Color</code> that is a brighter version of this
      * <code>Color</code>.
-     * <p/>
+     * <p>
      * This method applies an arbitrary scale factor to each of the three RGB
      * components of this <code>Color</code> to create a brighter version
      * of this <code>Color</code>. Although <code>brighter</code> and
@@ -292,7 +292,7 @@ public class DefaultOffice2003Theme extends Office2003Theme {
     /**
      * Creates a new <code>Color</code> that is a darker version of this
      * <code>Color</code>.
-     * <p/>
+     * <p>
      * This method applies an arbitrary scale factor to each of the three RGB
      * components of this <code>Color</code> to create a darker version of
      * this <code>Color</code>.  Although <code>brighter</code> and
@@ -324,10 +324,10 @@ public class DefaultOffice2003Theme extends Office2003Theme {
      * Sets if the standard selection color will be used. The standard selection color (orange) is the color that used in Office 2003
      * to indicate a button is selected or focused. By default it will be used for all Office 2003 theme including DefayltOffice2003Theme.
      * If user chooses not to use it, the theme will derive the color from the default selection color of the LookAndFeel.
-     * <p/>
+     * <p>
      * If you want to call this method, make sure you call it before LookAndFeelFactory.installJideExtension(...) is called.
      *
-     * @param useStandardSelectionColor
+     * @param useStandardSelectionColor <code>true</code> to use standard selection color, <code>false</code> otherwise
      */
     public static void setUseStandardSelectionColor(boolean useStandardSelectionColor) {
         _useStandardSelectionColor = useStandardSelectionColor;

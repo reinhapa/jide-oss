@@ -18,7 +18,7 @@ import javax.swing.text.View;
 import java.awt.*;
 
 /**
- * A eclipse L&f implementation of JideTabbedPaneUI
+ * A eclipse L&amp;F implementation of JideTabbedPaneUI
  */
 public class Eclipse3xJideTabbedPaneUI extends VsnetJideTabbedPaneUI {
     // pixels

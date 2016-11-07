@@ -14,9 +14,9 @@ public interface ShadowRenderer {
     /**
      * Creates and returns a shadow image based on the supplied image
      *
-     * @param image
+     * @param image the source image
      *
-     * @return
+     * @return a newly created buffered image
      */
     public BufferedImage createShadow(final BufferedImage image);
 }

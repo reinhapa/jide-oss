@@ -18,11 +18,11 @@ import java.util.List;
 
 /**
  * <code>FolderChooser</code> provides a simple mechanism for the user to choose a folder.
- * <p/>
+ * <p>
  * In addition to supporting the basic folder choosing function, it also supports create new folder, delete an existing
  * folder. Another useful feature is recent list. It allows you to set a list of recent selected folders so that user
  * can choose them directly instead of navigating to it in the file system tree.
- * <p/>
+ * <p>
  * The following code pops up a folder chooser for user to choose a folder.
  * <pre>
  *    FolderChooser chooser = new FolderChooser();
@@ -138,7 +138,7 @@ public class FolderChooser extends JFileChooser {
     }
 
     /**
-     * Returns a string that specifies the name of the L&F class that renders this component.
+     * Returns a string that specifies the name of the L&amp;F class that renders this component.
      *
      * @return the string "FolderChooserUI"
      *
@@ -195,7 +195,7 @@ public class FolderChooser extends JFileChooser {
      * Returns the selected folder. This can be set either by the programmer via <code>setSelectedFolder</code> or by a
      * user action, such as selecting the folder from a 'folder tree' in the UI.
      *
-     * @return the selected folder in the <i>folder tree<i>
+     * @return the selected folder in the <i>folder tree</i>
      *
      * @see #setSelectedFolder
      */
@@ -204,7 +204,7 @@ public class FolderChooser extends JFileChooser {
     }
 
     /**
-     * Sets the selected folder.<p> </p> Property change event {@link JFileChooser#SELECTED_FILE_CHANGED_PROPERTY} will
+     * Sets the selected folder.<p> Property change event {@link JFileChooser#SELECTED_FILE_CHANGED_PROPERTY} will
      * be fired when a new folder is selected.
      *
      * @param selectedFolder the selected folder

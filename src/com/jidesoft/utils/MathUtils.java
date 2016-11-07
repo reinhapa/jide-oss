@@ -79,7 +79,7 @@ public final class MathUtils {
 
     /**
      * Returns the standard deviation of the numbers.
-     * <p/>
+     * <p>
      * Double.NaN is returned if the numbers list is empty.
      *
      * @param numbers       the numbers to calculate the standard deviation.
@@ -104,7 +104,7 @@ public final class MathUtils {
     /**
      * Computes the variance of the available values. By default, the unbiased "sample variance" definitional formula is
      * used: variance = sum((x_i - mean)^2) / (n - 1)
-     * <p/>
+     * <p>
      * The "population variance"  ( sum((x_i - mean)^2) / n ) can also be computed using this statistic.  The
      * <code>biasCorrected</code> property determines whether the "population" or "sample" value is returned by the
      * <code>evaluate</code> and <code>getResult</code> methods. To compute population variances, set this property to

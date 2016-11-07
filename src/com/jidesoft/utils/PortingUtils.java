@@ -214,7 +214,7 @@ public class PortingUtils {
 
     /**
      * Gets the screen bounds. In JDK1.4+, the returned bounds will exclude task bar area on Windows OS.
-     * <p/>
+     * <p>
      * By default, it will not use invoker graphic device automatically.
      *
      * @param invoker the invoker component
@@ -302,12 +302,10 @@ public class PortingUtils {
     /** @deprecated No longer used. */
     @Deprecated public static boolean INITIALIZE_SCREEN_AREA_USING_THREAD = true;
 
-    /** @deprecated No longer used. */
     @Deprecated public static boolean isInitializationThreadAlive() {
         return false;
     }
 
-    /** @deprecated No longer used. */
     @Deprecated public static boolean isInitializationThreadStarted() {
         return false;
 

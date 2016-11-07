@@ -18,7 +18,7 @@ import java.awt.*;
 /**
  * This component extends JPopupMenu and adds a method to display the menu inside the screen even if the mouse pointer
  * is near the edge of the screen.
- * <p/>
+ * <p>
  * It also puts the menu items into a scroll pane. When there are too many menu items that can't fit into one screen,
  * the scroll pane will scroll up and down so that you can still get to all menu items.
  */

@@ -14,7 +14,7 @@ import java.awt.*;
 
 /**
  * <code>ButtonPanel</code> can help to layout buttons easily in any dialogs.
- * <p/>
+ * <p>
  * For more detail, please refer to JIDE Dialogs Developer Guide.
  */
 public class ButtonPanel extends JPanel implements ButtonListener, ButtonNames {

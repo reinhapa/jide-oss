@@ -15,24 +15,26 @@ import java.awt.event.ActionListener;
 /**
  * TristateCheckBox is a check box with three states - selected, unselected and mixed (a.k.a partial selected state).
  * Internally it uses a new class called {@link TristateButtonModel} to store the 3rd mixed state information.
- * <p/>
+ * <p>
  * The mixed state uses a different check icon. Instead of a checked sign in the selected state as in a regular check
- * box, we use a square sign to indicate the mixed state. On different L&Fs, it might look different. TristateCheckBox
- * supports most of the standard L&Fs such as Windows L&F, Metal L&F, Motif L&F, Nimbus L&F, Aqua L&F etc. For most
- * L&Fs, we use a new UIDefault "TristateCheckBox.icon" to paint in three different states. However for Aqua L&F, we
+ * box, we use a square sign to indicate the mixed state. On different L&amp;Fs, it might look different. TristateCheckBox
+ * supports most of the standard L&amp;Fs such as Windows L&amp;F, Metal L&amp;F, Motif L&amp;F, Nimbus L&amp;F, Aqua L&amp;F etc. For most
+ * L&amp;Fs, we use a new UIDefault "TristateCheckBox.icon" to paint in three different states. However for Aqua L&amp;F, we
  * actually leveraged a client property provided by Apple to display the icon for the mixed state (refer to Radar
  * #8930094 at http://developer.apple.com/library/mac/#releasenotes/Java/JavaSnowLeopardUpdate4LeopardUpdate9RN/ResolvedIssues/ResolvedIssues.html).
- * To make it extensible for other L&Fs who might provide a built-in mixed state for check box, we support two types of
+ * To make it extensible for other L&amp;Fs who might provide a built-in mixed state for check box, we support two types of
  * customizations.
+ * <p>
+ * using client property as Aqua. You can define your own client properties and use UIDefaults to tell us how
+ * to set it. For example:
  * <pre>
- * <ul>
- *     <li>using client property as Aqua. You can define your own client properties and use UIDefaults to tell us how
- * to set it. For example: </li>
  * "TristateCheckBox.icon", null,
  * "TristateCheckBox.setMixed.clientProperty", new Object[]{"JButton.selectedState", "indeterminate"},
  * "TristateCheckBox.clearMixed.clientProperty", new Object[]{"JButton.selectedState", null},
- * </ul>using component name. Some Synth-based L&Fs use component name to define style. If so, you can use the
- * following two UIDefaults. For example: </li>
+ * </pre>
+ * using component name. Some Synth-based L&amp;Fs use component name to define style. If so, you can use the
+ * following two UIDefaults. For example:
+ * <pre>
  * "TristateCheckBox.setMixed.componentName", "HalfSelected",
  * "TristateCheckBox.clearMixed.componentName", "",
  * </pre>
@@ -173,7 +175,7 @@ public class TristateCheckBox extends JCheckBox implements ActionListener {
             adjustMixedIcon();
             Object cp = UIDefaultsLookup.get("TristateCheckBox.setMixed.clientProperty");
             if (cp != null) {
-                putClientProperty(((Object[]) cp)[0], ((Object[]) cp)[1]); // for Aqua L&F
+                putClientProperty(((Object[]) cp)[0], ((Object[]) cp)[1]); // for Aqua L&amp;F
             }
             String name = UIDefaultsLookup.getString("TristateCheckBox.setMixed.componentName");
             if (name != null) {
@@ -184,7 +186,7 @@ public class TristateCheckBox extends JCheckBox implements ActionListener {
             restoreMixedIcon();
             Object cp = UIDefaultsLookup.get("TristateCheckBox.clearMixed.clientProperty");
             if (cp != null) {
-                putClientProperty(((Object[]) cp)[0], ((Object[]) cp)[1]); // for Aqua L&F
+                putClientProperty(((Object[]) cp)[0], ((Object[]) cp)[1]); // for Aqua L&amp;F
             }
             String name = UIDefaultsLookup.getString("TristateCheckBox.clearMixed.componentName");
             if (name != null) {

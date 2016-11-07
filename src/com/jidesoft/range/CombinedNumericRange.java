@@ -77,7 +77,9 @@ public class CombinedNumericRange extends AbstractNumericRange<Double> {
      * the class needed to recompute the lower and upper bounds any previous adjustment that had been made through this
      * method would have been lost.
      *
-     * @throws UnsupportedOperationException
+     * @param lower the lower bound
+     * @param upper the upper bound
+     * @throws UnsupportedOperationException by default
      */
     public void adjust(Double lower, Double upper) {
         throw new UnsupportedOperationException();
@@ -85,6 +87,8 @@ public class CombinedNumericRange extends AbstractNumericRange<Double> {
 
     /**
      * Lazily calculates the maximum value in the range
+     * 
+     * @return the maximum value in the range
      */
     public double maximum() {
         synchronized (monitor) {

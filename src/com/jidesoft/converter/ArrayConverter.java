@@ -30,7 +30,7 @@ abstract public class ArrayConverter implements ObjectConverter {
      * @param separator    separator to separate values. It should contain at least non-empty character.
      * @param size         size of the array
      * @param elementClass class of the array element. Assume all elements have the same class type. If not, use the
-     *                     constructor which takes Class<?>[] as parameter.
+     *                     constructor which takes Class&gt;?&lt;[] as parameter.
      */
     public ArrayConverter(String separator, int size, Class<?> elementClass) {
         _separator = separator;
@@ -139,7 +139,7 @@ abstract public class ArrayConverter implements ObjectConverter {
 
     /**
      * Sets the flag indicating if the converter will utilize Tokenizer to split the string or just utilize String#split().
-     * <p/>
+     * <p>
      * By default, the flag is false to keep backward compatibility.
      *
      * @param useTokenizer the flag

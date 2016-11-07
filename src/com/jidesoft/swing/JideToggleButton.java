@@ -111,10 +111,10 @@ public class JideToggleButton extends JideButton implements Accessible {
 
     /**
      * The ToggleButton model
-     * <p/>
+     * <p>
      * <strong>Warning:</strong> Serialized objects of this class will not be compatible with future Swing releases. The
      * current serialization support is appropriate for short term storage or RMI between applications running the same
-     * version of Swing.  As of 1.4, support for long term storage of all JavaBeans<sup><font size="-2">TM</font></sup>
+     * version of Swing.  As of 1.4, support for long term storage of all JavaBeans&trade;
      * has been added to the <code>java.beans</code> package. Please see {@link java.beans.XMLEncoder}.
      */
     public static class ToggleButtonModel extends DefaultButtonModel {
@@ -127,6 +127,8 @@ public class JideToggleButton extends JideButton implements Accessible {
 
         /**
          * Checks if the button is selected.
+         * 
+         * @return <code>true</code> if selected, <code>false</code> otherwise
          */
         @Override
         public boolean isSelected() {
@@ -312,10 +314,10 @@ public class JideToggleButton extends JideButton implements Accessible {
     /**
      * This class implements accessibility support for the <code>JToggleButton</code> class.  It provides an
      * implementation of the Java Accessibility API appropriate to toggle button user-interface elements.
-     * <p/>
+     * <p>
      * <strong>Warning:</strong> Serialized objects of this class will not be compatible with future Swing releases. The
      * current serialization support is appropriate for short term storage or RMI between applications running the same
-     * version of Swing.  As of 1.4, support for long term storage of all JavaBeans<sup><font size="-2">TM</font></sup>
+     * version of Swing.  As of 1.4, support for long term storage of all JavaBeans&trade;
      * has been added to the <code>java.beans</code> package. Please see {@link java.beans.XMLEncoder}.
      */
     protected class AccessibleJToggleButton extends AccessibleAbstractButton

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  * A data structure used by {@link SidePane} to represent a group of {@link SidePaneItem}.
- * <p/>
+ * <p>
  * Each group usually has one <code>SidePaneItem</code> selected.
  */
 public class SidePaneGroup extends ArrayList<SidePaneItem> {

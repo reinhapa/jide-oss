@@ -72,6 +72,8 @@ public class JideFocusTracker {
      * This allows you to set whether focus lost or focus gained will be
      * fired if the event is for the same component as a previous event.
      * The default is true.
+     * 
+     * @return if is repeating
      */
     public boolean isRepeating() {
         return this.repeat;
@@ -79,6 +81,8 @@ public class JideFocusTracker {
 
     /**
      * @see #isRepeating
+     * 
+     * @param repeat <code>true</code> to repeat, <code>false</code> otherwise
      */
     public void setRepeating(boolean repeat) {
         this.repeat = repeat;

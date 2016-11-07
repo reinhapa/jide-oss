@@ -126,7 +126,7 @@ public abstract class AbstractDialogPage extends AbstractPage {
      * Fire button event with id. The only event that doesn't take a button name as parameter is the {@link
      * ButtonEvent#CLEAR_DEFAULT_BUTTON} event.
      *
-     * @param id
+     * @param id the event id
      */
     public void fireButtonEvent(int id) {
         fireButtonEvent(id, null, null);
@@ -135,8 +135,8 @@ public abstract class AbstractDialogPage extends AbstractPage {
     /**
      * Fire button event with id and button name.
      *
-     * @param id
-     * @param buttonName
+     * @param id the event id
+     * @param buttonName the name of the button
      */
     public void fireButtonEvent(int id, String buttonName) {
         fireButtonEvent(id, buttonName, null);
@@ -145,9 +145,9 @@ public abstract class AbstractDialogPage extends AbstractPage {
     /**
      * Fire button event with id, button name and user object if needed.
      *
-     * @param id
-     * @param buttonName
-     * @param userObject
+     * @param id the event id
+     * @param buttonName the name of the button
+     * @param userObject the user object
      */
     public void fireButtonEvent(int id, String buttonName, String userObject) {
         Object[] listeners = listenerList.getListenerList();
@@ -220,7 +220,7 @@ public abstract class AbstractDialogPage extends AbstractPage {
      * Sets page enabled or disabled. The only place this flag is used right now is in MultiplePageDialog ICON_STYLE and
      * TAB_STYLE. Disabled page will have a disabled icon or tab as indicator.
      *
-     * @param pageEnabled
+     * @param pageEnabled <code>true</code> to enable, <code>false</code> otherwise
      */
     public void setPageEnabled(boolean pageEnabled) {
         if (_pageEnabled != pageEnabled) {

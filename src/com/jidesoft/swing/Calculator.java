@@ -20,11 +20,11 @@ import java.util.Locale;
 /**
  * <tt>Calculator</tt> is a component that can do simple arithmetic calculation. Since it extends JPanel, you can use it
  * at any place in your application.
- * <p/>
+ * <p>
  * To make it more flexible, the <tt>Calculator</tt> has no text field to display the result. You can create your own
  * JTextField or JLabel to display the result. Here is a simple example to create a text field and associate it with
  * Calculator.
- * <pre><code>
+ * <pre>
  * final JTextField textField = new JTextField();
  * textField.setColumns(20);
  * textField.setHorizontalAlignment(JTextField.TRAILING);
@@ -36,17 +36,17 @@ import java.util.Locale;
  *     }
  * });
  * calculator.clear();
- * </code></pre>
+ * </pre>
  * With the code above, user can type in directly into text field and do the calculation. If you just want to display
  * the result and don't mind if the text field accepts keyboard input, you don't need to call registerKeyboardActions
  * method.
- * <p/>
+ * <p>
  * All numeric and operator keys work as expected. Here are a few special keys that worth mentioning <ul> <li> 'C', 'c'
  * or ESC to clear current result <li> '!' to make current displayed number from positive to negative (or from negative
  * to positive) <li> ENTER is equivalent to '='.. </ul>
- * <p/>
+ * <p>
  * Another interesting way to use Calculator is to use it without using GUI.
- * <pre><code>
+ * <pre>
  * Calculator calculator = new Calculator();
  * calculator.input('1');
  * calculator.input('0');
@@ -55,9 +55,9 @@ import java.util.Locale;
  * calculator.input('4');
  * calculator.input('=');
  * System.out.println("10 * 24 = " + calculator.getDisplayText());
- * </code></pre>
+ * </pre>
  * The print out will be "10 * 24 = 240".
- * <p/>
+ * <p>
  * There are several methods you can use to get internal state of the Calculator. <ul> <li> {@link #getDisplayText()}:
  * to get the result that should be displayed. Please note, this method return a string. <li> {@link #getResult()}: to
  * get the last calculated result. This method returns a double value. <li> {@link #getOperator()}: to get the current
@@ -367,7 +367,7 @@ public class Calculator extends JPanel implements ActionListener {
     /**
      * Creates the button that is used in the Calculator. By default, it will create a JideButton. Here is the code. You
      * can override it to create your own button.
-     * <pre><code>
+     * <pre>
      * AbstractButton button = new JideButton(text, icon);
      * button.setOpaque(true);
      * button.setContentAreaFilled(true);
@@ -375,7 +375,7 @@ public class Calculator extends JPanel implements ActionListener {
      * button.setFocusable(false);
      * button.addActionListener(this);
      * return button;
-     * </code></pre>
+     * </pre>
      *
      * @param text the text on the button.
      * @param icon the icon on the button.

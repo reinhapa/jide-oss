@@ -47,9 +47,8 @@ public final class SwingPropertyChangeSupport extends PropertyChangeSupport {
 
     /**
      * {@inheritDoc}
-     * <p/>
-     * <p/>
-     * If {@see #isNotifyOnEDT} is {@code true} and called off the <i>Event Dispatch Thread</i> this implementation uses
+     * <p>
+     * If {@link #isNotifyOnEDT()} is {@code true} and called off the <i>Event Dispatch Thread</i> this implementation uses
      * {@code SwingUtilities.invokeLater} to send out the notification on the <i>Event Dispatch Thread</i>. This ensures
      * listeners are only ever notified on the <i>Event Dispatch Thread</i>.
      *

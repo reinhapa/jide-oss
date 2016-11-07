@@ -163,7 +163,7 @@ public class SidePaneItem {
 
     /**
      * Gets the foreground.
-     * <p/>
+     * <p>
      * If you didn't ever invoke {@link #setForeground(java.awt.Color)} and the component is an instance of {@link TabColorProvider},
      * {@link TabColorProvider#getTabForeground()} will be used.
      *
@@ -188,7 +188,7 @@ public class SidePaneItem {
 
     /**
      * Gets the background.
-     * <p/>
+     * <p>
      * If you didn't ever invoke {@link #setBackground(java.awt.Color)} and the component is an instance of {@link TabColorProvider},
      * {@link TabColorProvider#getTabBackground()} will be used.
      *

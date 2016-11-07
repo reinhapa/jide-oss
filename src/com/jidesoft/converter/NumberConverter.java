@@ -232,7 +232,7 @@ abstract public class NumberConverter implements ObjectConverter {
 
     /**
      * Sets the flag indicating if negative zero should be avoided.
-     * <p/>
+     * <p>
      * By default, the value is false to keep backward compatibility. If you don't like the string like "-0.00", please
      * set this flag to true to remove the negative sign.
      *

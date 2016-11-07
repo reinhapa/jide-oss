@@ -19,28 +19,27 @@ import java.util.List;
 /**
  * <code>TreeSearchable</code> is an concrete implementation of {@link Searchable} that enables the search function in
  * JTree. <p>It's very simple to use it. Assuming you have a JTree, all you need to do is to call
- * <code><pre>
+ * <pre>
  * JTree tree = ....;
  * TreeSearchable searchable = new TreeSearchable(tree);
- * </pre></code>
+ * </pre>
  * Now the JTree will have the search function.
- * <p/>
+ * <p>
  * There is very little customization you need to do to TreeSearchable. The only thing you might need is when the
  * element in the JTree needs a special conversion to convert to string. If so, you can override
  * convertElementToString() to provide you own algorithm to do the conversion.
- * <code><pre>
+ * <pre>
  * JTree tree = ....;
  * TreeSearchable searchable = new TreeSearchable(tree) {
  *      protected String convertElementToString(Object object) {
  *          ...
  *      }
  * };
- * </pre></code>
- * <p/>
+ * </pre>
  * Additional customization can be done on the base Searchable class such as background and foreground color,
- * keystrokes, case sensitivity. <p/> JTree actually has a simple searchable feature but has flaws. It will affect our
+ * keystrokes, case sensitivity. <p> JTree actually has a simple searchable feature but has flaws. It will affect our
  * searchable feature. To workaround it, you can override getNextMatch method and always return -1 when you create your
- * JList. <code>
+ * JList.
  * <pre>
  * JTree tree = new JTree(...) {
  *    public TreePath getNextMatch(String prefix, int startingRow, Position.Bias bias) {
@@ -48,7 +47,6 @@ import java.util.List;
  *    }
  * };
  * </pre>
- * </code>
  */
 public class TreeSearchable extends Searchable implements TreeModelListener, PropertyChangeListener {
 
@@ -75,7 +73,7 @@ public class TreeSearchable extends Searchable implements TreeModelListener, Pro
 
     /**
      * Sets the recursive attribute.
-     * <p/>
+     * <p>
      * If TreeSearchable is recursive, it will all tree nodes including those which are not visible to find the matching
      * node. Obviously, if your tree has unlimited number of tree nodes or a potential huge number of tree nodes (such
      * as a tree to represent file system), the recursive attribute should be false. To avoid this potential problem in
@@ -166,7 +164,7 @@ public class TreeSearchable extends Searchable implements TreeModelListener, Pro
 
     /**
      * Recursively go through the tree to populate the tree paths into a list and cache them.
-     * <p/>
+     * <p>
      * Tree paths list is only used when recursive attribute is true.
      */
     protected void populateTreePaths() {
@@ -188,7 +186,7 @@ public class TreeSearchable extends Searchable implements TreeModelListener, Pro
 
     /**
      * Reset the cached tree paths list.
-     * <p/>
+     * <p>
      * Tree paths list is only used when recursive atattributes true.
      */
     protected void resetTreePathes() {
@@ -197,7 +195,7 @@ public class TreeSearchable extends Searchable implements TreeModelListener, Pro
 
     /**
      * Gets the cached tree paths list. If it has never been cached before, this method will create the cache.
-     * <p/>
+     * <p>
      * Tree paths list is only used when recursive atattributes true.
      *
      * @return the tree paths list.

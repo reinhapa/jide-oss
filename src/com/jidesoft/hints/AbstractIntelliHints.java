@@ -152,7 +152,7 @@ public abstract class AbstractIntelliHints implements IntelliHints {
     /**
      * After user has selected a item in the hints popup, this method will update JTextComponent accordingly to accept
      * the hint.
-     * <p/>
+     * <p>
      * For JTextArea, the default implementation will insert the hint into current caret position. For JTextField, by
      * default it will replace the whole content with the item user selected. Subclass can always choose to override it
      * to accept the hint in a different way. For example, {@link com.jidesoft.hints.FileIntelliHints} will append the
@@ -199,7 +199,7 @@ public abstract class AbstractIntelliHints implements IntelliHints {
     /**
      * This method will call {@link #showHints(boolean)} if and only if the text component is enabled and has focus.
      *
-     * @param autoPopup
+     * @param autoPopup <code>true</code> to enable auto pop up, <code>false</code> otherwise
      */
     protected void showHintsPopup(boolean autoPopup) {
         if (!getTextComponent().isEnabled() || !getTextComponent().isEditable() || !getTextComponent().hasFocus()) {
@@ -222,7 +222,7 @@ public abstract class AbstractIntelliHints implements IntelliHints {
      * Shows the hints popup which contains the hints. It will call {@link #updateHints(Object, boolean)}. Only if it returns
      * true, the popup will be shown. You can call this method to fore the hints to be displayed.
      *
-     * @param autoPopup
+     * @param autoPopup <code>true</code> to enable auto pop up, <code>false</code> otherwise
      */
     public void showHints(boolean autoPopup) {
         if (_popup == null) {
@@ -425,12 +425,12 @@ public abstract class AbstractIntelliHints implements IntelliHints {
 
     /**
      * Gets the delegate keystrokes.
-     * <p/>
+     * <p>
      * When hint popup is visible, the keyboard focus never leaves the text component. However the hint popup usually
      * contains a component that user will try to use navigation key to select an item. For example, use UP and DOWN key
      * to navigate the list. Those keystrokes, if the popup is visible, will be delegated to the the component that
      * returns from {@link #getDelegateComponent()}.
-     * <p/>
+     * <p>
      * NOTE: Since this method would be invoked inside the constructor of AbstractIntelliHints, please do not try to
      * return a field because the field is not initiated yet at this time.
      *
@@ -448,7 +448,7 @@ public abstract class AbstractIntelliHints implements IntelliHints {
     /**
      * Gets the keystroke that will trigger the hint popup. Usually the hints popup will be shown automatically when
      * user types. Only when the hint popup is hidden accidentally, this keystroke will show the popup again.
-     * <p/>
+     * <p>
      * By default, it's the DOWN key for JTextField and CTRL+SPACE for JTextArea.
      *
      * @return the keystroke that will trigger the hint popup.
@@ -565,7 +565,7 @@ public abstract class AbstractIntelliHints implements IntelliHints {
 
     /**
      * Sets the delay after the key is pressed to show hints.
-     * <p/>
+     * <p>
      * By default, the delay time is 200ms.
      *
      * @param showHintsDelay the delay time

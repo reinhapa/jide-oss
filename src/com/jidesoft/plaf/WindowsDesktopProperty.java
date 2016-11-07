@@ -19,7 +19,7 @@ import java.lang.ref.WeakReference;
  * <code>UIManager.ActiveValue</code> method <code>createValue</code>. If the underlying desktop property changes this
  * will force the UIs to update all known Frames. You can invoke <code>invalidate</code> to force the value to be
  * fetched again.
- * <p/>
+ * <p>
  * Note: This class is the same as DesktopProperty under com.sun.java.swing.plaf.windows. We keep a copy of it here is
  * mainly for compatibility reason in case Sun decides to change the location of this class.
  */
@@ -137,6 +137,8 @@ public class WindowsDesktopProperty implements UIDefaults.ActiveValue {
 
     /**
      * Returns the value from the desktop.
+     * 
+     * @return the desktop value
      */
     protected Object getValueFromDesktop() {
         if (this.toolkit == null) {
@@ -150,6 +152,8 @@ public class WindowsDesktopProperty implements UIDefaults.ActiveValue {
 
     /**
      * Returns the value to use if the desktop property is null.
+     * 
+     * @return the default value
      */
     protected Object getDefaultValue() {
         if (fallback instanceof String) {
@@ -174,7 +178,7 @@ public class WindowsDesktopProperty implements UIDefaults.ActiveValue {
     }
 
     /**
-     * Requests that all components in the GUI hierarchy be updated to reflect dynamic changes in this look&feel.  This
+     * Requests that all components in the GUI hierarchy be updated to reflect dynamic changes in this L&amp;F.  This
      * update occurs by uninstalling and re-installing the UI objects. Requests are batched and collapsed into a single
      * update pass because often many desktop properties will change at once.
      */
@@ -193,6 +197,9 @@ public class WindowsDesktopProperty implements UIDefaults.ActiveValue {
 
     /**
      * Configures the value as appropriate for a defaults property in the UIDefaults table.
+     * 
+     * @param value the value
+     * @return the configurable value
      */
     protected Object configureValue(Object value) {
         if (value != null) {
@@ -225,6 +232,8 @@ public class WindowsDesktopProperty implements UIDefaults.ActiveValue {
 
     /**
      * Returns the key used to lookup the desktop properties value.
+     * 
+     * @return the key
      */
     protected String getKey() {
         return key;

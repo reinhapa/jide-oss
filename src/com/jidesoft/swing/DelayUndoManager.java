@@ -127,7 +127,7 @@ public class DelayUndoManager extends UndoManager {
     /**
      * Override to commit the cache before undo.
      *
-     * @throws CannotUndoException
+     * @throws CannotUndoException in case of undo is not possible
      */
     @Override
     public synchronized void undo() throws CannotUndoException {
@@ -138,7 +138,7 @@ public class DelayUndoManager extends UndoManager {
     /**
      * Override to commit the cache before redo.
      *
-     * @throws CannotRedoException
+     * @throws CannotRedoException in case redo is not possible
      */
     @Override
     public synchronized void redo() throws CannotRedoException {

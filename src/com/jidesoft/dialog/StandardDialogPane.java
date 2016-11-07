@@ -19,28 +19,28 @@ import java.awt.event.KeyEvent;
  * the default action and ESC key will trigger the cancel action and set the dialog result to RESULT_CANCELLED. <LI> Divide the whole ContentPane of the dialog into three parts - content panel, button
  * panel and banner panel. By default, they are added to CENTER, SOUTH and NORTH of a BorderLayout respectively. There isn't anything special about this. However if all your dialogs use this pattern,
  * it will automatically make the user interface more consistent. </UL>
- * <p/>
+ * <p>
  * This class is abstract. Subclasses need to implement createBannerPanel(), createButtonPanel() and createContentPanel()
- * <p/>
+ * <p>
  * <code>StandardDialogPane</code> has lazy loading feature. So when you are done setup the page list, you need to call {@link #initComponents()} to initialize everything. This method will be called
  * automatically if the dialog pane is added to StandardDialog. Basically, if you want to add StandardDialogPane without StandardDialog, the following code are required for the pane to be ready to add
  * to its parent container.
- * <code><pre>
+ * <pre>
  * pane = new StandardDialogPane() {
  *     public JComponent createBannerPanel() {
  *         return null;
  *     }
- * <p/>
+ * 
  *     public JComponent createContentPanel() {
  *         return null;
  *     }
- * <p/>
+ * 
  *     public ButtonPanel createButtonPanel() {
  *         return null;
  *     }
  * };
  * pane.initComponents();
- * </pre></code>
+ * </pre>
  */
 abstract public class StandardDialogPane extends JPanel implements ButtonNames {
 
@@ -136,7 +136,7 @@ abstract public class StandardDialogPane extends JPanel implements ButtonNames {
     /**
      * Call three createXxxPanel methods and layout them using BorderLayout. By default, banner panel, content panel and button panel are added to NORTH, CENTER and SOUTH of BorderLayout
      * respectively.
-     * <p/>
+     * <p>
      * You can override this method if you want to layout them in another way.
      */
     public void initComponents() {
@@ -183,7 +183,7 @@ abstract public class StandardDialogPane extends JPanel implements ButtonNames {
     /**
      * Setups the layout for the three panels - banner panel, content panel and button panel. By default, we will use BorderLayout, put the content panel in the middle, banner panel on the top and
      * button panel either right or bottom depending on its alignment.
-     * <p/>
+     * <p>
      * Subclass can override it to do your own layout. The three panels are the three parameters.
      *
      * @param bannerPanel  the banner panel
@@ -257,7 +257,7 @@ abstract public class StandardDialogPane extends JPanel implements ButtonNames {
     /**
      * Subclasses should implement this method to create the banner panel. By default banner panel will appear on top of the dialog unless you override initComponent() method. Banner panel is really
      * used to balance the layout of dialog to make the dialog looking good. However it can be used to show some help text. It is highly recommended to use our {@link BannerPanel}
-     * <p/>
+     * <p>
      * If subclass doesn't want to have a banner panel, just return null.
      *
      * @return the banner panel.

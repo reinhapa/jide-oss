@@ -8,10 +8,6 @@ import java.awt.event.MouseEvent;
 import java.awt.geom.Area;
 import java.awt.image.BufferedImage;
 
-/**
- * Original code http://forums.java.net/jive/thread.jspa?forumID=73&threadID=14674 under "Do whatever you want with this
- * code" license
- */
 @SuppressWarnings("serial")
 public class ScrollPaneOverview extends JComponent {
     
@@ -186,7 +182,7 @@ public class ScrollPaneOverview extends JComponent {
 
     /**
      * Show popup at designated location.
-     * <p/>
+     * <p>
      * You could override this method to show the popup in different location.
      *
      * @param x the x axis pixel

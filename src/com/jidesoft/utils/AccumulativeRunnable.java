@@ -16,16 +16,16 @@ import java.util.List;
  * An abstract class to be used in the cases where we need {@code Runnable} to perform  some actions on an appendable
  * set of data. The set of data might be appended after the {@code Runnable} is sent for the execution. Usually such
  * {@code Runnables} are sent to the EDT.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Usage example:
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Say we want to implement JLabel.setText(String text) which sends {@code text} string to the JLabel.setTextImpl(String
  * text) on the EDT. In the event JLabel.setText is called rapidly many times off the EDT we will get many updates on
  * the EDT but only the last one is important. (Every next updates overrides the previous one.) We might want to
  * implement this {@code setText} in a way that only the last update is delivered.
- * <p/>
+ * <p>
  * Here is how one can do this using {@code AccumulativeRunnable}:
  * <pre>
  * AccumulativeRunnable<String> doSetTextImpl =
@@ -41,12 +41,12 @@ import java.util.List;
  *     doSetTextImpl.add(text);
  * }
  * </pre>
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Say we want want to implement addDirtyRegion(Rectangle rect) which sends this region to the
  * handleDirtyRegions(List<Rect> regions) on the EDT. addDirtyRegions better be accumulated before handling on the EDT.
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Here is how it can be implemented using AccumulativeRunnable:
  * <pre>
  * AccumulativeRunnable<Rectangle> doHandleDirtyRegions =
@@ -77,8 +77,8 @@ abstract class AccumulativeRunnable<T> implements Runnable {
 
     /**
      * {@inheritDoc}
-     * <p/>
-     * <p/>
+     * <p>
+     * <p>
      * This implementation calls {@code run(List<T> args)} method with the list of accumulated arguments.
      */
     public final void run() {
@@ -87,7 +87,7 @@ abstract class AccumulativeRunnable<T> implements Runnable {
 
     /**
      * appends arguments and sends this {@code Runnable} for the execution if needed.
-     * <p/>
+     * <p>
      * This implementation uses {@see #submit} to send this {@code Runnable} for execution.
      *
      * @param args the arguments to accumulate
@@ -106,11 +106,11 @@ abstract class AccumulativeRunnable<T> implements Runnable {
 
     /**
      * Sends this {@code Runnable} for the execution
-     * <p/>
-     * <p/>
+     * <p>
+     * <p>
      * This method is to be executed only from {@code add} method.
-     * <p/>
-     * <p/>
+     * <p>
+     * <p>
      * This implementation uses {@code SwingWorker.invokeLater}.
      */
     protected void submit() {

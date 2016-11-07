@@ -14,7 +14,7 @@ import java.beans.PropertyChangeListener;
 
 /**
  * <code>PointSpinner</code> is a spinner that is specialized in displaying x and y value of a point.
- * <p/>
+ * <p>
  *
  * @author Nako Ruru
  */
@@ -24,7 +24,7 @@ public class PointSpinner extends JSpinner {
      * Constructs a complete spinner with pair of next/previous buttons and an editor for the
      * <code>SpinnerModel</code>.
      *
-     * @param model
+     * @param model the spinner point model
      */
     public PointSpinner(SpinnerPointModel model) {
         super(model);
@@ -51,7 +51,7 @@ public class PointSpinner extends JSpinner {
     public static class PointEditor extends DefaultEditor {
 
         /**
-         * @param spinner
+         * @param spinner the spinner component
          */
         public PointEditor(JSpinner spinner) {
             super(spinner);

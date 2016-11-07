@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
  * <tt>RangeSlider</tt> is a slider that can be used to select a range. A regular slider has only one thumb. So it can
  * only be used to select one value. <tt>RangeSlider</tt> has two thumbs. Each one can be moved independently or both
  * are moved together.
- * <p/>
+ * <p>
  * {@link #getLowValue()} will return the value of low range and {@link #getHighValue()} is the high range.
  */
 public class RangeSlider extends JSlider {

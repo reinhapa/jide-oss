@@ -83,7 +83,7 @@ public class CheckBoxTreeSelectionModel extends DefaultTreeSelectionModel implem
 
     /**
      * Tests whether there is any unselected node in the subtree of given path.
-     * <p/>
+     * <p>
      * Inherited from JTree, the TreePath must be a path instance inside the tree model. If you populate a new TreePath
      * instance on the fly, it would not work.
      *
@@ -113,10 +113,10 @@ public class CheckBoxTreeSelectionModel extends DefaultTreeSelectionModel implem
 
     /**
      * Check if the parent path is really selected.
-     * <p/>
+     * <p>
      * The default implementation is just return true. In filterable scenario, you could override this method to check
      * more.
-     * <p/>
+     * <p>
      * Inherited from JTree, the TreePath must be a path instance inside the tree model. If you populate a new TreePath
      * instance on the fly, it would not work.
      *
@@ -136,7 +136,7 @@ public class CheckBoxTreeSelectionModel extends DefaultTreeSelectionModel implem
     /**
      * Tells whether given path is selected. if dig is true, then a path is assumed to be selected, if one of its
      * ancestor is selected.
-     * <p/>
+     * <p>
      * Inherited from JTree, the TreePath must be a path instance inside the tree model. If you populate a new TreePath
      * instance on the fly, it would not work.
      *
@@ -188,7 +188,7 @@ public class CheckBoxTreeSelectionModel extends DefaultTreeSelectionModel implem
 
     /**
      * is path1 descendant of path2.
-     * <p/>
+     * <p>
      * Inherited from JTree, the TreePath must be a path instance inside the tree model. If you populate a new TreePath
      * instance on the fly, it would not work.
      *
@@ -220,7 +220,7 @@ public class CheckBoxTreeSelectionModel extends DefaultTreeSelectionModel implem
 
     /**
      * Overrides the method in DefaultTreeSelectionModel to consider digIn mode.
-     * <p/>
+     * <p>
      * Inherited from JTree, the TreePath must be a path instance inside the tree model. If you populate a new TreePath
      * instance on the fly, it would not work.
      *
@@ -239,7 +239,7 @@ public class CheckBoxTreeSelectionModel extends DefaultTreeSelectionModel implem
 
     /**
      * Overrides the method in DefaultTreeSelectionModel to consider digIn mode.
-     * <p/>
+     * <p>
      * Inherited from JTree, the TreePath must be a path instance inside the tree model. If you populate a new TreePath
      * instance on the fly, it would not work.
      *
@@ -396,7 +396,7 @@ public class CheckBoxTreeSelectionModel extends DefaultTreeSelectionModel implem
 
     /**
      * tells whether all siblings of given path are selected.
-     * <p/>
+     * <p>
      * Inherited from JTree, the TreePath must be a path instance inside the tree model. If you populate a new TreePath
      * instance on the fly, it would not work.
      *
@@ -583,18 +583,17 @@ public class CheckBoxTreeSelectionModel extends DefaultTreeSelectionModel implem
 
     /**
      * Single event mode is a mode that always fires only one event when you select or deselect a tree node.
-     * <p/>
+     * <p>
      * Taking this tree as an example,
-     * <p/>
-     * <code><pre>
+     * <pre>
      * A -- a
      *   |- b
      *   |- c
-     * </code></pre>
+     * </pre>
      * Case 1: Assuming b and c are selected at this point, you click on a. <br> <ul> <li>In non-single event mode, you
      * will get select-A, deselect-b and deselect-c three events <li>In single event mode, you will only get select-a.
      * </ul>
-     * <p/>
+     * <p>
      * Case 2: Assuming none of the nodes are selected, you click on A. In this case, both modes result in the same
      * behavior. <ul> <li>In non-single event mode, you will get only select-A event. <li>In single event mode, you will
      * only get select-A too. </ul> Case 3: Assuming b and c are selected and now you click on A. <ul> <li>In non-single
@@ -605,7 +604,7 @@ public class CheckBoxTreeSelectionModel extends DefaultTreeSelectionModel implem
      * find out. In non-single event mode, the events reflect what happened inside the selection model. So you can get a
      * complete picture of the exact state without asking the selection model. The downside is it will generate too many
      * events. With this option, you can decide which mode you want to use that is the best for your case.
-     * <p/>
+     * <p>
      * By default, singleEventMode is set to false to be compatible with the older versions that don't have this
      * option.
      *

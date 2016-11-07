@@ -19,37 +19,37 @@ import java.awt.*;
  * you add a null-component to JPanel, you can use JPanel to control the background, foreground and font of this
  * null-component. The feature is very helpful if you want to make sure all components in a JPanel has the same
  * background, foreground or font.
- * <p/>
+ * <p>
  * Even in null-components, you can still change the foreground, background or font value if you do want. However, you'll
  * have to use a font which is not an instance of FontUIResource or a color which is not an instance of ColorUIResource.
- * <p/>
+ * <p>
  * We creates a few null-components. It doesn't cover all components. You can always create your own. All you need to do
  * is this
- * <pre><code>
+ * <pre>
  * public class NullXxxComponent extends XxxComponent {
  *     // invoke clearAttribute() in all the constructors
- * <p/>
- * public void setFont(Font font) {
- *     if (font instanceof FontUIResource) {
- *         return;
+ *
+ *     public void setFont(Font font) {
+ *         if (font instanceof FontUIResource) {
+ *             return;
+ *         }
+ *         super.setFont(font);
  *     }
- *     super.setFont(font);
- * }
- * <p/>
- * public void setBackground(Color bg) {
- *     if (bg instanceof ColorUIResource) {
- *         return;
+ *
+ *     public void setBackground(Color bg) {
+ *         if (bg instanceof ColorUIResource) {
+ *             return;
+ *         }
+ *         super.setBackground(bg);
  *     }
- *     super.setBackground(bg);
- * }
- * <p/>
- * public void setForeground(Color fg) {
- *     if (fg instanceof ColorUIResource) {
- *         return;
+ *
+ *     public void setForeground(Color fg) {
+ *         if (fg instanceof ColorUIResource) {
+ *             return;
+ *         }
+ *         super.setForeground(fg);
  *     }
- *     super.setForeground(fg);
- * }
- * <p/>
+ *
  *     private void clearAttribute() {
  *         setFont(null);
  *         setBackground(null);
@@ -58,7 +58,7 @@ import java.awt.*;
  *         setForeground(null);
  *     }
  * }
- * </code></pre>
+ * </pre>
  *
  * @see com.jidesoft.swing.NullPanel
  * @see com.jidesoft.swing.NullCheckBox

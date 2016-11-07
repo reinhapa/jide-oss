@@ -12,14 +12,14 @@ import java.beans.PropertyChangeListener;
 /**
  * UIAction is the basis of all of basic's action classes that are used in an ActionMap. Subclasses
  * need to override <code>actionPerformed</code>.
- * <p/>
+ * <p>
  * A typical subclass will look like:
  * <pre>
  *    private static class Actions extends UIAction {
  *        Actions(String name) {
  *            super(name);
  *        }
- * <p/>
+ * 
  *        public void actionPerformed(ActionEvent ae) {
  *            if (getName() == "selectAll") {
  *                selectAll();
@@ -30,7 +30,7 @@ import java.beans.PropertyChangeListener;
  *        }
  *    }
  * </pre>
- * <p/>
+ * <p>
  * Subclasses that wish to conditionalize the enabled state should override
  * <code>isEnabled(Component)</code>, and be aware that the passed in <code>Component</code> may be
  * null.

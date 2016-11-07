@@ -25,7 +25,7 @@ import java.util.Arrays;
 
 
 /**
- * A metal L&F implementation of MenuUI.
+ * A metal L&amp;F implementation of MenuUI.
  */
 public class MetalMenuUI extends MetalMenuItemUI {
     protected ChangeListener changeListener;
@@ -316,7 +316,7 @@ public class MetalMenuUI extends MetalMenuItemUI {
     /**
      * Instantiated and used by a menu item to handle the current menu selection from mouse events. A MouseInputHandler
      * processes and forwards all mouse events to a shared instance of the MenuSelectionManager.
-     * <p/>
+     * <p>
      * This class is protected so that it can be subclassed by other look and feels to implement their own mouse
      * handling behavior. All overridden methods should call the parent methods so that the menu selection is correct.
      *
@@ -704,6 +704,8 @@ public class MetalMenuUI extends MetalMenuItemUI {
 
     /**
      * Set the temporary flag to indicate if the mouse has entered the menu.
+     * 
+     * @param over <code>true</code> mouse over the menu, <code>false</code> otherwise
      */
     protected void setMouseOver(boolean over) {
         isMouseOver = over;
@@ -712,6 +714,8 @@ public class MetalMenuUI extends MetalMenuItemUI {
 
     /**
      * Get the temporary flag to indicate if the mouse has entered the menu.
+     * 
+     * @return if the mouse has entered the menu
      */
     protected boolean isMouseOver() {
         return isMouseOver;

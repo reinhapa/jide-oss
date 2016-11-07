@@ -12,7 +12,7 @@ import java.awt.*;
 
 /**
  * A utility class that create additional cursors used by JIDE products.
- * <p/>
+ * <p>
  * Notes: this class has to be public so that JIDE can use it in different packages, not meant to release to end user as
  * a public API. JIDE will not guarantee the class will remain as it is.
  */

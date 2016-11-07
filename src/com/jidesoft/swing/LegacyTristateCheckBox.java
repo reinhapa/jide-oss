@@ -10,15 +10,15 @@ import java.awt.event.*;
 /**
  * <strong>This class is deprecated and replaced by {@link TristateCheckBox}. We will no longer provide support for this
  * class.</strong>
- * <p/>
+ * <p>
  * Maintenance tip - There were some tricks to getting this code working:
- * <p/>
+ * <p>
  * 1. You have to overwrite addMouseListener() to do nothing 2. You have to add a mouse event on mousePressed by calling
  * super.addMouseListener() 3. You have to replace the UIActionMap for the keyboard event "pressed" with your own one.
  * 4. You have to remove the UIActionMap for the keyboard event "released". 5. You have to grab focus when the next
  * state is entered, otherwise clicking on the component won't get the focus. 6. You have to make a TristateDecorator as
  * a button model that wraps the original button model and does state management.
- * <p/>
+ * <p>
  * To get notified for the state change, usually people use itemChange listener for a regular JCheckBox but for
  * TristateCheckBox, it doesn't work very well. It would be better to use addPropertyChangeListener on PROPERTY_STATE
  * property. It will be fired whenever the state is changed.
@@ -173,7 +173,7 @@ public class LegacyTristateCheckBox extends JCheckBox {
 
         /*
          * The current state is embedded in the selection / armed state of the model.
-         * <p/>
+         * <p>
          * We return the SELECTED state when the checkbox is selected but not armed, DONT_CARE state when the checkbox is selected and armed (grey) and NOT_SELECTED when the checkbox is deselected.
          */
         private State getState() {
@@ -293,7 +293,7 @@ public class LegacyTristateCheckBox extends JCheckBox {
     /**
      * We rotate between NOT_SELECTED, SELECTED and DONT_CARE. Subclass can override this method to tell the check box
      * what next state is. Here is the default implementation.
-     * <code><pre>
+     * <pre>
      *   if (current == NOT_SELECTED) {
      *       return SELECTED;
      *   }
@@ -303,7 +303,7 @@ public class LegacyTristateCheckBox extends JCheckBox {
      *   else {
      *       return NOT_SELECTED;
      *   }
-     * </code></pre>
+     * </pre>
      *
      * @param current the current state
      * @return the next state of the current state.

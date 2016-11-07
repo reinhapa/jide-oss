@@ -34,7 +34,7 @@ import java.util.*;
 import java.util.List;
 
 /**
- * A basic L&f implementation of JideTabbedPaneUI
+ * A basic L&amp;F implementation of JideTabbedPaneUI
  */
 public class BasicJideTabbedPaneUI extends JideTabbedPaneUI implements SwingConstants, DocumentListener {
 

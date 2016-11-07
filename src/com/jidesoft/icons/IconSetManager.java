@@ -8,22 +8,22 @@ import java.util.Map;
 /**
  * <code>IconSetManager</code> contains all the JIDE icon sets in one class so that you can access all of them from one
  * single place and switch to different icon set just by calling {@link #setActiveIconSetName(String)}.
- * <p/>
+ * <p>
  * In order to use IconSetManager, you need to define and register the JIDE icon set first. You can do something like
  * this.
- * <code><pre>
+ * <pre>
  * public static IconSetManager ICON_SET_MANAGER = new IconSetManager();
- * <p/>
+ * 
  * static {
  *      ICON_SET_MANAGER.add("vista", new int[]{16, 24, 32, 48, 64, 96, 128, 256}, "/com/jidesoft/icons/vista");
  *      ICON_SET_MANAGER.add("xp", new int[]{16, 24, 32, 48, 64}, "/com/jidesoft/icons/xp");
  *      // add more if you have. Right now JIDE only provides one icon set but we will add more
  * }
- * </pre></code>
+ * </pre>
  * Later on if you want to use it, for example, to get a File-New icon, you just call
- * <code><pre>
+ * <pre>
  * ICON_SET_MANAGER.getImageIcon(IconSet.File.NEW, size);
- * </pre></code>
+ * </pre>
  * The size is the size you want such as 16, 24, 32, 48, or 64 depending on what sizes are available.
  */
 public class IconSetManager {

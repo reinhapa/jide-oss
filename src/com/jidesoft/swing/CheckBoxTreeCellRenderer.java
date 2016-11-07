@@ -60,7 +60,7 @@ public class CheckBoxTreeCellRenderer extends JPanel implements TreeCellRenderer
 
     /**
      * Create the check box in the cell.
-     * <p/>
+     * <p>
      * By default, it creates a TristateCheckBox and set opaque to false.
      *
      * @return the check box instance.

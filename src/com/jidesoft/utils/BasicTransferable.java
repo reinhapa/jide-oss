@@ -14,7 +14,7 @@ import java.io.*;
 
 /**
  * A transferable implementation for the default data transfer of some Swing components.
- * <p/>
+ * <p>
  * This is copy from the same class as JDK. The original class is package local.
  *
  * @author Timothy Prinzing
@@ -177,6 +177,8 @@ public class BasicTransferable implements Transferable, UIResource {
     /**
      * Some subclasses will have flavors that are more descriptive than HTML or plain text.  If this method returns a
      * non-null value, it will be placed at the start of the array of supported flavors.
+     * 
+     * @return the data flavors
      */
     protected DataFlavor[] getRicherFlavors() {
         return null;
@@ -207,6 +209,8 @@ public class BasicTransferable implements Transferable, UIResource {
     /**
      * Should the HTML flavors be offered?  If so, the method getHTMLData should be implemented to provide something
      * reasonable.
+     * 
+     * @return if HTML is supported
      */
     protected boolean isHTMLSupported() {
         return htmlData != null;
@@ -214,6 +218,8 @@ public class BasicTransferable implements Transferable, UIResource {
 
     /**
      * Fetch the data in a text/html format
+     * 
+     * @return the HTML data
      */
     protected String getHTMLData() {
         return htmlData;
@@ -240,6 +246,8 @@ public class BasicTransferable implements Transferable, UIResource {
     /**
      * Should the plain text flavors be offered?  If so, the method getPlainData should be implemented to provide
      * something reasonable.
+     * 
+     * @return if plain data is supported
      */
     protected boolean isPlainSupported() {
         return plainData != null;
@@ -247,6 +255,8 @@ public class BasicTransferable implements Transferable, UIResource {
 
     /**
      * Fetch the data in a text/plain format.
+     * 
+     * @return the plain data
      */
     protected String getPlainData() {
         return plainData;

@@ -91,7 +91,7 @@ public class QuarterNameConverter implements ObjectConverter {
      * Sets the quarter name pattern. For example, if the int is 0, it will converted to "Qtr 1" if the pattern is "Qtr
      * {0}".
      *
-     * @param quarterName
+     * @param quarterName the quarter name pattern
      */
     public void setQuarterNamePattern(String quarterName) {
         _quarterNamePattern = quarterName;

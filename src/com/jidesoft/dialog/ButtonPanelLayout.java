@@ -105,7 +105,7 @@ class ButtonPanelLayout implements LayoutManager2, Serializable {
     /**
      * Indicates that a child has changed its layout related information, and thus any cached calculations should be
      * flushed.
-     * <p/>
+     * <p>
      * This method is called by AWT when the invalidate method is called on the Container.  Since the invalidate method
      * may be called asynchronously to the event thread, this method may be called asynchronously.
      *

@@ -132,7 +132,7 @@ public class FileIntelliHints extends AbstractListIntelliHints {
 
     /**
      * Get FilenameFilter configured to this hints.
-     * <p/>
+     * <p>
      * By default, it returns null. You could set this field to let the IntelliHints only show the files meet your criteria.
      *
      * @return the FilenameFilter in use.

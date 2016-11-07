@@ -31,7 +31,7 @@ public abstract class AbstractListIntelliHints extends AbstractIntelliHints {
     /**
      * Creates a Completion for JTextComponent
      *
-     * @param textComponent
+     * @param textComponent the text component
      */
     public AbstractListIntelliHints(JTextComponent textComponent) {
         super(textComponent);
@@ -56,13 +56,13 @@ public abstract class AbstractListIntelliHints extends AbstractIntelliHints {
 
     /**
      * Creates the list to display the hints. By default, we create a JList using the code below.
-     * <code><pre>
+     * <pre>
      * return new JList() {
      *     public int getVisibleRowCount() {
      *         int size = getModel().getSize();
-     *         return size < super.getVisibleRowCount() ? size : super.getVisibleRowCount();
+     *         return size &lt; super.getVisibleRowCount() ? size : super.getVisibleRowCount();
      *     }
-     * <p/>
+     * 
      *     public Dimension getPreferredScrollableViewportSize() {
      *         if (getModel().getSize() == 0) {
      *             return new Dimension(0, 0);
@@ -72,7 +72,7 @@ public abstract class AbstractListIntelliHints extends AbstractIntelliHints {
      *         }
      *     }
      * };
-     * </pre></code>
+     * </pre>
      *
      * @return the list.
      */
@@ -108,7 +108,7 @@ public abstract class AbstractListIntelliHints extends AbstractIntelliHints {
     /**
      * Sets the list data.
      *
-     * @param objects
+     * @param objects the data objects
      */
     protected void setListData(Object[] objects) {
         if (getList() == null) {
@@ -127,7 +127,7 @@ public abstract class AbstractListIntelliHints extends AbstractIntelliHints {
     /**
      * Sets the list data.
      *
-     * @param objects
+     * @param objects the data objects
      */
     protected void setListData(Vector<?> objects) {
         if (getList() == null) {

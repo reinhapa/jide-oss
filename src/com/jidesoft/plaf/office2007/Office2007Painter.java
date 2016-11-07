@@ -26,8 +26,8 @@ import java.awt.*;
 import java.awt.geom.Area;
 
 /**
- * Painter for Office2007 L&F.
- * <p/>
+ * Painter for Office2007 L&amp;F.
+ * <p>
  * Please note, this class is an internal class which is meant to be used by other JIDE classes only. Future version
  * might break your build if you use it.
  */
@@ -50,7 +50,7 @@ public class Office2007Painter extends BasicPainter {
 
     /**
      * Creates a default painter that paints something that could not be painted by Office2007Painter.'
-     * <p/>
+     * <p>
      * By default, it returns an Office2003Painter. However, if you doesn't like the painting theme of
      * Office2003Painter, you could override this method to offer another default painter.
      *

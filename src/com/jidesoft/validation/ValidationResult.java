@@ -12,7 +12,7 @@ package com.jidesoft.validation;
  * as it's consistent across your application. <li> message: a String value of result. You can use this string value to
  * put a message to indicate why the validation failed. </ul> Users can extend this class to create their own
  * ValidationResult to provide additional information that needed to be returned from Validator.
- * <p/>
+ * <p>
  * If you used a constructor without failBehavior parameter, the default value for behavior is {@link
  * #FAIL_BEHAVIOR_REVERT}, which means JideTable will not accept the new input and just revert the
  * value in the cell to the old value and stop cell editing as normal.
@@ -229,7 +229,7 @@ public class ValidationResult {
     /**
      * Sets the behavior if validation fails. Valid values are {@link #FAIL_BEHAVIOR_PERSIST}, {@link
      * #FAIL_BEHAVIOR_REVERT}, and {@link #FAIL_BEHAVIOR_RESET}.
-     * <p/>
+     * <p>
      * If you used a constructor without this parameter, the default value for behavior is {@link
      * #FAIL_BEHAVIOR_REVERT}, which means JideTable will not accept the new input and just revert the
      * value in the cell to the old value and stop cell editing as normal.

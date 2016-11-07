@@ -10,7 +10,7 @@ import java.awt.*;
 
 /**
  * An interface which defines a list of methods that are used to paint the UI.
- * <p/>
+ * <p>
  * Please note, this interface is still in development mode. Future version might break your build if you use it now.
  */
 public interface ThemePainter {

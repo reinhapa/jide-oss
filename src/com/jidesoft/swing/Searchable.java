@@ -30,25 +30,25 @@ import java.util.regex.PatternSyntaxException;
  * searching function will be very a useful feature in those components. <code>Searchable</code> is such a class that
  * can make JList, JTable and JTree searchable. User can simply type in any string they want to search for and use arrow
  * keys to navigate to next or previous occurrence.
- * <p/>
+ * <p>
  * <code>Searchable</code> is a base abstract class. <code>ListSearchable</code>, <code>TableSearchable</code> and
  * <code>TreeSearchable</code> are implementations to make JList, JTable and JTree searchable respectively. For each
  * implementation, there are five methods need to be implemented. <ul> <li><code>protected abstract int
  * getSelectedIndex()</code> <li><code>protected abstract void setSelectedIndex(int index, boolean incremental)</code>
  * <li><code>protected abstract int getElementCount()</code> <li><code>protected abstract Object getElementAt(int
  * index)</code> <li><code>protected abstract String convertElementToString(Object element)</code> </ul>
- * <p/>
+ * <p>
  * Please look at the javadoc of each method to learn more details.
- * <p/>
+ * <p>
  * The keys used by this class are fully customizable. Subclass can override the methods such as {@link
  * #isActivateKey(java.awt.event.KeyEvent)}, {@link #isDeactivateKey(java.awt.event.KeyEvent)}, {@link
  * #isFindFirstKey(java.awt.event.KeyEvent)},{@link #isFindLastKey(java.awt.event.KeyEvent)}, {@link
  * #isFindNextKey(java.awt.event.KeyEvent)}, {@link #isFindPreviousKey(java.awt.event.KeyEvent)} to provide its own set
  * of keys.
- * <p/>
+ * <p>
  * In addition to press up/down arrow to find next occurrence or previous occurrence of particular string, there are
  * several other features that are very handy.
- * <p/>
+ * <p>
  * Multiple selection feature - If you press CTRL key and hold it while pressing up and down arrow, it will find
  * next/previous occurrence while keeping existing selections. <br> Select all feature - If you type in a searching text
  * and press CTRL+A, all the occurrences of that searching string will be selected. This is a very handy feature. For
@@ -60,21 +60,21 @@ import java.util.regex.PatternSyntaxException;
  * small popup window. However if your user is very familiar with regular expression, you can add the feature to
  * <code>Searchable</code>. All you need to do is to override {@link #compare(String, String)} method and implement by
  * yourself.
- * <p/>
+ * <p>
  * As this is an abstract class, please refer to to javadoc of {@link ListSearchable},{@link TreeSearchable}, and {@link
  * TableSearchable} to find out how to use it with JList, JTree and JTable respectively.
- * <p/>
+ * <p>
  * This component has a timer. If user types very fast, it will accumulate them together and generate only one searching
  * action. The timer can be controlled by {@link #setSearchingDelay(int)}.
- * <p/>
+ * <p>
  * By default we will use lightweight popup for the sake of performance. But if you use heavyweight component which
  * could obscure the lightweight popup, you can call {@link #setHeavyweightComponentEnabled(boolean)} to true so that
  * heavyweight popup will be used.
- * <p/>
+ * <p>
  * When a <code>Searchable</code> is installed on a component, component.getClientProperty(Searchable.CLIENT_PROPERTY_SEARCHABLE)
  * will give you the Searchable instance. You can use static method {@link #getSearchable(javax.swing.JComponent)} to
  * get it too.
- * <p/>
+ * <p>
  * Last but not the least, only one Searchable is allowed on a component. If you install another one, it will remove the
  * first one and then install the new one.
  */
@@ -211,7 +211,7 @@ public abstract class Searchable {
     /**
      * Sets the selected index. The reason we have this method is just for back compatibility. All the method do is just
      * to invoke {@link #setSelectedIndex(int, boolean)}.
-     * <p/>
+     * <p>
      * Please do NOT try to override this method. Always override {@link #setSelectedIndex(int, boolean)} instead.
      *
      * @param index       the index to be selected
@@ -252,7 +252,7 @@ public abstract class Searchable {
 
     /**
      * Converts the element to String.
-     * <p/>
+     * <p>
      * This method will invoke {@link #convertElementToString(Object)} only. This method is added to provide a public
      * method for ShrinkSearchSupport without breaking the existing code of the customers.
      *
@@ -266,7 +266,7 @@ public abstract class Searchable {
 
     /**
      * Get the flag indicating if the search popup should be hidden on the component's event.
-     * <p/>
+     * <p>
      * By default, the value is true so that the search popup will be hidden anyway when the component get related
      * events. However, you could set this flag to false if you don't want to hide the search popup in some scenarios.
      * For example, JIDE ComboBoxShrinkSearchableSupport will set this flag to false temporarily when it tries to shrink
@@ -796,7 +796,7 @@ public abstract class Searchable {
 
     /**
      * Highlight all matching cases in the target.
-     * <p/>
+     * <p>
      * In default implementation, it will just search all texts in the target to highlight all. If you have a really
      * huge text to search, you may want to override this method to have a lazy behavior on visible areas only.
      */
@@ -828,7 +828,7 @@ public abstract class Searchable {
 
     /**
      * Cancel highlight all.
-     * <p/>
+     * <p>
      * By default, it does nothing. However, if you want to override {@link #highlightAll()}, you may want to override
      * this method to notify your Searchable that the highlightAll button is to be released.
      */
@@ -1864,12 +1864,12 @@ public abstract class Searchable {
 
     /**
      * Get the flag if we should process model change event.
-     * <p/>
+     * <p>
      * By default, the value is true, which means the model change event should be processed.
-     * <p/>
+     * <p>
      * In <code>ListShrinkSearchableSupport</code> case, since we will fire this event while applying filters. This flag
      * will be switched to false before we fire the event and set it back to true.
-     * <p/>
+     * <p>
      * In normal case, please do not set this flag.
      *
      * @return true if we should process model change event. Otherwise false.
@@ -1880,9 +1880,9 @@ public abstract class Searchable {
 
     /**
      * Set the flag if we should process model change event.
-     * <p/>
+     * <p>
      * In normal case, please do not set this flag.
-     * <p/>
+     * <p>
      *
      * @param processModelChangeEvent the flag
      * @see #isProcessModelChangeEvent()
@@ -1903,7 +1903,7 @@ public abstract class Searchable {
 
     /**
      * Sets the timeout for showing the popup.
-     * <p/>
+     * <p>
      * By default, the timeout value is 0, which means no timeout. You could set it to a positive value to automatically
      * hide the search popup after an idle time.
      *
@@ -1926,7 +1926,7 @@ public abstract class Searchable {
 
     /**
      * Sets the flag indicating if the Searchable should count all matches for every search.
-     * <p/>
+     * <p>
      * By default, the flag is false to keep performance high.
      *
      * @param countMatch the flag

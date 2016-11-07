@@ -17,29 +17,29 @@ import java.beans.PropertyChangeListener;
 /**
  * <code>ListSearchable</code> is an concrete implementation of {@link Searchable} that enables the search function in
  * JList. <p>It's very simple to use it. Assuming you have a JList, all you need to do is to call
- * <code><pre>
+ * <pre>
  * JList list = ....;
  * ListSearchable searchable = new ListSearchable(list);
- * </pre></code>
+ * </pre>
  * Now the JList will have the search function.
- * <p/>
+ * <p>
  * There is very little customization you need to do to ListSearchable. The only thing you might need is when the
  * element in the JList needs a special conversion to convert to string. If so, you can overide convertElementToString()
  * to provide you own algorithm to do the conversion.
- * <code><pre>
+ * <pre>
  * JList list = ....;
  * ListSearchable searchable = new ListSearchable(list) {
  *      protected String convertElementToString(Object object) {
  *          ...
  *      }
  * };
- * </pre></code>
- * <p/>
+ * </pre>
+ * <p>
  * Additional customization can be done on the base Searchable class such as background and foreground color,
  * keystrokes, case sensitivity.
- * <p/>
+ * <p>
  * JList actually has a simple searchable feature but has flaws. It will affect our searchable feature. To workaround
- * it, you can override getNextMatch method and always return -1 when you create your JList. <code>
+ * it, you can override getNextMatch method and always return -1 when you create your JList.
  * <pre>
  * JList list = new JList(...) {
  *     public int getNextMatch(String prefix, int startIndex, Position.Bias bias) {
@@ -47,7 +47,6 @@ import java.beans.PropertyChangeListener;
  *     }
  * };
  * </pre>
- * </code>
  */
 public class ListSearchable extends Searchable implements ListDataListener, PropertyChangeListener {
     private boolean _useRendererAsConverter = false;
@@ -183,7 +182,7 @@ public class ListSearchable extends Searchable implements ListDataListener, Prop
 
     /**
      * Get the flag if the ListSearchable should use the renderer in the list as its converter.
-     * <p/>
+     * <p>
      * The default value for this field is false so we can get higher performance. For AutoFilterBox, we will set it
      * to false automatically.
      *
@@ -195,7 +194,7 @@ public class ListSearchable extends Searchable implements ListDataListener, Prop
 
     /**
      * Set the flag if the ListSearchable should use the renderer in the list as its converter.
-     * <p/>
+     * <p>
      * @see #isUseRendererAsConverter()
      *
      * @param useRendererAsConverter the flag

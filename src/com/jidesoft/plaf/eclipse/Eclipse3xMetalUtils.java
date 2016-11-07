@@ -20,7 +20,7 @@ public class Eclipse3xMetalUtils extends EclipseMetalUtils {
     /**
      * Initializes class defaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initClassDefaults(UIDefaults table) {
         EclipseLookAndFeelExtension.initClassDefaults(table);
@@ -30,7 +30,7 @@ public class Eclipse3xMetalUtils extends EclipseMetalUtils {
     /**
      * Initializes components defaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initComponentDefaults(UIDefaults table) {
         EclipseMetalUtils.initComponentDefaults(table);

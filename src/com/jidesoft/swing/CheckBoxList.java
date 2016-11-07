@@ -21,21 +21,21 @@ import java.util.List;
 /**
  * <code>CheckBoxList</code> is a special JList which uses JCheckBox as the list element. In addition to regular JList
  * feature, it also allows you select any number of elements in the list by selecting the check boxes.
- * <p/>
+ * <p>
  * To select an element, user can mouse click on the check box, or highlight the rows and press SPACE key to toggle the
  * selections.
- * <p/>
+ * <p>
  * We used cell renderer feature in JList to add the check box in each row. However you can still set your own cell
  * renderer just like before using {@link #setCellRenderer(javax.swing.ListCellRenderer)}. CheckBoxList will use your
  * cell renderer and automatically put a check box before it.
- * <p/>
+ * <p>
  * The selection state is kept in a ListSelectionModel called CheckBoxListSelectionModel, which you can get using {@link
  * CheckBoxList#getCheckBoxListSelectionModel()}. If you need to add a check to a check box or to find out if a check
  * box is checked, you need to ask the getCheckBoxListSelectionModel() by using addListSelectionListener.
- * <p/>
+ * <p>
  * It is possible to add an "(All)" item. All you need to do is to add CheckBoxList.ALL_ENTRY to the list model. Then
  * check the (All) item will select all the check boxes and uncheck it will deselect all.
- * <p/>
+ * <p>
  * Please note, we changed CheckBoxList implementation in 1.9.2 release. The old CheckBoxList class is renamed to {@link
  * CheckBoxListWithSelectable}. If you want to use the old implementation, you can use CheckBoxListWithSelectable
  * instead. The main difference between the two implementation is at how the selection state is kept. In new
@@ -109,7 +109,7 @@ public class CheckBoxList extends JList {
     /**
      * Constructs a <code>CheckBoxList</code> that displays the elements in the specified, non-<code>null</code> model.
      * All <code>CheckBoxList</code> constructors delegate to this one.
-     * <p/>
+     * <p>
      *
      * @param dataModel the data model for this list
      * @throws IllegalArgumentException if <code>dataModel</code> is <code>null</code>
@@ -479,7 +479,7 @@ public class CheckBoxList extends JList {
     /**
      * Sets the value of property clickInCheckBoxOnly.
      *
-     * @param clickInCheckBoxOnly see {@Link #isClickInCheckBoxOnly} for more information.
+     * @param clickInCheckBoxOnly see {@link #isClickInCheckBoxOnly()} for more information.
      */
     public void setClickInCheckBoxOnly(boolean clickInCheckBoxOnly) {
         if (clickInCheckBoxOnly != _clickInCheckBoxOnly) {
@@ -731,12 +731,12 @@ public class CheckBoxList extends JList {
                     setCheckBoxListSelectedIndex(i);
                     if (shouldScroll)
                         ensureIndexIsVisible(i);
-                    repaint();  /** FIX-ME setSelectedIndex does not redraw all the time with the basic l&f**/
+                    repaint();  /** FIX-ME setSelectedIndex does not redraw all the time with the basic L&amp;F**/
                     return;
                 }
             setCheckBoxListSelectedIndex(-1);
         }
-        repaint(); /** FIX-ME setSelectedIndex does not redraw all the time with the basic l&f**/
+        repaint(); /** FIX-ME setSelectedIndex does not redraw all the time with the basic L&amp;F**/
     }
 
     /**
@@ -755,7 +755,7 @@ public class CheckBoxList extends JList {
                     addCheckBoxListSelectedIndex(i);
                     if (shouldScroll)
                         ensureIndexIsVisible(i);
-                    repaint();  /** FIX-ME setSelectedIndex does not redraw all the time with the basic l&f**/
+                    repaint();  /** FIX-ME setSelectedIndex does not redraw all the time with the basic L&amp;F**/
                     return;
                 }
         }
@@ -765,7 +765,7 @@ public class CheckBoxList extends JList {
                     addCheckBoxListSelectedIndex(i);
                     if (shouldScroll)
                         ensureIndexIsVisible(i);
-                    repaint();  /** FIX-ME setSelectedIndex does not redraw all the time with the basic l&f**/
+                    repaint();  /** FIX-ME setSelectedIndex does not redraw all the time with the basic L&amp;F**/
                     return;
                 }
             }
@@ -840,7 +840,7 @@ public class CheckBoxList extends JList {
                     removeCheckBoxListSelectedIndex(i);
                     if (shouldScroll)
                         ensureIndexIsVisible(i);
-                    repaint();  /** FIX-ME setSelectedIndex does not redraw all the time with the basic l&f**/
+                    repaint();  /** FIX-ME setSelectedIndex does not redraw all the time with the basic L&amp;F**/
                     return;
                 }
         }

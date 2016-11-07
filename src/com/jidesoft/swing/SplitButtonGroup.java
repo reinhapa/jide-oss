@@ -10,7 +10,7 @@ import javax.swing.*;
 /**
  * SplitButtonGroup extends ButtonGroup to provide the same button grouping function
  * for JideToggleSplitButton.
- * <p/>
+ * <p>
  * SplitButtonGroup supports regular JButton or JideButton as well.
  */
 public class SplitButtonGroup extends ButtonGroup {

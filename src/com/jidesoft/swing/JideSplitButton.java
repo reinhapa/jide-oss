@@ -19,12 +19,12 @@ import java.awt.event.ActionEvent;
  * <code>JideSplitButton</code> is a combination of button and menu. There is a line in the middle of the button that
  * splits the button into two portions. The portion before the line is a button. User can click on it and trigger an
  * action. The portion after the line is a menu. User can click on it to show a normal menu.
- * <p/>
+ * <p>
  * Please be noted that, when you try to use JideSplitButton as a menu item, please make sure that you will re-configure
  * its font with the following code. Otherwise, it may look different with the other JMenuItems.
- * <code><pre>
+ * <pre>
  *         splitButton.setFont((Font) JideSwingUtilities.getMenuFont(Toolkit.getDefaultToolkit(), UIManager.getDefaults()));
- * </pre></code>
+ * </pre>
  */
 public class JideSplitButton extends JideMenu implements ButtonStyle, ComponentStateSupport {
 
@@ -87,9 +87,9 @@ public class JideSplitButton extends JideMenu implements ButtonStyle, ComponentS
     }
 
     /**
-     * Sets the L&F object that renders this component.
+     * Sets the L&amp;F object that renders this component.
      *
-     * @param ui the <code>JideSplitButtonUI</code> L&F object
+     * @param ui the <code>JideSplitButtonUI</code> L&amp;F object
      * @see javax.swing.UIDefaults#getUI
      */
     @Override
@@ -98,7 +98,7 @@ public class JideSplitButton extends JideMenu implements ButtonStyle, ComponentS
     }
 
     /**
-     * Notification from the <code>UIFactory</code> that the L&F has changed. Called to replace the UI with the latest
+     * Notification from the <code>UIFactory</code> that the L&amp;F has changed. Called to replace the UI with the latest
      * version from the <code>UIFactory</code>.
      *
      * @see javax.swing.JComponent#updateUI
@@ -114,7 +114,7 @@ public class JideSplitButton extends JideMenu implements ButtonStyle, ComponentS
 
 
     /**
-     * Returns the name of the L&F class that renders this component.
+     * Returns the name of the L&amp;F class that renders this component.
      *
      * @return the string "JideSplitButtonUI"
      *
@@ -295,10 +295,10 @@ public class JideSplitButton extends JideMenu implements ButtonStyle, ComponentS
     /**
      * Gets the background for different states. The states are defined in ThemePainter as constants. Not all states are
      * supported by all components. If the state is not supported or background is never set, it will return null.
-     * <p/>
-     * Please note, each L&F will have its own way to paint the different backgrounds. This method allows you to
+     * <p>
+     * Please note, each L&amp;F will have its own way to paint the different backgrounds. This method allows you to
      * customize it for each component to use a different background. So if you want the background to be used, don't
-     * use a ColorUIResource because UIResource is considered as a setting set by the L&F and any L&F can choose to
+     * use a ColorUIResource because UIResource is considered as a setting set by the L&amp;F and any L&amp;F can choose to
      * ignore it.
      *
      * @param state the button state. Please refer to {@link com.jidesoft.plaf.basic.ThemePainter} to see the list of
@@ -322,10 +322,10 @@ public class JideSplitButton extends JideMenu implements ButtonStyle, ComponentS
     /**
      * Sets the background for different states.  The states are defined in ThemePainter as constants. Not all states
      * are supported by all components. If the state is not supported or background is never set, it will return null.
-     * <p/>
-     * Please note, each L&F will have its own way to paint the different backgrounds. This method allows you to
+     * <p>
+     * Please note, each L&amp;F will have its own way to paint the different backgrounds. This method allows you to
      * customize it for each component to use a different background. So if you want the background to be used, don't
-     * use a ColorUIResource because UIResource is considered as a setting set by the L&F and any L&F can choose to
+     * use a ColorUIResource because UIResource is considered as a setting set by the L&amp;F and any L&amp;F can choose to
      * ignore it.
      *
      * @param state the button state. Please refer to {@link com.jidesoft.plaf.basic.ThemePainter} to see the list of
@@ -352,10 +352,10 @@ public class JideSplitButton extends JideMenu implements ButtonStyle, ComponentS
     /**
      * Gets the foreground for different states. The states are defined in ThemePainter as constants. Not all states are
      * supported by all components. If the state is not supported or foreground is never set, it will return null.
-     * <p/>
-     * Please note, each L&F will have its own way to paint the different foregrounds. This method allows you to
+     * <p>
+     * Please note, each L&amp;F will have its own way to paint the different foregrounds. This method allows you to
      * customize it for each component to use a different foreground. So if you want the foreground to be used, don't
-     * use a ColorUIResource because UIResource is considered as a setting set by the L&F and any L&F can choose to
+     * use a ColorUIResource because UIResource is considered as a setting set by the L&amp;F and any L&amp;F can choose to
      * ignore it.
      *
      * @param state the button state. Please refer to {@link com.jidesoft.plaf.basic.ThemePainter} to see the list of
@@ -380,10 +380,10 @@ public class JideSplitButton extends JideMenu implements ButtonStyle, ComponentS
     /**
      * Sets the foreground for different states.  The states are defined in ThemePainter as constants. Not all states
      * are supported by all components. If the state is not supported or foreground is never set, it will return null.
-     * <p/>
-     * Please note, each L&F will have its own way to paint the different foregrounds. This method allows you to
+     * <p>
+     * Please note, each L&amp;F will have its own way to paint the different foregrounds. This method allows you to
      * customize it for each component to use a different foreground. So if you want the foreground to be used, don't
-     * use a ColorUIResource because UIResource is considered as a setting set by the L&F and any L&F can choose to
+     * use a ColorUIResource because UIResource is considered as a setting set by the L&amp;F and any L&amp;F can choose to
      * ignore it.
      *
      * @param state the button state. Please refer to {@link com.jidesoft.plaf.basic.ThemePainter} to see the list of

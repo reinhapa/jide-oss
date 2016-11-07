@@ -121,9 +121,9 @@ public class AutoResizingTextArea extends JTextArea {
      *
      * @param doc     the model to use, or create a default one if null
      * @param text    the text to be displayed, null if none
-     * @param minRows the minimum number of rows >= 0
-     * @param maxRows the maximum number of rows >= 0
-     * @param columns the number of columns >= 0
+     * @param minRows the minimum number of rows &gt;= 0
+     * @param maxRows the maximum number of rows &gt;= 0
+     * @param columns the number of columns &gt;= 0
      *
      * @throws IllegalArgumentException if the rows or columns arguments are negative.
      */

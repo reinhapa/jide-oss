@@ -249,6 +249,7 @@ public class JideBorderLayout implements LayoutManager2,
     /**
      * Returns the horizontal gap between components.
      *
+     * @return the hgap value
      * @since JDK1.1
      */
     public int getHgap() {
@@ -268,6 +269,7 @@ public class JideBorderLayout implements LayoutManager2,
     /**
      * Returns the vertical gap between components.
      *
+     * @return the vgap value
      * @since JDK1.1
      */
     public int getVgap() {
@@ -288,7 +290,7 @@ public class JideBorderLayout implements LayoutManager2,
      * Adds the specified component to the layout, using the specified constraint object.  For border layouts, the
      * constraint must be one of the following constants:  <code>NORTH</code>, <code>SOUTH</code>, <code>EAST</code>,
      * <code>WEST</code>, or <code>CENTER</code>.
-     * <p/>
+     * <p>
      * Most applications do not call this method directly. This method is called when a component is added to a
      * container using the <code>Container.add</code> method with the same argument types.
      *
@@ -541,7 +543,7 @@ public class JideBorderLayout implements LayoutManager2,
 
     /**
      * Determines the minimum size of the <code>target</code> container using this layout manager.
-     * <p/>
+     * <p>
      * This method is called when a container calls its <code>getMinimumSize</code> method. Most applications do not
      * call this method directly.
      *
@@ -596,7 +598,7 @@ public class JideBorderLayout implements LayoutManager2,
     /**
      * Determines the preferred size of the <code>target</code> container using this layout manager, based on the
      * components in the container.
-     * <p/>
+     * <p>
      * Most applications do not call this method directly. This method is called when a container calls its
      * <code>getPreferredSize</code> method.
      *
@@ -686,13 +688,13 @@ public class JideBorderLayout implements LayoutManager2,
 
     /**
      * Lays out the container argument using this border layout.
-     * <p/>
+     * <p>
      * This method actually reshapes the components in the specified container in order to satisfy the constraints of
      * this <code>BorderLayout</code> object. The <code>NORTH</code> and <code>SOUTH</code> components, if any, are
      * placed at the top and bottom of the container, respectively. The <code>WEST</code> and <code>EAST</code>
      * components are then placed on the left and right, respectively. Finally, the <code>CENTER</code> object is placed
      * in any remaining space in the middle.
-     * <p/>
+     * <p>
      * Most applications do not call this method directly. This method is called when a container calls its
      * <code>doLayout</code> method.
      *

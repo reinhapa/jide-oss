@@ -11,19 +11,19 @@ import java.util.EventObject;
 /**
  * ValidationObject is an object containing the information that needed by Validator.
  * The base class has three things - source, new value and old value.
- * <p/>
+ * <p>
  * The source is the object who has the Validator. In the case of cell
  * editor, cell editor will be the source. In the case of table, source will be
  * the table.
- * <p/>
+ * <p>
  * Normally ValidationObject are accompanied by the old and new value.
  * If the new value is a primitive
  * type (such as int or boolean) it must be wrapped as the
  * corresponding java.lang.* Object type (such as Integer or Boolean).
- * <p/>
+ * <p>
  * Null values may be provided for the old and the new values if their
  * true values are not known.
- * <p/>
+ * <p>
  * Users can extend this class to create their own ValidationObject to provide
  * additional information that needed by Validator. For example, TableValidationObject
  * extends ValidationObject to add row and column information.

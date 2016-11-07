@@ -23,22 +23,22 @@ public class MonthNameConverter implements ObjectConverter {
     public static ConverterContext CONTEXT = new ConverterContext("MonthName");
 
     /**
-     * 0 -> "1", 1 -> "2", ..., 11 -> "12"
+     * 0 -&gt; "1", 1 -&gt; "2", ..., 11 -&gt; "12"
      */
     public static final DateFormat CONCISE_FORMAT = new SimpleDateFormat("M");
 
     /**
-     * 0 -> "01", 1 -> "02", ..., 11 -> "12"
+     * 0 -&gt; "01", 1 -&gt; "02", ..., 11 -&gt; "12"
      */
     public static final DateFormat SHORT_FORMAT = new SimpleDateFormat("MM");
 
     /**
-     * 0 -> "Jan", 1 -> "Feb", ..., 11 -> "Dec"
+     * 0 -&gt; "Jan", 1 -&gt; "Feb", ..., 11 -&gt; "Dec"
      */
     public static final DateFormat MEDIUM_FORMAT = new SimpleDateFormat("MMM");
 
     /**
-     * 0 -> "January", 1 -> "February", ..., 11 -> "December"
+     * 0 -&gt; "January", 1 -&gt; "February", ..., 11 -&gt; "December"
      */
     public static final DateFormat LONG_FORMAT = new SimpleDateFormat("MMMMM");
 

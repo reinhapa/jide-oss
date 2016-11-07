@@ -14,15 +14,15 @@ import java.awt.event.MouseMotionAdapter;
 /**
  * <code>Sticky</code> is a helper class to make JList or JTree or JTable changing selection when mouse moves. To use
  * it, you simply call
- * <pre><code>
+ * <pre>
  * JList list = new JList();
  * new Sticky(list);
- * </code></pre>
+ * </pre>
  * or
- * <pre><code>
+ * <pre>
  * JTree tree = new JTree();
  * new Sticky(tree);
- * </code></pre>
+ * </pre>
  */
 public class Sticky {
     private JComponent _target;

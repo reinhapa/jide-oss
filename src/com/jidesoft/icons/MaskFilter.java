@@ -40,19 +40,27 @@ public class MaskFilter extends RGBImageFilter {
 
     /**
      * Creates an image from an existing one by replacing the old color with the new color.
+     * 
+     * @param img the image
+     * @param oldColor the old color
+     * @param newColor the new color
+     * @return the changed image
      */
-    public static Image createImage(Image i, Color oldColor, Color newColor) {
+    public static Image createImage(Image img, Color oldColor, Color newColor) {
         MaskFilter filter = MaskFilter.getInstance(oldColor, newColor);
-        ImageProducer prod = new FilteredImageSource(i.getSource(), filter);
+        ImageProducer prod = new FilteredImageSource(img.getSource(), filter);
         Image image = Toolkit.getDefaultToolkit().createImage(prod);
         return image;
     }
 
     /**
      * Creates an image as negative of an existing one. It will basically replace the black color with white color.
+     * 
+     * @param img the image
+     * @return the changed image
      */
-    public static Image createNegativeImage(Image i) {
-        return createImage(i, Color.black, Color.white);
+    public static Image createNegativeImage(Image img) {
+        return createImage(img, Color.black, Color.white);
     }
 
     /**

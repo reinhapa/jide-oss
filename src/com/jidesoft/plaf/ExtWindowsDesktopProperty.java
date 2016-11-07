@@ -101,6 +101,7 @@ public class ExtWindowsDesktopProperty implements UIDefaults.ActiveValue {
      * @param keys     Key used in looking up desktop value.
      * @param fallback Value used if desktop property is null.
      * @param toolkit  Toolkit used to fetch property from, can be null in which default will be used.
+     * @param listener The convert listener
      */
     public ExtWindowsDesktopProperty(String[] keys, Object[] fallback, Toolkit toolkit, ConvertListener listener) {
         this.keys = keys;
@@ -112,6 +113,9 @@ public class ExtWindowsDesktopProperty implements UIDefaults.ActiveValue {
     /**
      * UIManager.LazyValue method, returns the value from the desktop or the fallback value if the desktop value is
      * null.
+     * 
+     * @param table the table defaults
+     * @return the configurable value
      */
     public Object createValue(UIDefaults table) {
         if (value == null) {
@@ -125,6 +129,8 @@ public class ExtWindowsDesktopProperty implements UIDefaults.ActiveValue {
 
     /**
      * Returns the value from the desktop.
+     * 
+     * @return the desktop value
      */
     protected Object[] getValueFromDesktop() {
         if (this.toolkit == null) {
@@ -141,6 +147,8 @@ public class ExtWindowsDesktopProperty implements UIDefaults.ActiveValue {
 
     /**
      * Returns the value to use if the desktop property is null.
+     * 
+     * @return the default value
      */
     protected Object[] getDefaultValue() {
         return fallback;
@@ -162,7 +170,7 @@ public class ExtWindowsDesktopProperty implements UIDefaults.ActiveValue {
     }
 
     /**
-     * Requests that all components in the GUI hierarchy be updated to reflect dynamic changes in this look&feel.  This
+     * Requests that all components in the GUI hierarchy be updated to reflect dynamic changes in this L&amp;F.  This
      * update occurs by uninstalling and re-installing the UI objects. Requests are batched and collapsed into a single
      * update pass because often many desktop properties will change at once.
      */
@@ -181,6 +189,9 @@ public class ExtWindowsDesktopProperty implements UIDefaults.ActiveValue {
 
     /**
      * Configures the value as appropriate for a defaults property in the UIDefaults table.
+     * 
+     * @param value the value
+     * @return the configurable value
      */
     protected Object[] configureValue(Object[] value) {
         if (value != null) {
@@ -193,6 +204,9 @@ public class ExtWindowsDesktopProperty implements UIDefaults.ActiveValue {
 
     /**
      * Configures the value as appropriate for a defaults property in the UIDefaults table.
+     * 
+     * @param value the value
+     * @return the configurable value
      */
     protected Object configureValue(Object value) {
         if (value != null) {
@@ -214,6 +228,8 @@ public class ExtWindowsDesktopProperty implements UIDefaults.ActiveValue {
 
     /**
      * Returns the key used to lookup the desktop properties value.
+     * 
+     * @return the keys
      */
     protected String[] getKeys() {
         return keys;

@@ -18,7 +18,7 @@ import java.beans.PropertyChangeListener;
  * <code>BannerPanel</code> is a panel that can show title, subtitle and icon with title on top, subtitle on the bottom
  * and icon on the left. You can use ImageIcon as the icon but you can also use your own component as the icon component
  * by using {@link #setIconComponent(javax.swing.JComponent)}.
- * <p/>
+ * <p>
  * <code>BannerPanel</code> can be placed on top of any dialog or any panel to show some help information or display a
  * product logo.
  */

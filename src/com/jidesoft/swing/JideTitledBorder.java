@@ -386,6 +386,8 @@ public class JideTitledBorder extends AbstractBorder {
 
     /**
      * Returns the title of the titled border.
+     * 
+     * @return the title
      */
     public String getTitle() {
         return title;
@@ -393,6 +395,8 @@ public class JideTitledBorder extends AbstractBorder {
 
     /**
      * Returns the border of the titled border.
+     * 
+     * @return the border
      */
     public Border getBorder() {
         return border;
@@ -400,6 +404,8 @@ public class JideTitledBorder extends AbstractBorder {
 
     /**
      * Returns the title-position of the titled border.
+     * 
+     * @return the title position
      */
     public int getTitlePosition() {
         return titlePosition;
@@ -407,13 +413,17 @@ public class JideTitledBorder extends AbstractBorder {
 
     /**
      * Returns the title-justification of the titled border.
-     */
+      * 
+     * @return the title justification
+    */
     public int getTitleJustification() {
         return titleJustification;
     }
 
     /**
      * Returns the title-font of the titled border.
+     * 
+     * @return the title font
      */
     public Font getTitleFont() {
         return titleFont;
@@ -421,6 +431,8 @@ public class JideTitledBorder extends AbstractBorder {
 
     /**
      * Returns the title-color of the titled border.
+     * 
+     * @return the title color
      */
     public Color getTitleColor() {
         return titleColor;
@@ -430,6 +442,8 @@ public class JideTitledBorder extends AbstractBorder {
 
     /**
      * Sets the title of the titled border. param title the title for the border
+     * 
+     * @param title the title
      */
     public void setTitle(String title) {
         this.title = title;
@@ -509,6 +523,7 @@ public class JideTitledBorder extends AbstractBorder {
      * Returns the minimum dimensions this border requires in order to fully display the border and title.
      *
      * @param c the component where this border will be drawn
+     * @return the minimum dimension
      */
     public Dimension getMinimumSize(Component c) {
         Insets insets = getBorderInsets(c);

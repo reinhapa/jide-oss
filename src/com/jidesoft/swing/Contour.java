@@ -13,7 +13,7 @@ import java.awt.*;
 /**
  * A <code>Contour</code> is a lightweight component which only paints the outline of component when dragged. It is also
  * used as a placeholder for some information during dragging.
- * <p/>
+ * <p>
  * Notes: this class has to be public so that JIDE can use it in different packages, not meant to release to end user as
  * a public API. JIDE will not guarantee the class will remain as it is.
  */
@@ -93,7 +93,7 @@ public class Contour extends JComponent implements IContour {
      * When you dragged a component, several other components could be dragged. For example, if user drags on title bar
      * of FrameContainer, all components in the FrameContainer are considered as dragged. If user drags on tab, only
      * selected one is dragged.
-     * <p/>
+     * <p>
      * <code>true</code> if all dragged components are affected; <code>false</code> otherwise.
      */
     private boolean _single;
@@ -166,9 +166,9 @@ public class Contour extends JComponent implements IContour {
     }
 
     /**
-     * Paint a rectangle or tab-shape using <code>DOTTED_STROKE<code> with width of <code>WIDTH<code>.
+     * Paint a rectangle or tab-shape using <code>DOTTED_STROKE</code> with width of <code>WIDTH</code>.
      *
-     * @param g
+     * @param g the graphics object
      */
     @Override
     public void paint(Graphics g) {
@@ -348,7 +348,7 @@ public class Contour extends JComponent implements IContour {
 
     /**
      * Overwrite setBounds so that width and height are always even.
-     * <p/>
+     * <p>
      * It looks ugly for either dimension is odd when painting with <code>DOTTED_STROKE</code>
      *
      * @param x      the new <i>x</i>-coordinate of this component
@@ -445,7 +445,7 @@ public class Contour extends JComponent implements IContour {
     /**
      * Sets the tab height.
      *
-     * @param tabHeight
+     * @param tabHeight the tab height
      */
     public void setTabHeight(int tabHeight) {
         _tabHeight = tabHeight;
@@ -482,7 +482,7 @@ public class Contour extends JComponent implements IContour {
     /**
      * Sets the side of the tab.
      *
-     * @param tabSide
+     * @param tabSide the tab side
      */
     public void setTabSide(int tabSide) {
         _tabSide = tabSide;

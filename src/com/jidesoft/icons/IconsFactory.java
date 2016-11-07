@@ -49,9 +49,9 @@ import java.util.logging.Logger;
  * much easier. </i>
  * <p>
  * If you setup directory structure as above, you can now use IconsFactory to access the images like this.
- * <pre><code>
+ * <pre>
  * ImageIcon icon = IconsFactory.get(Foo.class, "icons/foo.gif");
- * </code></pre>
+ * </pre>
  * IconsFactory will cache the icon for you. So next time if you get the same icon, it will get from cache instead of
  * reading from disk again.
  * <p>
@@ -62,50 +62,50 @@ import java.util.logging.Logger;
  * idea is that you should have one for each functional area so that all your image files can be grouped into each
  * functional area. All images used in that functional area should be put under the folder where this IconsFactory is.
  * Here is an template.
- * <pre><code>
+ * <pre>
  * class TemplateIconsFactory {
  *    public static class Group1 {
  *        public static final String IMAGE1 = "icons/image11.png";
  *        public static final String IMAGE2 = "icons/image12.png";
  *        public static final String IMAGE3 = "icons/image13.png";
  *    }
- * <p>
+ * 
  *    public static class Group2 {
  *        public static final String IMAGE1 = "icons/image21.png";
  *        public static final String IMAGE2 = "icons/image22.png";
  *        public static final String IMAGE3 = "icons/image23.png";
  *    }
- * <p>
+ * 
  *    public static ImageIcon getImageIcon(String name) {
  *        if (name != null)
  *            return IconsFactory.getImageIcon(TemplateIconsFactory.class, name);
  *        else
  *            return null;
  *    }
- * <p>
+ * 
  *    public static void main(String[] argv) {
  *        IconsFactory.generateHTML(TemplateIconsFactory.class);
  *    }
  * }
- * </code></pre>
+ * </pre>
  * In your own IconsFactory, you can further divide images into different groups. The example above has two groups.
  * There is also a convenient method getImageIcon() which takes just the icon name.
  * <p>
  * In the template, we defined the image names as constants. When you have a lot of images, it's hard to remember all of
  * them when writing code. If using the IconsFactory above, you can use
- * <pre><code>
+ * <pre>
  * ImageIcon icon = TemplateIconsFactory.getImageIcon(TemplateIconsFactory.Group1.IMAGE1);
- * </code></pre>
+ * </pre>
  * without saying the actual image file name. With the help of intelli-sense (or code completion) feature in most Java
  * IDE, you will find it is much easier to find the icons you want. You can refer to JIDE Components Developer Guide to
  * see a screenshot of what it looks like in IntelliJ IDEA.
  * <p>
  * You probably also notice this is a main() method in this template. You can run it. When you run, you will see a
  * message printed out like this.
- * <pre><code>
+ * <pre>
  * "File is generated at "... some directory ...\com.jidesoft.icons.TemplateIconsFactory.html".
  * Please copy it to the same directory as TemplateIconsFactory.java"
- * </code></pre>
+ * </pre>
  * if you follow the instruction and copy the html file to the same location as the source code and open the html, you
  * will see the all image files defined in this IconsFactory are listed nicely in the page.
  * <p>
@@ -149,17 +149,17 @@ public class IconsFactory {
      * <p>
      * We used this method to create all the icons we used in JIDE's code. If you ever want to use your own icon instead
      * of JIDE's default icon, you just need to put it onto UIManager. For example, AutoFilterTableHeader uses an icon
-     * on the table header. This is how it was called. <br/> <code> IconsFactory.getImageIcon(AutoFilterTableHeader.class,
+     * on the table header. This is how it was called. <br> <code> IconsFactory.getImageIcon(AutoFilterTableHeader.class,
      * "icons/filterYes_over.png") </code>
      * <p>
      * The key for this icon is "com.jidesoft.grid.AutoFilterTableHeader:icons/filterYes_over.png". So you can call the
-     * code below to register your own icon. <p/> <code> UIManager.put("com.jidesoft.grid.AutoFilterTableHeader:icons/filterYes_over.png",
+     * code below to register your own icon. <p> <code> UIManager.put("com.jidesoft.grid.AutoFilterTableHeader:icons/filterYes_over.png",
      * your_new_icon); </code>
      * <p>
      * If you don't know what key to use, just put a breakpoint at this method, run it to inspect the id variable
      * below.
      *
-     * @param clazz    the Class<?>
+     * @param clazz    the Class&lt;?&gt;
      * @param fileName relative file name
      * @return the ImageIcon
      */
@@ -182,7 +182,7 @@ public class IconsFactory {
     /**
      * Gets ImageIcon by passing class and a relative image file path.
      *
-     * @param clazz    the Class<?>
+     * @param clazz    the Class&lt;?&gt;
      * @param fileName relative file name
      * @return the ImageIcon
      * @throws IOException when image file is not found.
@@ -206,7 +206,7 @@ public class IconsFactory {
     /**
      * Gets a disabled version of ImageIcon by passing class and a relative image file path.
      *
-     * @param clazz    the Class<?>
+     * @param clazz    the Class&lt;?&gt;
      * @param fileName relative file name
      * @return the ImageIcon
      */
@@ -225,7 +225,7 @@ public class IconsFactory {
     /**
      * Gets a brighter ImageIcon by passing class and a relative image file path.
      *
-     * @param clazz    the Class<?>
+     * @param clazz    the Class&lt;?&gt;
      * @param fileName relative file name
      * @return the ImageIcon
      */
@@ -244,7 +244,7 @@ public class IconsFactory {
     /**
      * Gets a brighter ImageIcon by passing class, a relative image file path and a percentage of brightness.
      *
-     * @param clazz    the Class<?>
+     * @param clazz    the Class&lt;?&gt;
      * @param fileName relative file name
      * @param percent  percentage of brightness
      * @return the ImageIcon
@@ -264,7 +264,7 @@ public class IconsFactory {
     /**
      * Gets a tinted ImageIcon by passing class, a relative image file path and a color.
      *
-     * @param clazz    the Class<?>
+     * @param clazz    the Class&lt;?&gt;
      * @param fileName relative file name
      * @param color    the color
      * @return the ImageIcon

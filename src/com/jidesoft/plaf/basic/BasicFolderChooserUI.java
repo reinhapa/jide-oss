@@ -117,7 +117,7 @@ public class BasicFolderChooserUI extends BasicFileChooserUI implements FolderCh
 
     /**
      * Return the default focus component inside the FolderChooser.
-     * <p/>
+     * <p>
      * By default, it is the file system tree.
      *
      * @return the default focus component.

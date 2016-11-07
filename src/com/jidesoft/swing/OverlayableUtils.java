@@ -63,16 +63,16 @@ public class OverlayableUtils {
      * the overlay component doesn't know to repaint immediately. Due to way Swing repaintManager works, there isn't any
      * other better way to solve the issue other than the component has code to trigger the repaint of the overlay
      * component. That's one reason we provide this way to repaint the overlay component easily.
-     * <p/>
+     * <p>
      * See below for an example of how to prepare the component to be ready for the overlayable.
-     * <pre><code>
+     * <pre>
      * public OverlayTextField() {
      * ...
      * public void repaint(long tm, int x, int y, int width, int height) {
      *     super.repaint(tm, x, y, width, height);
      *     OverlayableUtils.repaintOverlayable(this);
      * }
-     * </code></pre>
+     * </pre>
      *
      * @param component the component that has an overlayable.
      */

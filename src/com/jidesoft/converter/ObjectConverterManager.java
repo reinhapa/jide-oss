@@ -20,7 +20,7 @@ import java.util.Date;
  * <code>ObjectConverterManager</code> is a center place to register ObjectConverters with a data type and an optional
  * ConverterContext. The ConverterContext is a switch when you need several different converters for the same data type.
  * If you only use one ObjectConverter for a particular data type, you can use null as the ConverterContext.
- * <p/>
+ * <p>
  * <code>ObjectConverterManager</code> is used in many places in JIDE products, especially in JIDE Grids where
  * <code>ContextSensitiveTableModel</code> adds getCellClassAt (the data type) and getConverterContextAt for each cell
  * in a table model. We use both values as the key to look up for the <code>ObjectConverter</code> from
@@ -268,7 +268,7 @@ public class ObjectConverterManager {
      * Sets autoInit to true or false. If autoInit is true, whenever someone tries to call methods like as toString or
      * fromString, {@link #initDefaultConverter()} will be called if it has never be called. By default, autoInit is
      * true.
-     * <p/>
+     * <p>
      * This might affect the behavior if users provide their own converters and want to overwrite default converters. In
      * this case, instead of depending on autoInit to initialize default converters, you should call {@link
      * #initDefaultConverter()} first, then call registerConverter to add your own converters.

@@ -261,7 +261,7 @@ public class ObjectComparatorManager {
      * Sets autoInit to true or false. If autoInit is true, whenever someone tries to call methods like as toString or
      * fromString, {@link #initDefaultComparator()} will be called if it has never be called. By default, autoInit is
      * true.
-     * <p/>
+     * <p>
      * This might affect the behavior if users provide their own comparators and want to overwrite default comparators.
      * In this case, instead of depending on autoInit to initialize default comparators, you should call {@link
      * #initDefaultComparator()} first, then call registerComparator to add your own comparators.

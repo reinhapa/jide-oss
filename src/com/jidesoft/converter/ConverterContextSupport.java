@@ -37,7 +37,7 @@ public interface ConverterContextSupport {
     /**
      * Sets the class of the value.
      *
-     * @param clazz
+     * @param clazz the class of the value
      */
     void setType(Class<?> clazz);
 

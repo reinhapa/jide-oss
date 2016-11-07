@@ -25,8 +25,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * Painter for Office2003 L&F.
- * <p/>
+ * Painter for Office2003 L&amp;F.
+ * <p>
  * Please note, this class is an internal class which is meant to be used by other JIDE classes only. Future version
  * might break your build if you use it.
  */

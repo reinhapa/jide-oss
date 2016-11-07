@@ -14,18 +14,16 @@ import java.util.logging.Logger;
  * AbstractPage is an abstract base class that provides functionality to defer populating a JPanel object until it is
  * actually viewed. This is very useful when using CardLayout and tab panel views which have several pages. Delaying the
  * construction means it will start up fast. Sometimes delay means never.
- * <p/>
+ * <p>
  * If subclasses choose to override any of the following methods, it is their responsibility to ensure their overridden
  * methods call the parent's method first. The methods are:
- * <p/>
  * <ul> <li>public void paint (Graphics) <li>public void paintComponents(Graphics) <li>public void paintAll (Graphics)
  * <li>public void repaint () <li>public void repaint (long) <li>public void repaint (int, int, int, int) <li>public
  * void repaint (long, int, int, int, int) <li>public void update (Graphics) </ul>
- * <p/>
- * <p/>
+ * <p>
  * By default, if any of the methods is called, the panel will be populated. However user can setInvokeCondition() to
  * customize when the panel be populated. See javadoc of setInvokeContion() for details.
- * <p/>
+ * <p>
  * The idea of the lazy panel is from an article on JavaWorld at http://www.javaworld.com/javatips/jw-javatip90_p.html.
  * The credit should be given to Mark Roulo. We modified the code he provided in the article to add additional things as
  * we need. Things added are <ul> <li> Added setInvokeCondition() <li> Added addPageListener(), removePageListener() etc

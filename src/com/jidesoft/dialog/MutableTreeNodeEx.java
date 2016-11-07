@@ -47,7 +47,7 @@ class MutableTreeNodeEx extends DefaultMutableTreeNode {
 
     /**
      * Set the flag indicating if the node is enabled.
-     * <p/>
+     * <p>
      * By default, the value is true just like the other normal DefaultMutableTreeNode.
      *
      * @param enabled the flag

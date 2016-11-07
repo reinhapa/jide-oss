@@ -48,7 +48,7 @@ public class RegistrationEvent extends EventObject {
     /**
      * Create a REGISTRATION_CLEARED event.
      *
-     * @param source
+     * @param source the source
      * @param id     must be equal to REGISTRATION_CLEARED.
      */
     public RegistrationEvent(Object source, int id) {
@@ -64,6 +64,9 @@ public class RegistrationEvent extends EventObject {
      *
      * @param source the <code>Registration</code> object that originated the event
      * @param id     an integer indicating the type of event
+     * @param object the object
+     * @param key the key
+     * @param context the context
      */
     public RegistrationEvent(Object source, int id, Object object, Object key, Object context) {
         super(source);

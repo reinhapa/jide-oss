@@ -18,7 +18,7 @@ import java.util.Map;
 
 /**
  * <code>JideSplitPane</code> is used to divide multiple <code>Component</code>s.
- * <p/>
+ * <p>
  * These <code>Component</code>s in a split pane can be aligned left to right using
  * <code>JideSplitPane.HORIZONTAL_SPLIT</code>, or top to bottom using <code>JideSplitPane.VERTICAL_SPLIT</code>.
  */
@@ -181,7 +181,7 @@ public class JideSplitPane extends JPanel implements ContainerListener, Componen
 
     /**
      * Get the step size while dragging the divider.
-     * <p/>
+     * <p>
      * The default value of the step size is 0, which means no constraints on the dragging position
      *
      * @return the step size.
@@ -192,7 +192,7 @@ public class JideSplitPane extends JPanel implements ContainerListener, Componen
 
     /**
      * Set the step size while dragging the divider.
-     * <p/>
+     * <p>
      * The step size cannot be negative.
      *
      * @param dividerStepSize the step size
@@ -1226,7 +1226,7 @@ public class JideSplitPane extends JPanel implements ContainerListener, Componen
 
     /**
      * Get the flag indicating if dragging the divider could resize the panes.
-     * <p/>
+     * <p>
      * By default, the value is true for JideSplitPane. You could set it to false if you don't like it.
      *
      * @return the flag.
@@ -1354,8 +1354,8 @@ public class JideSplitPane extends JPanel implements ContainerListener, Componen
 
     /**
      * Sets the value of the <code>oneTouchExpandable</code> property. If <code>true</code>, the <code>JSplitPane</code>
-     * will display a UI widget on the divider to quickly expand/collapse the divider.<p> </p> The default value of this
-     * property is <code>false</code>.<p> </p> Please note: Some look and feels might not support one-touch expanding;
+     * will display a UI widget on the divider to quickly expand/collapse the divider.<p> The default value of this
+     * property is <code>false</code>.<p> Please note: Some look and feels might not support one-touch expanding;
      * they will ignore this property.
      *
      * @param oneTouchExpandable <code>true</code> to specify that the split pane should provide a collapse/expand

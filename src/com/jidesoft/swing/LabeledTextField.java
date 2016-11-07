@@ -450,7 +450,7 @@ public class LabeledTextField extends JPanel {
         }
         JTextField textField = getTextField();
         if (textField != null) {
-            // this probably won't work with L&F which ignore the background property like GTK L&F
+            // this probably won't work with L&amp;F which ignore the background property like GTK L&amp;F
             setBackground(textField.getBackground());
             setForeground(textField.getForeground());
         }
@@ -528,10 +528,10 @@ public class LabeledTextField extends JPanel {
     /**
      * Sets the PopupMenuCustomizer. PopupMenuCustomizer can be used to do customize the popup menu for the
      * <code>LabeledTextField</code>.
-     * <p/>
+     * <p>
      * PopupMenuCustomizer has a customize method. The popup menu of this menu will be passed in. You can
      * add/remove/change the menu items in customize method. For example,
-     * <code><pre>
+     * <pre>
      * field.setPopupMenuCustomizer(new LabeledTextField.PopupMenuCustomizer() {
      *     void customize(LabeledTextField field, JPopupMenu menu) {
      *         menu.removeAll();
@@ -539,7 +539,7 @@ public class LabeledTextField extends JPanel {
      *         menu.add(new JMenuItem("..."));
      *     }
      * }
-     * </pre></code>
+     * </pre>
      * If the menu is never used, the two add methods will never be called thus improve the performance.
      *
      * @param customizer the PopupMenuCustomizer

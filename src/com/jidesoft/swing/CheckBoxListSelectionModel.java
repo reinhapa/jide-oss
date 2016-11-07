@@ -37,7 +37,7 @@ public class CheckBoxListSelectionModel extends DefaultListSelectionModel implem
 
     /**
      * Sets the index of the "all" entry in the CheckBoxList.
-     * <p/>
+     * <p>
      * If the CheckBoxList has an "all" entry, check that entry on/off will check/uncheck all other entries. Uncheck any
      * other entry will uncheck the "all" entry.
      *
@@ -157,7 +157,7 @@ public class CheckBoxListSelectionModel extends DefaultListSelectionModel implem
 
     /**
      * Sets the flag indicating if this CheckBoxListSelectionModel should consider the CheckBoxList.ALL item if there is one.
-     * <p/>
+     * <p>
      * By default, the flag is true. If you want to improve the performance and don't have "all" entry, or if you do have
      * an entry similar to "all" entry but want to treat it as a normal entry, please set it to false.
      *

@@ -84,9 +84,9 @@ public class ButtonEvent extends EventObject {
     /**
      * Creates a ButtonEvent with source, id and the button name.
      *
-     * @param source
-     * @param id
-     * @param buttonName
+     * @param source the event source
+     * @param id the event id
+     * @param buttonName the button name
      */
     public ButtonEvent(Object source, int id, String buttonName) {
         super(source);
@@ -99,10 +99,10 @@ public class ButtonEvent extends EventObject {
      * Creates a ButtonEvent with source, id, the button name and a user object. User object is required for
      * CHANGE_BUTTON_TEXT and CHANGE_BUTTON_TOOLTIP event.
      *
-     * @param source
-     * @param id
-     * @param buttonName
-     * @param userObject
+     * @param source the event source
+     * @param id the event id
+     * @param buttonName the button name
+     * @param userObject the user object
      */
     public ButtonEvent(Object source, int id, String buttonName, String userObject) {
         super(source);
@@ -139,7 +139,7 @@ public class ButtonEvent extends EventObject {
     /**
      * Sets the event id.
      *
-     * @param id
+     * @param id the event id
      */
     public void setID(int id) {
         _id = id;
@@ -157,7 +157,7 @@ public class ButtonEvent extends EventObject {
     /**
      * Sets the button name.
      *
-     * @param buttonName
+     * @param buttonName the button name
      */
     public void setButtonName(String buttonName) {
         _buttonName = buttonName;
@@ -175,7 +175,7 @@ public class ButtonEvent extends EventObject {
     /**
      * Sets the user object.
      *
-     * @param userObject
+     * @param userObject the user object
      */
     public void setUserObject(String userObject) {
         _userObject = userObject;

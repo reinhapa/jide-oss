@@ -13,21 +13,21 @@ import java.util.List;
 /**
  * <code>StyledLabelBuilder</code> is a quick way to define StyledLabel. It provides two ways to handle the creation and
  * modification of StyleLabels.
- * <p/>
+ * <p>
  * The first is to use it as a builder (thus the name). This way is preferred if you want to create a StyledLabel with a
  * specific format and partially generic content. Example:
- * <pre><code>StyledLabel label = new StyledLabelBuilder()
+ * <pre>StyledLabel label = new StyledLabelBuilder()
  * 	.add(file.getName())
  * 	.add(" (", Font.BOLD)
  * 	.add(file.getPath(), "italic") // using annotation style - see section two for information about annotations
  * 	.add(")", Font.BOLD)
- * 	.createLabel();</code></pre>
+ * 	.createLabel();</pre>
  * This code would be used to create a label like "something.txt (/temp/something.txt)" with some styling (the braces
  * would be bold, the path would be italic). In case you find yourself reusing a specific style quite often in such a
  * label you might consider to create a style for it. This can be done with the help of the {@link #register}-methods.
  * As an example, the code above could be rewritten like this (though it only pays off when used for creation of longer
  * styles):
- * <pre><code>StyledLabelBuilder builder = new StyledLabelBuilder()
+ * <pre>StyledLabelBuilder builder = new StyledLabelBuilder()
  * 	.register("OPERATOR", Font.BOLD, new Color(0x000052)) // use parameters
  * 	.register("PATH", "italic, f:#0000CD"); // or style annotations
  * StyledLabel label = builder
@@ -35,31 +35,31 @@ import java.util.List;
  * 	.add(" (", "OPERATOR")
  * 	.add(file.getPath(), "PATH,underlined") // use a style + style annotation
  * 	.add(")", "OPERATOR")
- * 	.createLabel();</code></pre>
+ * 	.createLabel();</pre>
  * Note that we're using different font colors this time. It pays off as soon as you want to modify a specific group of
  * text parts or as your styles start to get more complicated. The {@link #clear()}-method is very useful if you want to
  * use these styles. Instead of re-creating a new builder each time, you can use the clear-method to clear the internal
  * buffer of text without removing the previously defined styles.
- * <p/>
+ * <p>
  * Let's have an example (we're going to reuse the code from above!):
- * <pre><code>builder.clear();
+ * <pre>builder.clear();
  * builder
  * 	.add(file.getName())
  * 	.add(" (", "OPERATOR")
  * 	.add(file.getPath(), "PATH")
  * 	.add(")", "OPERATOR")
- *  .configure(label);</code></pre>
- * <p/>
+ *  .configure(label);</pre>
+ * <p>
  * Please be noted that you need escape the ":" in your text string when necessary. For example, "{00:00:00:BOLD}" need
  * to be changed as "{00\\:00\\:00:BOLD}.
- * <p/>
+ * <p>
  * If we were using Java 5, we could also do this:
- * <pre><code>// no need to call {@link #clear()} this time
- * builder.configure(label, String.format("%s ({%s:PATH})", file.getName(), file.getPath()));</code></pre>
- * <p/>
+ * <pre>// no need to call {@link #clear()} this time
+ * builder.configure(label, String.format("%s ({%s:PATH})", file.getName(), file.getPath()));</pre>
+ * <p>
  * Each of the {@link #add} and {@link #register} methods is the same as using the corresponding StyleRange-constructor
  * directly (except that you don't have to care about its start and length).
- * <p/>
+ * <p>
  * The second, even more advanced, way to use this class is in combination with an annotated string. Using the static
  * {@link #setStyledText} or {@link #createStyledLabel} methods you can create a fully styled label from just on string.
  * This is ideal if you need the string to be configurable or locale-specific. The usage is even more easy than the
@@ -78,15 +78,15 @@ import java.util.List;
  * its HTML name (as I did in the above example) or any of these: f:(0,0,255) f:#00F l:#0000FF l:0x0000FF The "#00F"
  * notation is just like it is in CSS. It is the same as if you had written "#0000FF". You can get and modify the map of
  * color-names the parser is using with the static {@link #getColorNamesMap()}-method.
- * <p/>
+ * <p>
  * You saw some styles above. Here is a complete list of styles and its shortcut.
- * <p/>
+ * <p>
  * <b>Font styles</b> <ul> <li>plain or p <li>bold or b <li>italic or i <li>bolditalic or bi </ul> <b>Additional
  * styles</b> <ul> <li>strike or s <li>doublestrike or ds <li>waved or w <li>underlined or u <li>dotted or d
  * <li>superscript or sp <li>subscript or sb </ul> <b>Global flags</b>: You can enable global flags by using "@" at the
  * end of the String. <ul> <li>rows or row or r: it can take up to three parameters separately ":". The first one is
  * preferred rows, the second one is minimum rows and the last one is the maximum rows. </ul>
- * <p/>
+ * <p>
  *
  * @author Patrick Gotthardt
  */

@@ -22,22 +22,22 @@ import java.util.*;
  * MultiplePageDialogPane is a StandardDialogPane which can have multiple AbstractDialogPages. You can choose one from
  * four predefined styles of how to change the page visibility. Those four styles are TAB_STYLE, ICON_STYLE, LIST_STYLE
  * and TREE_STYLE.
- * <p/>
+ * <p>
  * To use this class, just create a PageList of AbstractDialogPage and call setPageList() to set to this dialog. Based
  * on the style, the class will automatically layout those pages correctly and hook up actions to switch based on user
  * selection.
- * <p/>
+ * <p>
  * As AbstractDialogPage extends AbstractPage, so you can always use PageListener to decide what to do when page is
  * opened, closing, closed, activated or deactivated.
- * <p/>
+ * <p>
  * We automatically create a button panel which have three button - OK, Cancel and Apply. The ButtonPanel listens to
  * ButtonEvent from all the pages. You can simply fireButtonEvent in the page to change the state of those buttons. Or
  * if you want to create your own button panel, just override createButtonPanel() method.
- * <p/>
+ * <p>
  * If you choose LIST_STYLE and TREE_STYLE, you can set your own ListCellRenderer and TreeCellRenderer. Just call
  * setListCellRenderer() and setTreeCellRenderer(). The value passed in the renderer is an instance of
  * AbstractDialogPage associated with that list row or tree node.
- * <p/>
+ * <p>
  * <code>MultiplePageDialogPane</code> has lazy loading feature. So when you are done setup the page list, you need to
  * call {@link #initComponents()} to initialize everything. This method will be called automatically if the dialog pane
  * is added to StandardDialog.
@@ -106,7 +106,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
      * Creates a non-modal MultiplePageDialog without a title and without a specified <code>Frame</code> owner.  A
      * shared, hidden frame will be set as the owner of the dialog. By default TAB_STYLE is used.
      *
-     * @throws java.awt.HeadlessException
+     * @throws java.awt.HeadlessException in case of an error
      */
     public MultiplePageDialogPane() throws HeadlessException {
         this(TAB_STYLE);
@@ -246,7 +246,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
     /**
      * Changes the default cancel action.
      *
-     * @param cancelAction
+     * @param cancelAction the cancel action
      */
     public void setCancelAction(AbstractAction cancelAction) {
         if (cancelAction == null) {
@@ -273,7 +273,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
     /**
      * Changes the default OK action.
      *
-     * @param okAction
+     * @param okAction the OK action
      */
     public void setOKAction(AbstractAction okAction) {
         if (okAction == null) {
@@ -454,7 +454,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
     /**
      * Sets the page list of this dialog. User must call this method before the dialog is set visible.
      *
-     * @param pageList
+     * @param pageList thw page list
      */
     public void setPageList(PageList pageList) {
         _pageList = pageList;
@@ -462,6 +462,8 @@ public class MultiplePageDialogPane extends StandardDialogPane {
 
     /**
      * Gets the page list of this dialog.
+     * 
+     * @return the page list
      */
     public PageList getPageList() {
         return _pageList;
@@ -501,7 +503,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
      * If it is any of the other styles, this method will show the page that is already added in a CardLayout in
      * createPagePanel method.
      *
-     * @param currentPage
+     * @param currentPage the corrent page
      */
     protected void showCurrentPage(AbstractDialogPage currentPage) {
         if (currentPage != null) {
@@ -595,13 +597,13 @@ public class MultiplePageDialogPane extends StandardDialogPane {
      * Creates tree that is used in TREE_STYLE dialog's index panel. Below is the code we used. If you just want to have
      * a different cell renderer, you can just call {@link #setTreeCellRenderer(javax.swing.tree.TreeCellRenderer)} to
      * set a new one.
-     * <pre><code>
+     * <pre>
      * UIManager.put("Tree.hash", Color.white);
      * return new JTree(root);
-     * </code></pre>
+     * </pre>
      *
-     * @param root
-     * @return tree
+     * @param root the root tree node
+     * @return tree the tree from the given root
      */
     protected JTree createTree(DefaultMutableTreeNode root) {
         UIManager.put("Tree.hash", Color.white);
@@ -611,7 +613,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
     /**
      * Configure the JTree used in TREE_STYLE dialog. Subclass can override this method to configure the JTree to the
      * way you want. Below is the default implementation of this method.
-     * <code><pre>
+     * <pre>
      * tree.setToggleClickCount(1);
      * tree.setCellRenderer(createTreeCellRenderer());
      * tree.setRootVisible(false);
@@ -621,7 +623,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
      *         if (tree.getSelectionPath() == null) {
      *             return;
      *         }
-     * <p/>
+     * 
      *         DefaultMutableTreeNode treeNode = (DefaultMutableTreeNode)
      * tree.getSelectionPath().getLastPathComponent();
      *         // comment this while block if you want the parent page shows its own page instead
@@ -637,7 +639,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
      *             SwingUtilities.invokeLater(runnable);
      *             treeNode = (DefaultMutableTreeNode) treeNode.getChildAt(0);
      *         }
-     * <p/>
+     * 
      *         if (treeNode != null) {
      *             Object userObject = treeNode.getUserObject();
      *             if (userObject instanceof AbstractDialogPage) {
@@ -646,9 +648,9 @@ public class MultiplePageDialogPane extends StandardDialogPane {
      *         }
      *     }
      * });
-     * </pre></code>
+     * </pre>
      *
-     * @param tree
+     * @param tree the tree component
      */
     protected void configureTree(final JTree tree) {
         tree.setToggleClickCount(1);
@@ -821,14 +823,14 @@ public class MultiplePageDialogPane extends StandardDialogPane {
      * Creates list that is used in LIST_STYLE dialog's index panel. Below is the code we used. If you just want to have
      * a different cell renderer, you can just call {@link #setListCellRenderer(javax.swing.ListCellRenderer)} to set a
      * new one.
-     * <pre><code>
+     * <pre>
      * JList list = new JList(listModel);
      * list.setCellRenderer(createListCellRenderer());
      * return list;
-     * </code></pre>
+     * </pre>
      *
-     * @param listModel
-     * @return list.
+     * @param listModel the list model
+     * @return list new list for the given list model
      */
     protected JList createList(DefaultListModel listModel) {
         JList list = new JList(listModel);
@@ -972,8 +974,8 @@ public class MultiplePageDialogPane extends StandardDialogPane {
     /**
      * Creates the button for each icon.
      *
-     * @param title
-     * @param icon
+     * @param title the button title
+     * @param icon the button icon
      * @return the button
      */
     protected JideButton createIconButton(String title, Icon icon) {
@@ -1041,7 +1043,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
     /**
      * Sets the tree cell renderer that will be used by JTree when the style is TREE_STYLE.
      *
-     * @param treeCellRenderer
+     * @param treeCellRenderer the tree cell renderer
      */
     public void setTreeCellRenderer(TreeCellRenderer treeCellRenderer) {
         _treeCellRenderer = treeCellRenderer;
@@ -1059,7 +1061,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
     /**
      * Sets the list cell renderer that will be used by JList when the style is LIST_STYLE.
      *
-     * @param listCellRenderer
+     * @param listCellRenderer the list cell renderer
      */
     public void setListCellRenderer(ListCellRenderer listCellRenderer) {
         _listCellRenderer = listCellRenderer;
@@ -1103,7 +1105,7 @@ public class MultiplePageDialogPane extends StandardDialogPane {
     /**
      * Sets the initial page title. Initial page is the page that will be selected when the dialog.
      *
-     * @param initialPageTitle
+     * @param initialPageTitle the initial page title
      */
     public void setInitialPageTitle(String initialPageTitle) {
         _initialPageTitle = initialPageTitle;

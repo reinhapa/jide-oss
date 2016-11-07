@@ -12,9 +12,9 @@ import java.text.ParseException;
 /**
  * Default object converter. It converts an object to a String using either toString()
  * or the AbstractFormatter specified in the ConverterContex's userObject.
- * <p/>
+ * <p>
  * For example,
- * <code><pre>
+ * <pre>
  *  MaskFormatter mask = null;
  *  try {
  *      mask = new MaskFormatter("###-##-####");
@@ -23,7 +23,7 @@ import java.text.ParseException;
  *      e.printStackTrace();
  *  }
  *  ConverterContext ssnConverterContext = new ConverterContext("SSN", mask);
- * </pre></code>
+ * </pre>
  * If so, it will use the MaskFormatter's stringToValue and valueToString methods to do the conversion.
  */
 public class DefaultObjectConverter implements ObjectConverter {

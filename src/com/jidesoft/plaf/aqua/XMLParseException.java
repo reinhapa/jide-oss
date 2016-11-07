@@ -32,7 +32,7 @@ package com.jidesoft.plaf.aqua;
 
 /**
  * An XMLParseException is thrown when an error occurs while parsing an XML string.
- * <p/>
+ * <p>
  * $Revision: 1.4 $<BR> $Date: 2002/03/24 10:27:59 $<P>
  *
  * @author Marc De Scheemaecker
@@ -51,7 +51,7 @@ class XMLParseException
     /**
      * The line number in the source code where the error occurred, or <code>NO_LINE</code> if the line number is
      * unknown.
-     * <p/>
+     * <p>
      * <dl><dt><b>Invariants:</b></dt><dd> <ul><li><code>lineNr &gt 0 || lineNr == NO_LINE</code> </ul></dd></dl>
      */
     private int lineNr;
@@ -62,9 +62,9 @@ class XMLParseException
      *
      * @param name    The name of the element where the error is located.
      * @param message A message describing what went wrong.
-     *                <p/>
+     *                <p>
      *                </dl><dl><dt><b>Preconditions:</b></dt><dd> <ul><li><code>message != null</code> </ul></dd></dl>
-     *                <p/>
+     *                <p>
      *                <dl><dt><b>Postconditions:</b></dt><dd> <ul><li>getLineNr() => NO_LINE </ul></dd></dl><dl>
      */
     public XMLParseException(String name,
@@ -83,10 +83,10 @@ class XMLParseException
      * @param name    The name of the element where the error is located.
      * @param lineNr  The number of the line in the input.
      * @param message A message describing what went wrong.
-     *                <p/>
+     *                <p>
      *                </dl><dl><dt><b>Preconditions:</b></dt><dd> <ul><li><code>message != null</code> <li><code>lineNr
      *                &gt; 0</code> </ul></dd></dl>
-     *                <p/>
+     *                <p>
      *                <dl><dt><b>Postconditions:</b></dt><dd> <ul><li>getLineNr() => lineNr </ul></dd></dl><dl>
      */
     public XMLParseException(String name,

@@ -18,7 +18,7 @@ import java.awt.event.ItemListener;
 
 /**
  * An implementation of a two-state JideButton.
- * <p/>
+ * <p>
  * <strong>Warning:</strong> {@code SplitButtonGroup} has to be used in place of {@code ButtonGroup} for {@code
  * JideToggleSplitButton}s.
  */
@@ -72,6 +72,7 @@ public class JideToggleSplitButton extends JideSplitButton implements Accessible
     /**
      * Creates a toggle button where properties are taken from the Action supplied.
      *
+     * @param a the action
      * @since 1.3
      */
     public JideToggleSplitButton(Action a) {
@@ -144,6 +145,8 @@ public class JideToggleSplitButton extends JideSplitButton implements Accessible
      * Button subclasses that support mirroring the selected state from
      * the action should override this to return true.  AbstractButton's
      * implementation returns false.
+     * 
+     * @return <code>false</code> as default
      */
     protected boolean shouldUpdateSelectedStateFromAction() {
         return true;
@@ -170,10 +173,10 @@ public class JideToggleSplitButton extends JideSplitButton implements Accessible
 
     /**
      * The ToggleButton model
-     * <p/>
+     * <p>
      * <strong>Warning:</strong> Serialized objects of this class will not be compatible with future Swing releases. The
      * current serialization support is appropriate for short term storage or RMI between applications running the same
-     * version of Swing.  As of 1.4, support for long term storage of all JavaBeans<sup><font size="-2">TM</font></sup>
+     * version of Swing.  As of 1.4, support for long term storage of all JavaBeans&trade;
      * has been added to the <code>java.beans</code> package. Please see {@link java.beans.XMLEncoder}.
      */
     public static class ToggleSplitButtonModel extends DefaultSplitButtonModel {
@@ -290,10 +293,10 @@ public class JideToggleSplitButton extends JideSplitButton implements Accessible
     /**
      * This class implements accessibility support for the <code>JToggleButton</code> class.  It provides an
      * implementation of the Java Accessibility API appropriate to toggle button user-interface elements.
-     * <p/>
+     * <p>
      * <strong>Warning:</strong> Serialized objects of this class will not be compatible with future Swing releases. The
      * current serialization support is appropriate for short term storage or RMI between applications running the same
-     * version of Swing.  As of 1.4, support for long term storage of all JavaBeans<sup><font size="-2">TM</font></sup>
+     * version of Swing.  As of 1.4, support for long term storage of all JavaBeans&trade;
      * has been added to the <code>java.beans</code> package. Please see {@link java.beans.XMLEncoder}.
      */
     protected class AccessibleJToggleButton extends AccessibleAbstractButton

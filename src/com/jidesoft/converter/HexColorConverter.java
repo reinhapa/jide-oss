@@ -33,9 +33,9 @@ public class HexColorConverter extends ColorConverter {
 
     /**
      * Get the flag if this converter should consider alpha value.
-     * <p/>
+     * <p>
      * If you use default constructor, the default value of this flag is false.
-     * <p/>
+     * <p>
      *
      * @return true if this converter should consider alpha value.
      *
@@ -47,7 +47,7 @@ public class HexColorConverter extends ColorConverter {
 
     /**
      * Set the flag if this converter should consider alpha value.
-     * <p/>
+     * <p>
      *
      * @param alphaIncluded the flag if this converter should consider alpha value.
      * @see #isAlphaIncluded()

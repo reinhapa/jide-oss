@@ -295,7 +295,7 @@ public class SimpleScrollPane extends JScrollPane implements ChangeListener, Mou
     /**
      * Creates the scroll button. You can override this method to change the attributes on the button. For example, you
      * can do this to create a bigger scroll button.
-     * <code><pre>
+     * <pre>
      * SimpleScrollPane pane = new SimpleScrollPane(){
      *     protected AbstractButton createScrollButton(int type) {
      *         AbstractButton scrollButton = super.createScrollButton(type);
@@ -303,7 +303,7 @@ public class SimpleScrollPane extends JScrollPane implements ChangeListener, Mou
      *         return scrollButton;
      *     }
      * };
-     * </pre></code>
+     * </pre>
      *
      * @param type the type of the scroll button. It could be {@link javax.swing.SwingConstants#NORTH}, {@link
      *             javax.swing.SwingConstants#SOUTH}, {@link javax.swing.SwingConstants#WEST} or {@link

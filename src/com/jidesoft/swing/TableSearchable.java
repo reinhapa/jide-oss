@@ -18,36 +18,36 @@ import java.beans.PropertyChangeListener;
 /**
  * <code>TableSearchable</code> is an concrete implementation of {@link Searchable} that enables the search function in
  * JTable. <p>It's very simple to use it. Assuming you have a JTable, all you need to do is to call
- * <code><pre>
+ * <pre>
  * JTable table = ....;
  * TableSearchable searchable = new TableSearchable(table);
- * </pre></code>
+ * </pre>
  * Now the JTable will have the search function.
- * <p/>
+ * <p>
  * As JTable is a two dimension data, the search is a little different from JList and JTree which both have one
  * dimension data. So there is a little work you need to do in order to convert from two dimension data to one dimension
  * data. We use the selection mode to determine how to convert. There is a special property called mainIndex. You can
  * set it using setMainIndex(). If the JTable is in row selection mode, mainIndex will be the column that you want
  * search at. Please note you can change mainIndex at any time.
- * <p/>
+ * <p>
  * On the other hand, if the JTable is in column selection mode, mainIndex will be the row that you want search at.
  * There is one more case when cell selection is enabled. In this case, mainIndex will be ignore; all cells will be
  * searched.
- * <p/>
+ * <p>
  * In three cases above, the keys for find next and find previous are different too. In row selection mode, up/down
  * arrow are the keys. In column selection mode, left/right arrow are keys. In cell selection mode, both up and left
  * arrow are keys to find previous occurrence, both down and right arrow are keys to find next occurrence.
- * <p/>
+ * <p>
  * In addition, you might need to override convertElementToString() to provide you own algorithm to do the conversion.
- * <code><pre>
+ * <pre>
  * JTable table = ....;
  * TableSearchable searchable = new TableSearchable(table) {
  *      protected String convertElementToString(Object object) {
  *          ...
  *      }
  * };
- * </pre></code>
- * <p/>
+ * </pre>
+ * <p>
  * Additional customization can be done on the base Searchable class such as background and foreground color,
  * keystrokes, case sensitivity,
  */

@@ -26,8 +26,8 @@ public class SearchableEvent extends AWTEvent {
     /**
      * Creates a <code>SearchableEvent</code>.
      *
-     * @param source
-     * @param id
+     * @param source the source
+     * @param id the id
      */
     public SearchableEvent(Searchable source, int id) {
         super(source, id);
@@ -36,9 +36,9 @@ public class SearchableEvent extends AWTEvent {
     /**
      * Creates a <code>SearchableEvent</code>. The searching text is the text that is being searched for.
      *
-     * @param source
-     * @param id
-     * @param searchingText
+     * @param source the source
+     * @param id the id
+     * @param searchingText the search text
      */
     public SearchableEvent(Object source, int id, String searchingText) {
         super(source, id);

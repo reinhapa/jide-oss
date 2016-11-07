@@ -76,11 +76,11 @@ public class StyledListCellRenderer extends StyledLabel
     /**
      * Overrides this method to customize the styled label.
      *
-     * @param list
-     * @param value
-     * @param index
-     * @param isSelected
-     * @param cellHasFocus
+     * @param list the list component
+     * @param value the value
+     * @param index the index
+     * @param isSelected <code>true</code> if selected, <code>false</code> otherwise
+     * @param cellHasFocus <code>true</code> if cell has focus, <code>false</code> otherwise
      */
     protected void customizeStyledLabel(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
         clearStyleRanges();
@@ -232,10 +232,10 @@ public class StyledListCellRenderer extends StyledLabel
      * A subclass of DefaultListCellRenderer that implements UIResource. DefaultListCellRenderer doesn't implement
      * UIResource directly so that applications can safely override the cellRenderer property with
      * DefaultListCellRenderer subclasses.
-     * <p/>
+     * <p>
      * <strong>Warning:</strong> Serialized objects of this class will not be compatible with future Swing releases. The
      * current serialization support is appropriate for short term storage or RMI between applications running the same
-     * version of Swing.  As of 1.4, support for long term storage of all JavaBeans<sup><font size="-2">TM</font></sup>
+     * version of Swing.  As of 1.4, support for long term storage of all JavaBeans&trade;
      * has been added to the <code>java.beans</code> package. Please see {@link java.beans.XMLEncoder}.
      */
     public static class UIResource extends StyledListCellRenderer

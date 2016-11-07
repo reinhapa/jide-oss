@@ -15,23 +15,21 @@ import java.beans.PropertyChangeListener;
 /**
  * In JDK6, Swing adds three new properties on Action class: SELECTED_KEY, DISPLAYED_MNEMONIC_INDEX_KEY and LARGE_ICON. You can find more information at
  * http://weblogs.java.net/blog/zixle/archive/2005/11/changes_to_acti.html
- * <p/>
+ * <p>
  * However, for users who are still using JDK5, you are out of luck. In this class, we provide a simple way to use those new properties
  * on JDK5.
- * <p/>
+ * <p>
  * First of all, you need to call this method.
- * <p/>
- * <code><pre>
+ * <pre>
  * Action action = new AbstractAction("Text") {...};
  * JButton button = new JButton(action);
  * ActionSupportForJDK5.install(button);
- * </pre></code>
- * <p/>
+ * </pre>
  * When you about to change the selected state of action, you call ActionSupportForJDK5.setActionSelected(action, selected). The selected value could
  * be true or false. This call will automatically make the button selected or not selected.
- * <p/>
+ * <p>
  * There are also setDisplayedMnemonicIndex and setLargeIcon methods on ActionSupportForJDK5 to the other two new properties.
- * <p/>
+ * <p>
  * Last but not least, if you don't use the button anymore, it is a good practice to call ActionSupportForJDK5.uninstall to remove the installed listeners.
  */
 public class ActionSupportForJDK5 {

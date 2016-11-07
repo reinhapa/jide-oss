@@ -25,19 +25,19 @@ import java.util.Vector;
  * original submitter, you will immediately notice the tree node disappeared when you click on the tree nodes. This bug
  * is actually one of the main reasons we decided to create StyledLabel. JTextPane is powerful and can display text in
  * different color. But in the cases like cell renderer, JTextPane is obviously an overkill.
- * <p/>
+ * <p>
  * StyledLabel sits between JLabel and JTextPane and provides a very simple and fast way to display text in different
  * color and style. It can also support decorations using all kinds of line styles.
- * <p/>
+ * <p>
  * All the methods on JLabel still work as before. The methods added in StyledLabel are several methods for StyleRange,
  * such as {@link #addStyleRange(StyleRange)}, {@link #setStyleRanges(StyleRange[])}, {@link
  * #clearStyleRange(StyleRange)}, and {@link #clearStyleRanges()}.
- * <p/>
+ * <p>
  * This is one thing about StyleRange that you should be aware of, which could be considered as a future enhancement
  * item, is that the StyleRanges can't overlap with each other. For example, if you defined a StyleRange that covers
  * from index 0 to index 3, you can't define any other StyleRange that overlaps with the first one. If you do so, the
  * second StyleRange will be ignored.
- * <p/>
+ * <p>
  * We borrowed some ideas from SWT's StyledText when we designed StyledLabel, especially StyleRange concept. Saying
  * that, the features of the two components are not exactly the same since the purpose of the two components are quite
  * different.
@@ -107,7 +107,7 @@ public class StyledLabel extends JLabel {
 
 
     /**
-     * Returns a string that specifies the name of the L&F class that renders this component.
+     * Returns a string that specifies the name of the L&amp;F class that renders this component.
      *
      * @return the string "StyledLabelUI"
      *
@@ -295,9 +295,9 @@ public class StyledLabel extends JLabel {
 
     /**
      * Sets the default row count to wrap the {@link StyledLabel}.
-     * <p/>
+     * <p>
      * By default, the value is 0. Any non-positive value is deemed as not configured.
-     * <p/>
+     * <p>
      * This has lower priority than {@link #setPreferredWidth(int)}. If preferred width is set, this flag does not take
      * effect.
      *
@@ -322,7 +322,7 @@ public class StyledLabel extends JLabel {
 
     /**
      * Sets the gap pixels between rows.
-     * <p/>
+     * <p>
      * By default, the value is 0.
      *
      * @param rowGap the gap pixels.
@@ -344,7 +344,7 @@ public class StyledLabel extends JLabel {
 
     /**
      * Sets the maximum rows possible after wrapping.
-     * <p/>
+     * <p>
      * By default, the value is 0. Any non-positive value is deemed as not configured.
      *
      * @param maxRows the maximum rows
@@ -367,7 +367,7 @@ public class StyledLabel extends JLabel {
 
     /**
      * Sets the minimum rows possible after wrapping.
-     * <p/>
+     * <p>
      * By default, the value is 0. Any non-positive value is deemed as not configured.
      *
      * @param minRows the minimum rows

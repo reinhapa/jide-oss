@@ -21,7 +21,7 @@ import java.util.Locale;
 
 /**
  * <code>JideOptionPane</code> is an enhanced version of JOptionPane.
- * <p/>
+ * <p>
  * This component is still in beta, thus we didn't include the UIDefault needed by this component into
  * LookAndFeelFactory by default. If you want to use it, please refer to JideOptionPaneDemo's getDemoPanel method where
  * we add all necessary UIDefaults using UIDefaultCustomizer.
@@ -199,6 +199,7 @@ public class JideOptionPane extends JOptionPane {
      * means it is centered on the screen.
      *
      * @param message the <code>Object</code> to display
+     * @return user's input, or <code>null</code> meaning the user canceled the input
      *
      * @throws java.awt.HeadlessException if <code>GraphicsEnvironment.isHeadless</code> returns <code>true</code>
      * @see java.awt.GraphicsEnvironment#isHeadless
@@ -215,6 +216,7 @@ public class JideOptionPane extends JOptionPane {
      *
      * @param message               the <code>Object</code> to display
      * @param initialSelectionValue the value used to initialize the input field
+     * @return user's input, or <code>null</code> meaning the user canceled the input
      *
      * @since 1.4
      */
@@ -229,6 +231,7 @@ public class JideOptionPane extends JOptionPane {
      *
      * @param parentComponent the parent <code>Component</code> for the dialog
      * @param message         the <code>Object</code> to display
+     * @return user's input, or <code>null</code> meaning the user canceled the input
      *
      * @throws HeadlessException if <code>GraphicsEnvironment.isHeadless</code> returns <code>true</code>
      * @see java.awt.GraphicsEnvironment#isHeadless
@@ -246,6 +249,7 @@ public class JideOptionPane extends JOptionPane {
      * @param parentComponent       the parent <code>Component</code> for the dialog
      * @param message               the <code>Object</code> to display
      * @param initialSelectionValue the value used to initialize the input field
+     * @return user's input, or <code>null</code> meaning the user canceled the input
      *
      * @since 1.4
      */
@@ -266,6 +270,7 @@ public class JideOptionPane extends JOptionPane {
      * @param messageType     the type of message that is to be displayed: <code>ERROR_MESSAGE</code>,
      *                        <code>INFORMATION_MESSAGE</code>, <code>WARNING_MESSAGE</code>,
      *                        <code>QUESTION_MESSAGE</code>, or <code>PLAIN_MESSAGE</code>
+     * @return user's input, or <code>null</code> meaning the user canceled the input
      *
      * @throws HeadlessException if <code>GraphicsEnvironment.isHeadless</code> returns <code>true</code>
      * @see java.awt.GraphicsEnvironment#isHeadless
@@ -517,10 +522,10 @@ public class JideOptionPane extends JOptionPane {
     /**
      * Brings up a dialog with a specified icon, where the initial choice is determined by the <code>initialValue</code>
      * parameter and the number of choices is determined by the <code>optionType</code> parameter.
-     * <p/>
+     * <p>
      * If <code>optionType</code> is <code>YES_NO_OPTION</code>, or <code>YES_NO_CANCEL_OPTION</code> and the
      * <code>options</code> parameter is <code>null</code>, then the options are supplied by the look and feel.
-     * <p/>
+     * <p>
      * The <code>messageType</code> parameter is primarily used to supply a default icon from the look and feel.
      *
      * @param parentComponent determines the <code>Frame</code> in which the dialog is displayed;  if <code>null</code>,

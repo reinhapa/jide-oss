@@ -25,15 +25,15 @@ import java.util.Locale;
 /**
  * <code>SearchableBar</code> is a convenient component to enable searching feature for components. As long as the
  * component support <code>Searchable</code> feature, it can work with <code>SearchableBar</code>.
- * <p/>
+ * <p>
  * Different from <code>Searchable</code> feature which uses a small popup window to allow user typing in the searching
  * text, <code>SearchableBar</code> provides a full-size panel. Although they both pretty provide the same set of
  * features, they should be used in different cases to achieve the most desirable result.
- * <p/>
+ * <p>
  * First of all, <code>SearchableBar</code> is a lot bigger than <code>Searchable</code>'s popup and need more space on
  * the screen. The component that installs <code>SearchableBar</code> should be large enough. In comparison,
  * <code>Searchable</code> can be installed on components of any size as it's a floating popup.
- * <p/>
+ * <p>
  * Secondly, <code>SearchableBar</code> can be set visible all the time or can be set visible by a keystroke and stay
  * visible unless user explicitly hides it. If your user is not computer savvy, <code>SearchableBar</code> is more
  * appropriate because user can see searching feature very easily. <code>SearchableBar</code> can also be a better
@@ -42,31 +42,30 @@ import java.util.Locale;
  * will hide the popup. For computer savvy it is very helpful but it could be hard for non-computer savvy to
  * "understand" it. A good example is IntelliJ IDEA heavily uses Searchable popup because the users are all Java
  * developers. Firefox, on the other hand, uses SearchableBar because the users are just regular computer users.
- * <p/>
+ * <p>
  * Although appearance wise, these two are very different, they both based on {@link Searchable} interface. So as
  * developer, both are almost the same. <code>SearchableBar</code> based on <code>Searchable</code>. So if you have an
  * interface of <code>Searchable</code>, all you need is to call
- * <code><pre>
+ * <pre>
  * SearchableBar.install(searchable, KeyStroke.getKeyStroke(KeyEvent.VK_F,
  * KeyEvent.CTRL_DOWN_MASK),
  * new SearchableBar.Installer() {
  *     public void openSearchBar(SearchableBar searchableBar) {
  *        // add code to show search bar
  *     }
- * <p/>
+ *
  *     public void closeSearchBar(SearchableBar searchableBar) {
  *        // add code to close search bar
- * }
- * });
- * </pre></code>
+ *     }
+ * };
+ * </pre>
  * Or if you want fully control the SearchableBar, you can create one using one of its constructors and add to wherever
  * you want.
- * <p/>
+ * <p>
  * There are a few options you can set on <code>SearchableBar</code>. You can set compact or full mode. Compact mode
  * will only use icon for buttons v.s. full mode will use both icon and text for buttons. All buttons on the
  * <code>SearchableBar</code> can be shown/hidden by using {@link #setVisibleButtons(int)} method. You can also set the
  * text field background for mismatch by using {@link #setMismatchForeground(java.awt.Color)}.
- * <p/>
  */
 public class SearchableBar extends JToolBar implements SearchableProvider {
     private Searchable _searchable;
@@ -611,7 +610,7 @@ public class SearchableBar extends JToolBar implements SearchableProvider {
 
     /**
      * Get if the SearchableBar is highlighting all matches.
-     * <p/>
+     * <p>
      * Even you set it to true, after the customer press previous or next button, this flag will be cleared.
      *
      * @return true if all matches are highlighted. Otherwise false.
@@ -872,7 +871,7 @@ public class SearchableBar extends JToolBar implements SearchableProvider {
      * Gets the maximum search history length.
      *
      * @return the maximum search history length.
-     * @see {@link #setMaxHistoryLength(int)}
+     * @see #setMaxHistoryLength(int)
      * @since 3.4.1
      */
     public int getMaxHistoryLength() {
@@ -881,7 +880,7 @@ public class SearchableBar extends JToolBar implements SearchableProvider {
 
     /**
      * Sets the maximum search history length.
-     * <p/>
+     * <p>
      * By default, it's 0, which means there is no history to shown to keep the behavior backward compatibility. To show
      * history with a JComboBox, please use this method to set a positive or negative value. Any negative value means
      * that the history size is unlimited.
@@ -923,10 +922,10 @@ public class SearchableBar extends JToolBar implements SearchableProvider {
 
     /**
      * Sets the flag indicating if the match count should be displayed in the status label.
-     * <p/>
+     * <p>
      * By default, the flag is set to false to keep the original behavior.
      *
-     * @param showMatchCount
+     * @param showMatchCount <code>true</code> to show match count, <code>false</code> otherwise
      * @since 3.5.2
      */
     public void setShowMatchCount(boolean showMatchCount) {
@@ -942,7 +941,7 @@ public class SearchableBar extends JToolBar implements SearchableProvider {
     public interface Installer {
         /**
          * Called to show the SearchableBar so that user can see it.
-         * <p/>
+         * <p>
          * For example, if you want to add a SearchableBar to the south of a JTextArea, you should add JTextArea to the
          * CENTER of a BorderLayout panel. In this method, you add the SearchableBar to the SOUTH of the same
          * BorderLayout panel.
@@ -975,8 +974,8 @@ public class SearchableBar extends JToolBar implements SearchableProvider {
     /**
      * Installs a SearchableBar on a component. This is just a convenient method for you, you can install it in your own
      * code. See below for the actual code we used in this method.
-     * <p/>
-     * <code><pre>
+     * 
+     * <pre>
      * final SearchableBar searchableBar = new SearchableBar(searchable);
      * searchableBar.setInstaller(installer);
      * ((JComponent) searchable.getComponent()).registerKeyboardAction(new AbstractAction() {
@@ -986,7 +985,7 @@ public class SearchableBar extends JToolBar implements SearchableProvider {
      *     }
      * }, keyStroke, JComponent.WHEN_FOCUSED);
      * return searchableBar;
-     * </pre></code>
+     * </pre>
      *
      * @param searchable the searchable
      * @param keyStroke  the key stroke

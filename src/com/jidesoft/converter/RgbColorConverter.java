@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 /**
  * If alpha value is not included, converts Color to/from "XXX, XXX, XXX" format. For example "0, 0, 0" is Color(0, 0,
  * 0) and "255, 0, 255" is Color(255, 0, 255).
- * <p/>
+ * <p>
  * If alpha value is included, converts Color to/from "XXX, XXX, XXX, XXX" format. For example "0, 0, 0, 255" is
  * Color(0, 0, 0, 255) and "255, 0, 255, 100" is Color(255, 0, 255, 100).
  */
@@ -36,9 +36,9 @@ public class RgbColorConverter extends ColorConverter {
 
     /**
      * Get the flag if this converter should consider alpha value.
-     * <p/>
+     * <p>
      * If you use default constructor, the default value of this flag is false.
-     * <p/>
+     * <p>
      *
      * @return true if this converter should consider alpha value.
      *
@@ -50,7 +50,7 @@ public class RgbColorConverter extends ColorConverter {
 
     /**
      * Set the flag if this converter should consider alpha value.
-     * <p/>
+     * <p>
      *
      * @param alphaIncluded the flag if this converter should consider alpha value.
      * @see #isAlphaIncluded()

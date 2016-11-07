@@ -12,20 +12,20 @@ import java.lang.reflect.Array;
 /**
  * A typical way to define a constant is to use int as the value type. For example, in SwingConstants, the following
  * values are defined.
- * <code><pre>
+ * <pre>
  * public static final int CENTER  = 0;
  * public static final int TOP     = 1;
  * public static final int LEFT    = 2;
  * public static final int BOTTOM  = 3;
  * public static final int RIGHT   = 4;
- * </pre></code>
+ * </pre>
  * Before JDK1.5, there is no enum type, so this is one way to define enumeration. When you use it, you just need to
  * define a int field say _locaton and the valid value for _location is one of the values above. If you want to display
  * it in UI and allow user to specify the value of _location, problem comes. You don't want to use 0, 1, 2, 3, 4 as the
  * value doesn't mean anything from user point of view. You want user to be able to use meaningful names such as
  * "Center", "Top", "Left", "Bottom", "Right". Obviously you need a converter here to convert from integer in an enum to
  * string, such as converting from 0 to "Center" and vice verse. That's what <tt>EnumConverter</tt> for.
- * <p/>
+ * <p>
  * Combining with EnumCellConverter, EnumCellEditor, you can easily use combobox to choose value for _location like the
  * example above using meaningful strings.
  */
@@ -39,7 +39,7 @@ public class EnumConverter implements ObjectConverter {
 
     /**
      * The constructor to convert a enum type class.
-     * <p/>
+     * <p>
      * Reflection is used to invoke Enum#getValues(). Please consider make the enum class protected or public if you
      * want to release your version after obfuscated. Otherwise, this constructor may not be able to find correct class
      * method to work.
@@ -247,13 +247,13 @@ public class EnumConverter implements ObjectConverter {
 
     /**
      * Converts an object array to a String array using ObjectConverterManager.
-     * <p/>
+     * <p>
      * This method can be used, for example, for Enum type, to provide a default string representation of the enum
      * values.
-     * <code><pre>
+     * <pre>
      * ObjectConverter converter = new EnumConverter("Rank", Rank.values(),
      * EnumConverter.toStrings(Rank.values()));
-     * </pre></code>
+     * </pre>
      * Of course, you can still define your own string array for the enum values if the default one doesn't work well.
      *
      * @param values the object array.

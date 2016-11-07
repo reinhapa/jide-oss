@@ -18,7 +18,7 @@ import java.awt.geom.AffineTransform;
 
 /**
  * A better ProgressBarUI for indeterminate progress bar.
- * <p/>
+ * <p>
  * <b>Credit:</b> This implementation is based on work from Santhosh Kumar - santhosh@in.fiorano.com.
  */
 

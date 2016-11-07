@@ -15,8 +15,8 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Painter for Xerto L&F.
- * <p/>
+ * Painter for Xerto L&amp;F.
+ * <p>
  * Please note, this class is an internal class which is meant to be used by other JIDE classes only. Future version might break your build if you use it.
  */
 public class XertoPainter extends BasicPainter {

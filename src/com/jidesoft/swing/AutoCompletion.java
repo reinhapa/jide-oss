@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * <code>AutoCompletion</code> is a helper class to make JTextComponent or JComboBox auto-complete based on a list of
  * known items.
- * <p/>
+ * <p>
  * There are three constructors. The simplest one is {@link #AutoCompletion(javax.swing.JComboBox)}. It takes any
  * combobox and make it auto completion. If you are looking for an auto-complete combobox solution, this is all you
  * need. However <code>AutoCompletion</code> can do more than that. There are two more constructors. One is {@link
@@ -34,11 +34,11 @@ import java.util.List;
  * common interface to access the element in JTree, JList or JTable. In the other word, the known list item we used to
  * auto-complete can be got from JTree or JList or even JTable or any other component as long as it has Searchable
  * interface implemented. The last constructor takes any java.util.List and use it as auto completion list.
- * <p/>
+ * <p>
  * The only option available on <code>AutoCompletion</code> is {@link #setStrict(boolean)}. If it's true, it will not
  * allow user to type in anything that is not in the known item list. If false, user can type in whatever he/she wants.
  * If the text can match with a item in the known item list, it will still auto-complete.
- * <p/>
+ * <p>
  *
  * @author Thomas Bierhance
  * @author JIDE Software, Inc.
@@ -552,7 +552,7 @@ public class AutoCompletion {
      * If false, user can type in whatever he/she wants. If the text can match with a item in the known item list, it
      * will still auto-complete.
      *
-     * @param strict
+     * @param strict <code>true</code> to only allow existing values, <code>false</code> otherwise
      */
     public void setStrict(boolean strict) {
         _strict = strict;
@@ -574,7 +574,7 @@ public class AutoCompletion {
      * "AR", if this flag is true, it will auto-completed as "Arial". If false, it will be auto-completed as "ARial". Of
      * course, this flag will only make a difference if Searchable is case insensitive.
      *
-     * @param strictCompletion
+     * @param strictCompletion <code>true</code> to activate exact searching, <code>false</code> otherwise
      */
     public void setStrictCompletion(boolean strictCompletion) {
         _strictCompletion = strictCompletion;

@@ -31,7 +31,7 @@ public class AquaJideUtils extends VsnetLookAndFeelExtension {
     /**
      * Initializes class defaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initClassDefaults(UIDefaults table) {
         VsnetLookAndFeelExtension.initClassDefaults(table);
@@ -70,7 +70,7 @@ public class AquaJideUtils extends VsnetLookAndFeelExtension {
     /**
      * Initializes components defaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initComponentDefaults(UIDefaults table) {
         Toolkit toolkit = Toolkit.getDefaultToolkit();

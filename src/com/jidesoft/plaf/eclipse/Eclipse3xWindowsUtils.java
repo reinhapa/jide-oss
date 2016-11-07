@@ -20,7 +20,7 @@ public class Eclipse3xWindowsUtils extends EclipseWindowsUtils {
     /**
      * Initializes class defaults with menu components UIDefaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initClassDefaultsWithMenu(UIDefaults table) {
         EclipseWindowsUtils.initClassDefaultsWithMenu(table);
@@ -30,7 +30,7 @@ public class Eclipse3xWindowsUtils extends EclipseWindowsUtils {
     /**
      * Initializes class defaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initClassDefaults(UIDefaults table) {
         EclipseWindowsUtils.initClassDefaults(table);
@@ -40,7 +40,7 @@ public class Eclipse3xWindowsUtils extends EclipseWindowsUtils {
     /**
      * Initializes components defaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initComponentDefaults(UIDefaults table) {
         EclipseWindowsUtils.initComponentDefaults(table);
@@ -50,7 +50,7 @@ public class Eclipse3xWindowsUtils extends EclipseWindowsUtils {
     /**
      * Initializes components defaults with menu components UIDefaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initComponentDefaultsWithMenu(UIDefaults table) {
         EclipseWindowsUtils.initComponentDefaultsWithMenu(table);

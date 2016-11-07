@@ -17,7 +17,7 @@ public class NumberComparator implements Comparator<Object> {
 
     /**
      * Constructor.
-     * <p/>
+     * <p>
      * Has protected access to prevent other clients creating instances of the class ... it is stateless so we need only
      * one instance.
      */

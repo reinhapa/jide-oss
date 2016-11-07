@@ -372,7 +372,7 @@ public class EclipseMenuUI extends EclipseMenuItemUI {
     /**
      * Instantiated and used by a menu item to handle the current menu selection from mouse events. A MouseInputHandler
      * processes and forwards all mouse events to a shared instance of the MenuSelectionManager.
-     * <p/>
+     * <p>
      * This class is protected so that it can be subclassed by other look and feels to implement their own mouse
      * handling behavior. All overridden methods should call the parent methods so that the menu selection is correct.
      *
@@ -780,7 +780,7 @@ public class EclipseMenuUI extends EclipseMenuItemUI {
 
     /**
      * Method which renders the text of the current menu item.
-     * <p/>
+     * <p>
      *
      * @param g        Graphics context
      * @param menuItem Current menu item to render
@@ -832,6 +832,8 @@ public class EclipseMenuUI extends EclipseMenuItemUI {
 
     /**
      * Set the temporary flag to indicate if the mouse has entered the menu.
+     * 
+     * @param over <code>true</code> to indicate mouse over, <code>false</code> otherwise
      */
     protected void setMouseOver(boolean over) {
         isMouseOver = over;
@@ -840,6 +842,8 @@ public class EclipseMenuUI extends EclipseMenuItemUI {
 
     /**
      * Get the temporary flag to indicate if the mouse has entered the menu.
+     * 
+     * @return if the mouse has entered the menu
      */
     protected boolean isMouseOver() {
         return isMouseOver;

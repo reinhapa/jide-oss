@@ -25,7 +25,7 @@ import static com.jidesoft.plaf.windows.TMSchema.State.*;
 
 /**
  * Copied from JDK source code and modified to provide additional integration between JIDE components and native windows
- * L&F.
+ * L&amp;F.
  */
 class AnimationController implements ActionListener, PropertyChangeListener {
 
@@ -57,7 +57,7 @@ class AnimationController implements ActionListener, PropertyChangeListener {
     private AnimationController() {
         timer.setRepeats(true);
         timer.setCoalesce(true);
-        //we need to dispose the controller on l&f change
+        //we need to dispose the controller on L&amp;F change
         UIManager.addPropertyChangeListener(this);
     }
 

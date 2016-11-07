@@ -55,7 +55,7 @@ public class MarqueePane extends JScrollPane {
 
     /**
      * Get the scroll frequency which indicating how frequent the Marquee will get repaint.
-     * <p/>
+     * <p>
      * The default value is 100ms.
      *
      * @return the scroll frequency.
@@ -75,7 +75,7 @@ public class MarqueePane extends JScrollPane {
 
     /**
      * Get the scroll amount between two repaints.
-     * <p/>
+     * <p>
      * The default value is 2.
      *
      * @return the step size.
@@ -95,10 +95,10 @@ public class MarqueePane extends JScrollPane {
 
     /**
      * Get the scroll direction.
-     * <p/>
+     * <p>
      * The value could be <code>SCROLL_LEFT</code>, <code>SCROLL_RIGHT</code>, <code>SCROLL_UP</code>,
      * <code>SCROLL_DOWN</code>
-     * <p/>
+     * <p>
      * The default value is <code>SCROLL_LEFT</code>.
      *
      * @return the scroll direction.
@@ -118,7 +118,7 @@ public class MarqueePane extends JScrollPane {
 
     /**
      * Gets delay time when it reaches a stay position.
-     * <p/>
+     * <p>
      * The default value is 500ms.
      *
      * @return the delay time when it reaches a stay position..
@@ -213,9 +213,9 @@ public class MarqueePane extends JScrollPane {
 
     /**
      * Get stay position.
-     * <p/>
+     * <p>
      * With this field, you can let the scrolling stop for <code>getStayTime</code> after scrolling <code>getStayPosition</code> times.
-     * <p/>
+     * <p>
      * The default value is -1, which means no stay position in the middle.
      *
      * @return the stay position.

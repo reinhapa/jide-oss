@@ -27,7 +27,7 @@ public class DefaultSelectable implements Selectable {
     /**
      * Sets the actual element.
      *
-     * @param object
+     * @param object the object
      */
     public void setObject(Object object) {
         _object = object;
@@ -45,7 +45,7 @@ public class DefaultSelectable implements Selectable {
     /**
      * Sets it as selected.
      *
-     * @param selected
+     * @param selected <code>true</code> if selected, <code>false</code> otherwise
      */
     public void setSelected(boolean selected) {
         _selected = selected;
@@ -72,7 +72,7 @@ public class DefaultSelectable implements Selectable {
      * setEnable(false) won't make selected become false. In the other word, setEnabled won't change the the value of
      * isSelected().
      *
-     * @param enabled
+     * @param enabled <code>true</code> to enable, <code>false</code> otherwise
      */
     public void setEnabled(boolean enabled) {
         _enabled = enabled;

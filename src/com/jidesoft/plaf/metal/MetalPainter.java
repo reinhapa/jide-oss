@@ -13,8 +13,8 @@ import javax.swing.plaf.metal.MetalLookAndFeel;
 import java.awt.*;
 
 /**
- * Painter for Metal L&F.
- * <p/>
+ * Painter for Metal L&amp;F.
+ * <p>
  * Please note, this class is an internal class which is meant to be used by other JIDE classes only. Future version
  * might break your build if you use it.
  */

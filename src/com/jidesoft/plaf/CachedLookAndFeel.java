@@ -8,15 +8,15 @@ import java.lang.reflect.Method;
 /**
  * When UIManager.getUI(JComponent target) is called to retrieve a ComponentUI object for a target, we want to make sure
  * that ComponentUI is from the same classloader as the target classloader.
- * <p/>
+ * <p>
  * The CacheCleanerLookAndFeel will install itself as a hook to intercept UIManager().getUI(). It will clean up the
- * UIManager cache if needed and also update the UIManager L&F defaults table if needed. This is very useful if you have
+ * UIManager cache if needed and also update the UIManager L&amp;F defaults table if needed. This is very useful if you have
  * to use multiple class loader and each class loader has its own version of JIDE jars.
- * <p/>
- * <code><pre>
+ * <p>
+ * <pre>
  * CachedLookAndFeel.install();
  * CachedLookAndFeel.installJideExtension(LookAndFeelFactory.class.getClassLoader(), true);
- * </pre></code>
+ * </pre>
  */
 class CachedLookAndFeel extends LookAndFeel {
     static ClassLoader currentLoader; // active classloader
@@ -124,9 +124,9 @@ class CachedLookAndFeel extends LookAndFeel {
 
     private static void removeCachedClass(UIDefaults defaults, Class componentUIClass) {
         if (componentUIClass != null) {
-            // remove className <--> class definition
+            // remove className <--&gt; class definition
             defaults.remove(componentUIClass.getName());
-            // remove class definition <--> method definition
+            // remove class definition <--&gt; method definition
             defaults.remove(componentUIClass);
         }
     }
@@ -139,7 +139,7 @@ class CachedLookAndFeel extends LookAndFeel {
             UIDefaults defaults = UIManager.getDefaults();
 
             // to increase the performance, UIManager is caching the
-            // className <--> class definition object
+            // className <--&gt; class definition object
             // It does not differentiate between classNames from different class loaders
             // This means that the cached class definition may  not match the current
             // classloader and will cause ClassCastException later on.

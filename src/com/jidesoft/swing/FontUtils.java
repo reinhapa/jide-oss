@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * This is a global class to keep a record of Font so that we can improve the performance and memory usage in various
  * scenarios like StyledLabel.
- * <p/>
+ * <p>
  * In this class, we have a global map of font and derived font. It probably could be huge after running a long time. In
  * that case, you need explicitly clear the font cache in this class by using {@link #clearDerivedFontCache()} .
  */

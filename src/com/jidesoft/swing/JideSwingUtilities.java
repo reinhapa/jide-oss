@@ -306,7 +306,7 @@ public class JideSwingUtilities implements SwingConstants {
      * Synchronizes the two viewports. The view position changes in the master view, the slave view's view position will
      * change too. Generally speaking, if you want the two viewports to synchronize vertically, they should have the
      * same height. If horizontally, the same width.
-     * <p/>
+     * <p>
      * It's OK if you call this method with the same master viewport and slave viewport duplicate times. It won't cause
      * multiple events fired.
      *
@@ -777,28 +777,28 @@ public class JideSwingUtilities implements SwingConstants {
     }
 
     /**
-     * In JDK1.4, it uses a wrong font for Swing component in Windows L&F which is actually one big reason for people to
+     * In JDK1.4, it uses a wrong font for Swing component in Windows L&amp;F which is actually one big reason for people to
      * think Swing application ugly. To address this issue, we changed the code to force to use Tahoma font for all the
-     * fonts in L&F instead of using the system font.
-     * <p/>
+     * fonts in L&amp;F instead of using the system font.
+     * <p>
      * However this is a downside to this. Tahoma cannot display Unicode characters such as Chinese, Japanese and
      * Korean. So if the locale is CJK ({@link SystemInfo#isCJKLocale()}, we shouldn't use Tahoma. If you are on JDK 1.5
      * and above, you shouldn't force to use Tahoma either because JDK fixed it in 1.5 and above.
-     * <p/>
+     * <p>
      * There are also a few system properties you can set to control if system font should be used.
      * "swing.useSystemFontSettings" is the one for all Swing applications. "Application.useSystemFontSettings" is the
      * one for a particular Swing application.
-     * <p/>
+     * <p>
      * This method considers all the cases above. If JDK is 1.5 and above, this method will return true. If you are on
      * Chinese, Japanese or Korean locale, it will return true. If "swing.useSystemFontSettings" property us true, it
      * will return true. If "Application.useSystemFontSettings" property is true, it will return true. Otherwise, it
-     * will return false. All JIDE L&F considered the returned value and decide if Tahoma font should be used or not.
-     * <p/>
+     * will return false. All JIDE L&amp;F considered the returned value and decide if Tahoma font should be used or not.
+     * <p>
      * Last but the least, we also add system property "jide.useSystemfont" which has the highest priority. If you set
      * it to "true" or "false", this method will just check that value and return true or false respectively without
      * looking at any other settings.
      *
-     * @return true if the L&F should use system font.
+     * @return true if the L&amp;F should use system font.
      */
     public static boolean shouldUseSystemFont() {
         String property = SecurityUtils.getProperty("jide.useSystemfont", "");
@@ -915,13 +915,13 @@ public class JideSwingUtilities implements SwingConstants {
 
     /**
      * A simple handler used by getRecursively.
-     * <code><pre>
+     * <pre>
      *  if ( condition() ) {
      *      return action();
      *  }
-     * </pre></code>.
+     * </pre>.
      * Here is an example to get the first child of the specified type.
-     * <code><pre>
+     * <pre>
      * public static Component getFirstChildOf(final Class clazz, Component c) {
      *     return getRecursively(c, new GetHandler() {
      *         public boolean condition(Component c) {
@@ -932,7 +932,7 @@ public class JideSwingUtilities implements SwingConstants {
      *         }
      *     });
      * }
-     * </pre></code>
+     * </pre>
      */
     public interface GetHandler {
         /**
@@ -2105,7 +2105,7 @@ public class JideSwingUtilities implements SwingConstants {
 
     /**
      * Setups the graphics to draw text using anti-alias.
-     * <p/>
+     * <p>
      * Under JDK1.4 and JDK5, this method will use a system property "swing.aatext" to determine if anti-alias is used.
      * Under JDK6, we will read the system setting. For example, on Windows XP, there is a check box to turn on clear
      * type anti-alias. We will use the same settings.
@@ -2136,8 +2136,8 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Restores the old setting for text anti-alias.
      *
-     * @param c
-     * @param g
+     * @param c the component
+     * @param g the graphics
      * @param oldHints the value returned from {@link #setupAntialiasing(java.awt.Component, java.awt.Graphics)}.
      */
     public static void restoreAntialiasing(Component c, Graphics g, Object oldHints) {
@@ -2155,7 +2155,7 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Setups the graphics to draw shape using anti-alias.
      *
-     * @param g
+     * @param g the graphics
      * @return the old hints. You will need this value as the third parameter in {@link
      * #restoreShapeAntialiasing(java.awt.Graphics, Object)}.
      */
@@ -2169,7 +2169,7 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Restores the old setting for shape anti-alias.
      *
-     * @param g
+     * @param g the graphics
      * @param oldHints the value returned from {@link #setupShapeAntialiasing(java.awt.Graphics)}.
      */
     public static void restoreShapeAntialiasing(Graphics g, Object oldHints) {
@@ -2223,7 +2223,7 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Register the tab key with the container.
      *
-     * @param container
+     * @param container the container
      */
     public static void registerTabKey(Container container) {
         if (container instanceof JComponent) {
@@ -2308,6 +2308,12 @@ public class JideSwingUtilities implements SwingConstants {
      * Gets the RadialGradientPaint. RadialGradientPaint is added after JDK6. If you are running JDK5 or before, you can
      * include batik-awt-util.jar which also has a RadialGradientPaint class. This method will use reflection to
      * determine if the RadialGradientPaint class is in the class path and use the one it can find.
+     * 
+     * @param point the point
+     * @param radius the radius
+     * @param fractions the fractions
+     * @param colors the colors
+     * @return a paint object
      */
     public static Paint getRadialGradientPaint(Point2D point, float radius, float[] fractions, Color[] colors) {
         Class<?> radialGradientPaintClass = null;
@@ -2352,6 +2358,13 @@ public class JideSwingUtilities implements SwingConstants {
      * Gets the RadialGradientPaint. RadialGradientPaint is added after JDK6. If you are running JDK5 or before, you can
      * include batik-awt-util.jar which also has a RadialGradientPaint class. This method will use reflection to
      * determine if the RadialGradientPaint class is in the class path and use the one it can find.
+     * 
+     * @param cx the cx
+     * @param cy the cy
+     * @param radius the radius
+     * @param fractions the fractions
+     * @param colors the colors
+     * @return a paint object
      */
     public static Paint getRadialGradientPaint(float cx, float cy, float radius, float[] fractions, Color[] colors) {
         if (_radialGradientPaintClass == null) {
@@ -2401,6 +2414,14 @@ public class JideSwingUtilities implements SwingConstants {
      * Gets the LinearGradientPaint. LinearGradientPaint is added after JDK6. If you are running JDK5 or before, you can
      * include batik-awt-util.jar which also has a LinearGradientPaint class. This method will use reflection to
      * determine if the LinearGradientPaint class is in the class path and use the one it can find.
+     * 
+     * @param startX the start x
+     * @param startY the start y
+     * @param endX the end x
+     * @param endY the end y
+     * @param fractions the fractions
+     * @param colors the colors
+     * @return the paint object
      */
     public static Paint getLinearGradientPaint(float startX, float startY, float endX, float endY, float[] fractions, Color[] colors) {
         if (_linearGradientPaintClass == null) {
@@ -2525,15 +2546,15 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Fills a gradient using the startColor and endColor specified. This is a fast version of fill gradient which will
      * not only leverage hardware acceleration, but also cache GradientPaint and reuse it.
-     * <p/>
+     * <p>
      * We also leave an option to use the normal GradientPaint to paint the gradient. To do so, just set a system
      * property "normalGradientPaint" to "false".
      *
-     * @param g2d
-     * @param s
-     * @param startColor
-     * @param endColor
-     * @param isVertical
+     * @param g2d the 2D graphics
+     * @param s the shape
+     * @param startColor the start color
+     * @param endColor the end color
+     * @param isVertical <code>true</code> to transpose vertical, <code>false</code> horizontal
      */
     public static void fillGradient(Graphics2D g2d, Shape s, Color startColor, Color endColor, boolean isVertical) {
         if ("true".equals(SecurityUtils.getProperty("normalGradientPaint", "false"))) {
@@ -2554,7 +2575,7 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Gets the top modal dialog of current window.
      *
-     * @param w
+     * @param w the window
      * @return the top modal dialog of current window.
      */
     public static Window getTopModalDialog(Window w) {
@@ -2578,6 +2599,8 @@ public class JideSwingUtilities implements SwingConstants {
 
     /**
      * For internal usage only.
+     * 
+     * @param useBorders <code>true</code> to use borders, <code>false</code> otherwise
      */
     public static void traceFocus(final boolean useBorders) {
         if (tracingFocus)
@@ -2664,6 +2687,9 @@ public class JideSwingUtilities implements SwingConstants {
 
     /**
      * For internal usage only.
+     * 
+     * @param tableModel the table model
+     * @return the panel object
      */
     public static JPanel createTableModelModifier(final DefaultTableModel tableModel) {
         JPanel tableModelPanel = new JPanel(new BorderLayout(6, 6));
@@ -2721,12 +2747,12 @@ public class JideSwingUtilities implements SwingConstants {
 
     /**
      * Find some subcomponent of the specified container that will accept focus.
-     * <p/>
+     * <p>
      * Note that this doesn't do something smart like trying to walk the hierarchy horizontally at each level so that
      * the focused subcomponent is as high as possible. Rather, it drills vertically. It's just a safety valve so that
      * focus can be requested somewhere rather than being lost.
      *
-     * @param container
+     * @param container the container
      * @return a focusable subcomponent
      */
     public static Component findSomethingFocusable(Container container) {
@@ -2755,7 +2781,7 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * There are four standard tests which determine if Swing will be able to request focus for a component. Test them.
      *
-     * @param comp
+     * @param comp the component
      * @return does the specified component pass the four focusability tests
      */
     public static boolean passesFocusabilityTest(Component comp) {
@@ -2769,7 +2795,7 @@ public class JideSwingUtilities implements SwingConstants {
      * easily find out the place that ignoring exception. In development phase, we can log a message in this method so
      * that we can verify if it makes sense to ignore.
      *
-     * @param e
+     * @param e the exception being ignored
      */
     public static void ignoreException(Exception e) {
     }
@@ -2777,7 +2803,7 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Prints out the message of the exception.
      *
-     * @param e
+     * @param e the exception being printed
      */
     public static void printException(Exception e) {
         System.err.println(e.getLocalizedMessage());
@@ -2787,7 +2813,7 @@ public class JideSwingUtilities implements SwingConstants {
      * Throws the exception. If the exception is RuntimeException, just throw it. Otherwise, wrap it in RuntimeException
      * and throw it.
      *
-     * @param e
+     * @param e the exception being thrown
      */
     public static void throwException(Exception e) {
         if (e instanceof RuntimeException) {
@@ -2803,7 +2829,7 @@ public class JideSwingUtilities implements SwingConstants {
      * exception. If the target exception is a RuntimeException or Error, we will throw it. Otherwise, we will wrap it
      * inside RuntimeException and throw it.
      *
-     * @param e
+     * @param e the invocation target exception being thrown
      */
     public static void throwInvocationTargetException(InvocationTargetException e) {
         // in most cases, target exception will be RuntimeException
@@ -2845,8 +2871,8 @@ public class JideSwingUtilities implements SwingConstants {
      * Gets the first occurrence of the component with specified type in the container. It used deep-first searching to
      * find it.
      *
-     * @param c
-     * @param container
+     * @param c the class
+     * @param container the container
      * @return the first occurrence of the component with specified type in the container. Null if nothing is found.
      */
     public static Component getDescendantOfClass(Class c, Container container) {
@@ -3048,6 +3074,12 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Draws a border based on an image. The image can be divided into nine different areas. Each area size is
      * determined by the insets.
+     * 
+     * @param g the graphics
+     * @param img the image icon
+     * @param rect the rectangle
+     * @param ins the insets
+     * @param drawCenter <code>true</code> draws in center, <code>false</code> otherwise
      */
     public static void drawImageBorder(Graphics g, ImageIcon img, Rectangle rect, Insets ins, boolean drawCenter) {
         int left = ins.left;
@@ -3092,7 +3124,7 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Copied from BasicLookAndFeel as the method is package local.
      *
-     * @param component
+     * @param component the component
      * @return if request focus is success or not.
      */
     public static boolean compositeRequestFocus(Component component) {
@@ -3154,7 +3186,7 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Gets the top level Dialog or Frame of the component.
      *
-     * @param parentComponent
+     * @param parentComponent the parent component
      * @return the top level Frame or Dialog. Null if we didn't find an ancestor which is instance of Frame.
      */
     public static Window getWindowForComponent(Component parentComponent)
@@ -3186,9 +3218,9 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Inserts the key listener at the particular index in the listeners' chain.
      *
-     * @param component
-     * @param l
-     * @param index
+     * @param component the component
+     * @param l         the listener
+     * @param index     the index
      */
     public static void insertKeyListener(Component component, KeyListener l, int index) {
         KeyListener[] listeners = component.getKeyListeners();
@@ -3388,9 +3420,9 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Inserts the mouse listener at the particular index in the listeners' chain.
      *
-     * @param component
-     * @param l
-     * @param index
+     * @param component the component
+     * @param l         the listener
+     * @param index     the index
      */
     public static void insertMouseListener(Component component, MouseListener l, int index) {
         MouseListener[] listeners = component.getMouseListeners();
@@ -3430,9 +3462,9 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Inserts the mouse motion listener at the particular index in the listeners' chain.
      *
-     * @param component
-     * @param l
-     * @param index
+     * @param component the component
+     * @param l         the listener
+     * @param index     the index
      */
     public static void insertMouseMotionListener(Component component, MouseMotionListener l, int index) {
         MouseMotionListener[] listeners = component.getMouseMotionListeners();
@@ -3455,7 +3487,7 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Gets the scroll pane around the component.
      *
-     * @param innerComponent
+     * @param innerComponent the inner component
      * @return the scroll pane. Null if the component is not in any JScrollPane.
      */
     public static Component getScrollPane(Component innerComponent) {
@@ -3562,8 +3594,8 @@ public class JideSwingUtilities implements SwingConstants {
      * To make sure the row is visible. If the table's horizontal scroll bar is visible, the method will not change the
      * horizontal scroll bar's position.
      *
-     * @param table
-     * @param row
+     * @param table the table
+     * @param row the row index
      */
     public static void ensureRowVisible(JTable table, int row) {
         Rectangle r = table.getVisibleRect();
@@ -3819,12 +3851,11 @@ public class JideSwingUtilities implements SwingConstants {
      * model is null or empty string. The second bug is only on JDK1.4.2 where the vertical scroll bar is shown even all
      * rows are visible. To use it, you just need to override JList#getPreferredScrollableViewportSize and call this
      * method.
-     * <pre><code>
+     * <pre>
      * public Dimension getPreferredScrollableViewportSize() {
      *    return JideSwingUtilities.adjustPreferredScrollableViewportSize(this, super.getPreferredScrollableViewportSize());
      * }
-     * <p/>
-     * </code></pre>
+     * </pre>
      *
      * @param list                the JList
      * @param defaultViewportSize the default viewport size from JList#getPreferredScrollableViewportSize().
@@ -3869,7 +3900,7 @@ public class JideSwingUtilities implements SwingConstants {
      * with respect to focus. By calling this function before any of the operations above focus is guaranteed a
      * consistent degregation.
      *
-     * @param component
+     * @param component the component
      */
     public static void removeFromParentWithFocusTransfer(Component component) {
         boolean wasVisible = component.isVisible();
@@ -3938,8 +3969,8 @@ public class JideSwingUtilities implements SwingConstants {
     }
 
     /**
-     * Sets the text component transparent. It will call setOpaque(false) and also set client property for certain L&Fs
-     * in case the L&F doesn't respect the opaque flag.
+     * Sets the text component transparent. It will call setOpaque(false) and also set client property for certain L&amp;Fs
+     * in case the L&amp;F doesn't respect the opaque flag.
      *
      * @param component the text component to be set to transparent.
      * @deprecated replaced by {@link #setComponentTransparent(javax.swing.JComponent)}.
@@ -3950,8 +3981,8 @@ public class JideSwingUtilities implements SwingConstants {
     }
 
     /**
-     * Sets the text component transparent. It will call setOpaque(false) and also set client property for certain L&Fs
-     * in case the L&F doesn't respect the opaque flag.
+     * Sets the text component transparent. It will call setOpaque(false) and also set client property for certain L&amp;Fs
+     * in case the L&amp;F doesn't respect the opaque flag.
      *
      * @param component the text component to be set to transparent.
      */
@@ -3969,7 +4000,8 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Perform a binary search over a sorted list for the given key.
      *
-     * @param a   the array to search
+     * @param <T> the type
+     * @param a the array to search
      * @param key the key to search for
      * @return the index of the given key if it exists in the list, otherwise -1 times the index value at the insertion
      * point that would be used if the key were added to the list.
@@ -4000,6 +4032,7 @@ public class JideSwingUtilities implements SwingConstants {
     /**
      * Perform a binary search over a sorted array for the given key.
      *
+     * @param <T> the type
      * @param a   the array to search
      * @param key the key to search for
      * @return the index of the given key if it exists in the array, otherwise -1 times the index value at the insertion
@@ -4278,18 +4311,19 @@ public class JideSwingUtilities implements SwingConstants {
 
     /**
      * Copied from JDK's SwingUtilities2.java
-     * <p/>
+     * <p>
      * Returns the FontMetrics for the current Font of the passed in Graphics.  This method is used when a Graphics is
      * available, typically when painting.  If a Graphics is not available the JComponent method of the same name should
      * be used.
-     * <p/>
+     * <p>
      * Callers should pass in a non-null JComponent, the exception to this is if a JComponent is not readily available
      * at the time of painting.
-     * <p/>
+     * <p>
      * This does not necessarily return the FontMetrics from the Graphics.
      *
      * @param c JComponent requesting FontMetrics, may be null
      * @param g Graphics Graphics
+     * @return the font metrics object
      */
     public static FontMetrics getFontMetrics(JComponent c, Graphics g) {
         return getFontMetrics(c, g, g.getFont());
@@ -4298,18 +4332,19 @@ public class JideSwingUtilities implements SwingConstants {
 
     /**
      * Copied from JDK's SwingUtilities2.java
-     * <p/>
+     * <p>
      * Returns the FontMetrics for the specified Font. This method is used when a Graphics is available, typically when
      * painting.  If a Graphics is not available the JComponent method of the same name should be used.
-     * <p/>
+     * <p>
      * Callers should pass in a non-null JComponent, the exception to this is if a JComponent is not readily available
      * at the time of painting.
-     * <p/>
+     * <p>
      * This does not necessarily return the FontMetrics from the Graphics.
      *
      * @param c    JComponent requesting FontMetrics, may be null
-     * @param c    Graphics Graphics
+     * @param g    Graphics Graphics
      * @param font Font to get FontMetrics for
+     * @return the font metrics object
      */
     public static FontMetrics getFontMetrics(JComponent c, Graphics g,
                                              Font font) {

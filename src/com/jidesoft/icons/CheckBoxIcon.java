@@ -13,7 +13,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 /**
- * The icon to paint CheckBox icon safely with any L&F.
+ * The icon to paint CheckBox icon safely with any L&amp;F.
  *
  * @since 3.3.7
  */
@@ -87,7 +87,7 @@ public class CheckBoxIcon implements Icon {
 
     /**
      * Sets the state of the icon to paint.
-     * <p/>
+     * <p>
      * The state could be {@link TristateCheckBox#STATE_SELECTED}, {@link TristateCheckBox#STATE_UNSELECTED} or
      * {@link TristateCheckBox#STATE_MIXED}.
      *

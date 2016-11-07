@@ -19,13 +19,13 @@ import java.awt.event.ActionListener;
  * associated with the keystroke will be triggered as well. This solves the problem that {@link
  * JComponent#registerKeyboardAction(java.awt.event.ActionListener, String, javax.swing.KeyStroke, int)} will replace the
  * original action so that the original action will never be triggered.
- * <p/>
+ * <p>
  * The second way to use DelegateAction is to delegate the action from one component to another component using {@link
  * #replaceAction(javax.swing.JComponent, int, javax.swing.JComponent, int, javax.swing.KeyStroke, DelegateAction)}. In this
  * case, the keystroke on the first component parameter will be triggered the DelegateAction. If DelegateAction returns
  * false, the registered action on the second component parameter will be triggered. If you pass in {@link
  * PassthroughDelegateAction}, the registered action on the second component will always be triggered.
- * <p/>
+ * <p>
  * Please notes, if you call replaceAction several times on the same component with the same keystroke, it will form a
  * chain of DelegateActions. In this case, the first call will be the first DelegateAction. In the other words, the
  * first one will have the highest priority and will be triggered first. Ideally, we should assign a priority to each
@@ -33,7 +33,6 @@ import java.awt.event.ActionListener;
  * not ready to be used as public API. We have to make it public because different packages in JIDE need to use it. If
  * you want to use, please use it with caution. We don't guarantee that we will not change the public methods on this
  * classes.
- * <p/>
  */
 abstract public class DelegateAction extends AbstractAction {
     private static final long serialVersionUID = -3867985431184738600L;
@@ -54,7 +53,7 @@ abstract public class DelegateAction extends AbstractAction {
 
     /**
      * Returns true if either delegateIsEnabled or the action is enabled.
-     * <p/>
+     * <p>
      * {@inheritDoc}
      */
     // Should be final like actionPerformed but not done for backward compatibility.

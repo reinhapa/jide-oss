@@ -11,13 +11,13 @@ import java.awt.*;
 
 /**
  * This is a wrapper component for containing another component that uses a transparent (or translucent background).
- * <p/>
+ * <p>
  * This class is a solution to a problem that may be encountered in Swing when using transparency in the background of a
  * component. The problem is that when you want to use a background colour with transparency, you need to set the opaque
  * property of the component to be false to force the opaque parent components to be painted first. The catch is that if
  * the opaque property is set to false, the component's background may not be painted at all - so you lose the
  * transparency effect you wanted to achieve.
- * <p/>
+ * <p>
  * A component that uses a transparent background can be wrapped by this class, which has opaque set to false (to ensure
  * that the opaque parents are painted first) and also takes on the responsibility of painting the background of the
  * wrapped component.

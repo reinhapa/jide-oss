@@ -25,7 +25,7 @@ import java.beans.PropertyChangeListener;
  * whole ContentPane of the dialog into three parts - content panel, button panel and banner panel. By default, they are
  * added to the CENTER, SOUTH and NORTH of a BorderLayout respectively. There isn't anything special about this. However
  * if all your dialogs use this pattern, it will automatically make the user interface more consistent. </UL>
- * <p/>
+ * <p>
  * This class is abstract. Subclasses need to implement createBannerPanel(), createButtonPanel() and
  * createContentPanel()
  */
@@ -227,7 +227,7 @@ abstract public class StandardDialog extends JDialog implements ButtonNames {
     /**
      * Call three createXxxPanel methods and layout them using BorderLayout. By default, banner panel, content panel and
      * button panel are added to NORTH, CENTER and SOUTH of BorderLayout respectively.
-     * <p/>
+     * <p>
      * You can override this method if you want to layout them in another way.
      */
     protected void initComponents() {
@@ -300,7 +300,7 @@ abstract public class StandardDialog extends JDialog implements ButtonNames {
      * the dialog unless you override initComponent() method. Banner panel is really used to balance the layout of
      * dialog to make the dialog looking good. However it can be used to show some help text. It is highly recommended
      * to use our {@link BannerPanel}
-     * <p/>
+     * <p>
      * If subclass doesn't want to have a banner panel, just return null.
      *
      * @return the banner panel.

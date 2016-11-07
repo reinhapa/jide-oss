@@ -11,10 +11,10 @@ import java.awt.*;
 /**
  * A <code>Contour</code> is a lightweight component which only paints the outline of component when dragged. It is also
  * used as a placeholder for some information during dragging.
- * <p/>
+ * <p>
  * Usually <code>Contour</code> is added to {@link JLayeredPane} of a {@link RootPaneContainer} so that it looks like
  * floating above other windows.
- * <p/>
+ * <p>
  * Notes: this class has to be public so that JIDE can use it in different packages, not meant to release to end user as
  * a public API. JIDE will not guarantee the class will remain as it is.
  */
@@ -33,7 +33,7 @@ public interface IContour {
     /**
      * Sets the tab height.
      *
-     * @param tabHeight
+     * @param tabHeight the height of the table
      */
     public void setTabHeight(int tabHeight);
 
@@ -61,7 +61,7 @@ public interface IContour {
     /**
      * Sets the side of the tab.
      *
-     * @param tabSide
+     * @param tabSide the tab side
      */
     public void setTabSide(int tabSide);
 

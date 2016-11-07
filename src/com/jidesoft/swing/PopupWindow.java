@@ -20,10 +20,8 @@ import java.util.Vector;
 
 /**
  * PopupWindow class
- * <p/>
- * You can add another JPopupMenu or JComboxBox in this popup.
- * <p/>
- * This class is copied from http://forum.java.sun.com/thread.jsp?forum=57&thread=230866 with some minor modifications.
+ * <p>
+ * You can add another JPopupMenu or JComboxBox in this popup
  */
 public class PopupWindow {
 
@@ -317,7 +315,7 @@ public class PopupWindow {
     /**
      * Adds a <code>PopupMenu</code> listener which will listen to notification messages from the popup portion of the
      * combo box.
-     * <p/>
+     * <p>
      * For all standard look and feels shipped with Java 2, the popup list portion of combo box is implemented as a
      * <code>JPopupMenu</code>. A custom look and feel may not implement it this way and will therefore not receive the
      * notification.
@@ -353,7 +351,7 @@ public class PopupWindow {
 
     /**
      * Notifies <code>PopupMenuListener</code>s that the popup portion of the combo box will become visible.
-     * <p/>
+     * <p>
      * This method is public but should not be called by anything other than the UI delegate.
      *
      * @see #addPopupMenuListener
@@ -373,7 +371,7 @@ public class PopupWindow {
 
     /**
      * Notifies <code>PopupMenuListener</code>s that the popup portion of the combo box has become invisible.
-     * <p/>
+     * <p>
      * This method is public but should not be called by anything other than the UI delegate.
      *
      * @see #addPopupMenuListener
@@ -393,7 +391,7 @@ public class PopupWindow {
 
     /**
      * Notifies <code>PopupMenuListener</code>s that the popup portion of the combo box has been canceled.
-     * <p/>
+     * <p>
      * This method is public but should not be called by anything other than the UI delegate.
      *
      * @see #addPopupMenuListener

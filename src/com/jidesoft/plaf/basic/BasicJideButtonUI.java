@@ -496,7 +496,7 @@ public class BasicJideButtonUI extends JideButtonUI {
 
     /**
      * Method which renders the text of the current button.
-     * <p/>
+     * <p>
      *
      * @param g        Graphics context
      * @param b        Current button to render

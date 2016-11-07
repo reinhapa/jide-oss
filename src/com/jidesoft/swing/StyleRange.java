@@ -12,7 +12,7 @@ import java.awt.*;
  * One is the font style and color which includes bold, italic, superscript, subscript as well as the color of the text.
  * The other one is line color and style. The line style could be straight line, dotted line, waved line or any
  * customized style using Stroke. The line could be used as underline or strikethrough line.
- * <p/>
+ * <p>
  * The name of StyleRange comes from SWT's StyleRange. We borrowed some design idea from it. StyledLabel is actually
  * very similar to SWT's StyledText. Saying that, the features of the two components are not exactly the same since the
  * purpose of the two components are quite different.
@@ -164,6 +164,7 @@ public class StyleRange {
      * @param additionalStyle Valid additional styles are defined as constants in {@link StyleRange}. The names begin
      *                        with STYLE_. You can also use any | to concat two or more styles as long as it makes
      *                        sense.
+     * @param lineColor       The color of the line.
      */
     public StyleRange(int fontStyle, Color fontColor, int additionalStyle, Color lineColor) {
         this(0, -1, fontStyle, fontColor, additionalStyle, lineColor, null);
@@ -178,6 +179,7 @@ public class StyleRange {
      * @param additionalStyle Valid additional styles are defined as constants in {@link StyleRange}. The names begin
      *                        with STYLE_. You can also use any | to concat two or more styles as long as it makes
      *                        sense.
+     * @param lineColor       The color of the line.
      */
     public StyleRange(int fontStyle, Color fontColor, Color backgroundColor, int additionalStyle, Color lineColor) {
         this(0, -1, fontStyle, fontColor, backgroundColor, additionalStyle, lineColor, null);
@@ -222,7 +224,8 @@ public class StyleRange {
      * @param additionalStyle Valid additional styles are defined as constants in {@link StyleRange}. The names begin
      *                        with STYLE_. You can also use any | to concat two or more styles as long as it makes
      *                        sense.
-     * @param lineColor       the color of the line.
+     * @param lineColor       The color of the line.
+     * @param lineStroke      The stroke style of the line
      */
     public StyleRange(int fontStyle, Color fontColor, int additionalStyle, Color lineColor, Stroke lineStroke) {
         this(0, -1, fontStyle, fontColor, additionalStyle, lineColor, lineStroke);

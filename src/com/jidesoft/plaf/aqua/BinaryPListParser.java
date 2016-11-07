@@ -26,14 +26,14 @@ import java.util.HashMap;
 
 /**
  * Reads a binary PList file and returns it as a NanoXML XMLElement.
- * <p/>
+ * <p>
  * The NanoXML XMLElement returned by this reader is equivalent to the
  * XMLElement returned, if a PList file in XML format is parsed with
  * NanoXML.
- * <p/>
+ * <p>
  * Description about property list taken from <a href="http://developer.apple.com/documentation/Cocoa/Conceptual/PropertyLists/index.html#//apple_ref/doc/uid/10000048i">
  * Apple's online documentation</a>:
- * <p/>
+ * <p>
  * "A property list is a data representation used by Mac OS X Cocoa and Core
  * Foundation as a convenient way to store, organize, and access standard object
  * types. Frequently called a plist a property list is an object of one of
@@ -44,7 +44,7 @@ import java.util.HashMap;
  * dictionaries can contain objects not supported by the architecture, but are
  * then not property lists, and cannot be saved and restored with the various
  * property list methods.)"
- * <p/>
+ * <p>
  * XXX - This implementation can not read date values. Date values will always
  * have the current date.
  *
@@ -525,7 +525,7 @@ class BinaryPListParser {
     /**
      * Reads a count value from the object table. Count values are encoded
      * using the following scheme:
-     * <p/>
+     * <p>
      * int	0001 nnnn   ...     // # of bytes is 2^nnnn, big-endian bytes
      */
     private int readCount(DataInputStream in) throws IOException {

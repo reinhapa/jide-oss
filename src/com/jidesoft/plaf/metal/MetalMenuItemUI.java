@@ -157,6 +157,8 @@ public class MetalMenuItemUI extends MenuItemUI {
 
     /**
      * @since 1.3
+     * 
+     * @param menuItem the menu item to install
      */
     protected void installComponents(JMenuItem menuItem) {
         BasicHTML.updateRenderer(menuItem, menuItem.getText());
@@ -226,6 +228,8 @@ public class MetalMenuItemUI extends MenuItemUI {
 
     /**
      * @since 1.3
+     * 
+     * @param menuItem the menu item to install
      */
     protected void uninstallComponents(JMenuItem menuItem) {
         BasicHTML.updateRenderer(menuItem, "");
@@ -751,7 +755,7 @@ public class MetalMenuItemUI extends MenuItemUI {
 
     /**
      * Renders the text of the current menu item.
-     * <p/>
+     * <p>
      *
      * @param g        graphics context
      * @param menuItem menu item to render

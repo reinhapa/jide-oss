@@ -22,24 +22,24 @@ import java.beans.PropertyChangeListener;
  * <code>ComboBoxSearchable</code> is an concrete implementation of {@link Searchable} that enables the search function
  * in non-editable JComboBox. <p>It's very simple to use it. Assuming you have a JComboBox, all you need to do is to
  * call
- * <code><pre>
+ * <pre>
  * JComboBox comboBox = ....;
  * ComboBoxSearchable searchable = new ComboBoxSearchable(comboBox);
- * </pre></code>
+ * </pre>
  * Now the JComboBox will have the search function.
- * <p/>
+ * <p>
  * There is very little customization you need to do to ComboBoxSearchable. The only thing you might need is when the
  * element in the JComboBox needs a special conversion to convert to string. If so, you can override
  * convertElementToString() to provide you own algorithm to do the conversion.
- * <code><pre>
+ * <pre>
  * JComboBox comboBox = ....;
  * ComboBoxSearchable searchable = new ComboBoxSearchable(comboBox) {
  *      protected String convertElementToString(Object object) {
  *          ...
  *      }
  * };
- * </pre></code>
- * <p/>
+ * </pre>
+ * <p>
  * Additional customization can be done on the base Searchable class such as background and foreground color,
  * keystrokes, case sensitivity,
  */
@@ -145,7 +145,7 @@ public class ComboBoxSearchable extends Searchable implements ListDataListener, 
 
     /**
      * Checks if the popup should be refreshed during searching.
-     * <p/>
+     * <p>
      * By default, the value is false. ComboBoxShrinkSearchSupport will set this flag to true.
      *
      * @return true if popup is refreshed during searching.

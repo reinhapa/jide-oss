@@ -16,8 +16,8 @@ import java.awt.*;
 import java.util.logging.Logger;
 
 /**
- * Painter for Aqua style L&F.
- * <p/>
+ * Painter for Aqua style L&amp;F.
+ * <p>
  * Please note, this class is an internal class which is meant to be used by other JIDE classes only. Future version
  * might break your build if you use it.
  */

@@ -29,7 +29,7 @@ import java.util.HashMap;
  * factory.setColor(Color.GREEN);
  * </pre>
  * The default constructor provides the following default values: <ul> <li><i>size</i>: 5 pixels</li>
- * <li><i>opacity</i>: 50%</li> <li><i>color</i>: Black</li> </ul></p> <h2>Shadow Quality</h2> <p>The factory provides
+ * <li><i>opacity</i>: 50%</li> <li><i>color</i>: Black</li> </ul> <h2>Shadow Quality</h2> The factory provides
  * two shadow generation algorithms: <i>fast quality blur</i> and <i>high quality blur</i>. You can select your
  * preferred algorithm by setting the appropriate rendering hint:
  * <pre>
@@ -37,9 +37,9 @@ import java.util.HashMap;
  * factory.setRenderingHint(ShadowFactory.KEY_BLUR_QUALITY,
  *                          ShadowFactory.VALUE_BLUR_QUALITY_HIGH);
  * </pre>
- * The default rendering algorithm is <code>VALUE_BLUR_QUALITY_FAST</code>.</p> <p>The current implementation should
+ * The default rendering algorithm is <code>VALUE_BLUR_QUALITY_FAST</code>. <p>The current implementation should
  * provide the same quality with both algorithms but performances are guaranteed to be better (about 30 times faster)
- * with the <i>fast quality blur</i>.</p> <h2>Generating a Shadow</h2> <p>A shadow is generated as a
+ * with the <i>fast quality blur</i>.<h2>Generating a Shadow</h2> A shadow is generated as a
  * <code>BufferedImage</code> from another <code>BufferedImage</code>. Once the factory is set up, you must call {@link
  * #createShadow} to actually generate the shadow:
  * <pre>
@@ -49,15 +49,15 @@ import java.util.HashMap;
  * </pre>
  * The resulting image is of type <code>BufferedImage.TYPE_INT_ARGB</code>. Both dimensions of this image are larger
  * than original image's: <ul> <li>new width = original width + 2 * shadow size</li> <li>new height = original height +
- * 2 * shadow size</li> </ul> This must be taken into account when you need to create a drop shadow effect.</p>
- * <h2>Properties Changes</h2> <p>This factory allows to register property change listeners with {@link
+ * 2 * shadow size</li> </ul> This must be taken into account when you need to create a drop shadow effect.
+ * <h2>Properties Changes</h2> This factory allows to register property change listeners with {@link
  * #addPropertyChangeListener}. Listening to properties changes is very useful when you embed the factory in a graphical
  * component and give the API user the ability to access the factory. By listening to properties changes, you can easily
- * repaint the component when needed.</p> <h2>Threading Issues</h2> <p><code>ShadowFactory</code> is not guaranteed to
- * be thread-safe.</p>
+ * repaint the component when needed. <h2>Threading Issues</h2> <code>ShadowFactory</code> is not guaranteed to
+ * be thread-safe.
  *
- * @author Romain Guy <romain.guy@mac.com>
- * @author Sebastien Petrucci <sebastien_petrucci@yahoo.fr>
+ * @author Romain Guy romain.guy@mac.com
+ * @author Sebastien Petrucci sebastien_petrucci@yahoo.fr
  */
 
 public class ShadowFactory implements ShadowRenderer {
@@ -113,8 +113,8 @@ public class ShadowFactory implements ShadowRenderer {
     /**
      * <p>Creates a default good looking shadow generator. The default shadow factory provides the following default
      * values: <ul> <li><i>size</i>: 5 pixels</li> <li><i>opacity</i>: 50%</li> <li><i>color</i>: Black</li>
-     * <li><i>rendering quality</i>: VALUE_BLUR_QUALITY_FAST</li> </ul></p> <p>These properties provide a regular, good
-     * looking shadow.</p>
+     * <li><i>rendering quality</i>: VALUE_BLUR_QUALITY_FAST</li> </ul> These properties provide a regular, good
+     * looking shadow.
      */
     public ShadowFactory() {
         this(5, 0.5f, Color.BLACK);
@@ -124,8 +124,8 @@ public class ShadowFactory implements ShadowRenderer {
      * <p>A shadow factory needs three properties to generate shadows. These properties are:</p> <ul> <li><i>size</i>:
      * The size, in pixels, of the shadow. This property also defines the fuzzyness.</li> <li><i>opacity</i>: The
      * opacity, between 0.0 and 1.0, of the shadow.</li> <li><i>color</i>: The color of the shadow. Shadows are not
-     * meant to be black only.</li> </ul></p> <p>Besides these properties you can set rendering hints to control the
-     * rendering process. The default rendering hints let the factory use the fastest shadow generation algorithm.</p>
+     * meant to be black only.</li> </ul> Besides these properties you can set rendering hints to control the
+     * rendering process. The default rendering hints let the factory use the fastest shadow generation algorithm.
      *
      * @param size    The size of the shadow in pixels. Defines the fuzziness.
      * @param opacity The opacity of the shadow.
@@ -161,7 +161,7 @@ public class ShadowFactory implements ShadowRenderer {
      * will be notified one less time after being removed. If <code>listener</code> is null, or was never added, no
      * exception is thrown and no action is taken.</p>
      *
-     * @param listener
+     * @param listener the property change listener
      */
     public void removePropertyChangeListener(PropertyChangeListener listener) {
         changeSupport.removePropertyChangeListener(listener);
@@ -255,7 +255,7 @@ public class ShadowFactory implements ShadowRenderer {
      * impact on shadow generation performances. The greater this value, the longer it will take to generate the shadow.
      * Remember the generated shadow image dimensions are computed as follow: <ul> <li>new width = original width + 2 *
      * shadow size</li> <li>new height = original height + 2 * shadow size</li> </ul> The size cannot be negative. If
-     * you provide a negative value, the size will be 0 instead.</p>
+     * you provide a negative value, the size will be 0 instead.
      *
      * @param shadowSize the generated shadows size in pixels (fuzziness)
      */
@@ -277,8 +277,8 @@ public class ShadowFactory implements ShadowRenderer {
     /**
      * <p>Generates the shadow for a given picture and the current properties of the factory.</p> <p>The generated
      * shadow image dimensions are computed as follow: <ul> <li>new width = original width + 2 * shadow size</li>
-     * <li>new height = original height + 2 * shadow size</li> </ul></p> <p>The time taken by a call to this method
-     * depends on the size of the shadow, the larger the longer it takes, and on the selected rendering algorithm.</p>
+     * <li>new height = original height + 2 * shadow size</li> </ul> <p>The time taken by a call to this method
+     * depends on the size of the shadow, the larger the longer it takes, and on the selected rendering algorithm.
      *
      * @param image the picture from which the shadow must be cast
      *

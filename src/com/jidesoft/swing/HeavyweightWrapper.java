@@ -12,7 +12,7 @@ import java.awt.event.ComponentListener;
 
 /**
  * HeavyweightWrapper is a special heavyweight Panel that can hold another component.
- * <p/>
+ * <p>
  * It's package local right now. Whenever it is ready, we will make it public.
  */
 public class HeavyweightWrapper extends Panel {

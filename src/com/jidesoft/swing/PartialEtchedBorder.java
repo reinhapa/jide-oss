@@ -149,9 +149,9 @@ public class PartialEtchedBorder extends EtchedBorder implements PartialSide {
 
     /**
      * Sets the flag indicating if the corner should be painted rounded.
-     * <p/>
+     * <p>
      * By default, the value is false to keep the default behavior backward compatibility.
-     * <p/>
+     * <p>
      * This flag take effects only if the side is {@link #ALL}
      *
      * @param roundedCorners the flag

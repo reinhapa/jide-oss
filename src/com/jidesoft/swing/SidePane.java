@@ -22,7 +22,7 @@ import java.util.List;
  * SidePane is a component that can display several buttons
  * horzontally or vertically. It usually attaches to side of
  * a JFrame.
- * <p/>
+ * <p>
  * Buttons in SidePane can be grouped. Each group is called {@link SidePaneGroup}.
  * Each button in the group is called {@link SidePaneItem}.
  */
@@ -75,7 +75,7 @@ public class SidePane extends JPanel implements SwingConstants, Accessible {
     }
 
     /**
-     * Returns the UI object which implements the L&F for this component.
+     * Returns the UI object which implements the L&amp;F for this component.
      *
      * @return a <code>TabbedPaneUI</code> object
      * @see #setUI
@@ -86,7 +86,7 @@ public class SidePane extends JPanel implements SwingConstants, Accessible {
     }
 
     /**
-     * Sets the UI object which implements the L&F for this component.
+     * Sets the UI object which implements the L&amp;F for this component.
      *
      * @param ui the new UI object
      * @see javax.swing.UIDefaults#getUI
@@ -111,7 +111,7 @@ public class SidePane extends JPanel implements SwingConstants, Accessible {
 
     /**
      * Returns the name of the UI class that implements the
-     * L&F for this component.
+     * L&amp;F for this component.
      *
      * @return the string "TabbedPaneUI"
      * @see javax.swing.JComponent#getUIClassID
@@ -123,7 +123,7 @@ public class SidePane extends JPanel implements SwingConstants, Accessible {
     }
 
     /**
-     * Adds a <code>SidePaneGroup<code> to this component.
+     * Adds a <code>SidePaneGroup</code> to this component.
      * Do nothing if there is nothing in the group.
      *
      * @param group the group to be added
@@ -133,7 +133,7 @@ public class SidePane extends JPanel implements SwingConstants, Accessible {
     }
 
     /**
-     * Removes a <code>SidePaneGroup<code> from this component.
+     * Removes a <code>SidePaneGroup</code> from this component.
      *
      * @param group the group to be removed
      */
@@ -142,7 +142,7 @@ public class SidePane extends JPanel implements SwingConstants, Accessible {
     }
 
     /**
-     * Removes a <code>SidePaneGroup<code> at a spefific index from this component.
+     * Removes a <code>SidePaneGroup</code> at a spefific index from this component.
      *
      * @param index position of the group to be removed
      */
@@ -176,7 +176,7 @@ public class SidePane extends JPanel implements SwingConstants, Accessible {
      * <li><code>SwingConstants.WEST</code>
      * <li><code>SwingConstants.EAST</code>
      * </ul>
-     * <p/>
+     * <p>
      * Note: Please call this method before this component is rendered on screen.
      *
      * @param attachedSide the attached side

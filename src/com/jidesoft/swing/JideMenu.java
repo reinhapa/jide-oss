@@ -22,7 +22,7 @@ import java.awt.event.ActionListener;
  * is set visible. Please note, when you use PopupMenuCustomizer, you need to remove the old menu items you added
  * previously using PopupMenuCustomizer. Otherwise, you will see a menu which gets longer and longer when you show it.
  * See below for an example.
- * <code><pre>
+ * <pre>
  * JideMenu jideMenu = new JideMenu("Dynamic");
  * jideMenu.setPopupMenuCustomizer(new JideMenu.PopupMenuCustomizer(){
  *     public void customize(JPopupMenu menu) {
@@ -33,12 +33,11 @@ import java.awt.event.ActionListener;
  *         menu.add("item 5");
  *     }
  * });
- * </pre></code>
- * <p/>
+ * </pre>
+ * <p>
  * Second feature is popup alignment. Usually menu and its popup align to the left side. In our case, we hope they align
  * to right side. So we added a method call setPreferredPopupHorizontalAlignment(). You can set to RIGHT if you want
  * to.
- * <p/>
  */
 public class JideMenu extends JMenu implements Alignable {
 
@@ -191,16 +190,16 @@ public class JideMenu extends JMenu implements Alignable {
     /**
      * Sets the PopupMenuCustomizer. PopupMenuCustomizer can be used to do lazy menu creation. If you put code in the
      * MenuCreator, it won't be called until before the menu is set visible.
-     * <p/>
+     * <p>
      * PopupMenuCustomizer has a customize method. The popup menu of this menu will be passed in. You can
      * add/remove/change the menu items in customize method. For example, instead of
-     * <code><pre>
+     * <pre>
      * JideMenu menu = new JideMenu();
      * menu.add(new JMenuItem("..."));
      * menu.add(new JMenuItem("..."));
-     * </pre></code>
+     * </pre>
      * You can do
-     * <code><pre>
+     * <pre>
      * JideMenu menu = new JideMenu();
      * menu.setPopupMenuCustomzier(new JideMenu.PopupMenuCustomizer() {
      *     void customize(JPopupMenu popupMenu) {
@@ -209,7 +208,7 @@ public class JideMenu extends JMenu implements Alignable {
      *         popupMenu.add(new JMenuItem("..."));
      *     }
      * }
-     * </pre></code>
+     * </pre>
      * If the menu is never used, the two add methods will never be called thus improve the performance.
      *
      * @param customizer the popup menu customizer
@@ -506,7 +505,7 @@ public class JideMenu extends JMenu implements Alignable {
 
     /**
      * Check if the popup menu should stay hidden although {@link #setPopupMenuVisible(boolean)} is invoked.
-     * <p/>
+     * <p>
      * The default implementation is to check if it contains any menu items. You could override this method to change the
      * default behavior.
      *

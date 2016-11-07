@@ -129,6 +129,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the default icon, for the current laf, that is used to represent non-leaf nodes that are expanded.
+     * 
+     * @return the default open icon
      */
     public Icon getDefaultOpenIcon() {
         return UIDefaultsLookup.getIcon("Tree.openIcon");
@@ -136,6 +138,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the default icon, for the current laf, that is used to represent non-leaf nodes that are not expanded.
+     * 
+     * @return the default closed icon
      */
     public Icon getDefaultClosedIcon() {
         return UIDefaultsLookup.getIcon("Tree.closedIcon");
@@ -143,6 +147,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the default icon, for the current laf, that is used to represent leaf nodes.
+     * 
+     * @return the default leaf icon
      */
     public Icon getDefaultLeafIcon() {
         return UIDefaultsLookup.getIcon("Tree.leafIcon");
@@ -150,6 +156,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Sets the icon used to represent non-leaf nodes that are expanded.
+     * 
+     * @param newIcon the new icon
      */
     public void setOpenIcon(Icon newIcon) {
         openIcon = newIcon;
@@ -157,6 +165,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the icon used to represent non-leaf nodes that are expanded.
+     * 
+     * @return the open icon
      */
     public Icon getOpenIcon() {
         return openIcon;
@@ -164,6 +174,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Sets the icon used to represent non-leaf nodes that are not expanded.
+     * 
+     * @param newIcon the new icon
      */
     public void setClosedIcon(Icon newIcon) {
         closedIcon = newIcon;
@@ -171,6 +183,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the icon used to represent non-leaf nodes that are not expanded.
+     * 
+     * @return the close icon
      */
     public Icon getClosedIcon() {
         return closedIcon;
@@ -178,6 +192,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Sets the icon used to represent leaf nodes.
+     * 
+     * @param newIcon the new icon
      */
     public void setLeafIcon(Icon newIcon) {
         leafIcon = newIcon;
@@ -185,6 +201,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the icon used to represent leaf nodes.
+     * 
+     * @return the leaf icon
      */
     public Icon getLeafIcon() {
         return leafIcon;
@@ -192,6 +210,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Sets the color the text is drawn with when the node is selected.
+     * 
+     * @param newColor the new color
      */
     public void setTextSelectionColor(Color newColor) {
         textSelectionColor = newColor;
@@ -199,6 +219,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the color the text is drawn with when the node is selected.
+     * 
+     * @return the selection color
      */
     public Color getTextSelectionColor() {
         return textSelectionColor;
@@ -206,6 +228,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Sets the color the text is drawn with when the node isn't selected.
+     * 
+     * @param newColor the new color
      */
     public void setTextNonSelectionColor(Color newColor) {
         textNonSelectionColor = newColor;
@@ -213,6 +237,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the color the text is drawn with when the node isn't selected.
+     * 
+     * @return the non selection color
      */
     public Color getTextNonSelectionColor() {
         return textNonSelectionColor;
@@ -220,6 +246,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Sets the color to use for the background if node is selected.
+     * 
+     * @param newColor the new color
      */
     public void setBackgroundSelectionColor(Color newColor) {
         backgroundSelectionColor = newColor;
@@ -228,6 +256,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the color to use for the background if node is selected.
+     * 
+     * @return the background selection color
      */
     public Color getBackgroundSelectionColor() {
         return backgroundSelectionColor;
@@ -235,6 +265,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Sets the background color to be used for non selected nodes.
+     * 
+     * @param newColor the new color
      */
     public void setBackgroundNonSelectionColor(Color newColor) {
         backgroundNonSelectionColor = newColor;
@@ -242,6 +274,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the background color to be used for non selected nodes.
+     * 
+     * @return the background non selection color
      */
     public Color getBackgroundNonSelectionColor() {
         return backgroundNonSelectionColor;
@@ -249,6 +283,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Sets the color to use for the border.
+     * 
+     * @param newColor the new color
      */
     public void setBorderSelectionColor(Color newColor) {
         borderSelectionColor = newColor;
@@ -256,6 +292,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Returns the color the border is drawn.
+     * 
+     * @return the border selection color
      */
     public Color getBorderSelectionColor() {
         return borderSelectionColor;
@@ -266,6 +304,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
      * <code>FontUIResource</code>, this has the effect of letting the font of the JTree show through. On the other
      * hand, if <code>font</code> is non-null, and not a <code>FontUIResource</code>, the font becomes
      * <code>font</code>.
+     * 
+     * @param font the font
      */
     @Override
     public void setFont(Font font) {
@@ -296,6 +336,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
      * <code>ColorUIResource</code>, this has the effect of letting the background color of the JTree show through. On
      * the other hand, if <code>color</code> is non-null, and not a <code>ColorUIResource</code>, the background becomes
      * <code>color</code>.
+     * 
+     * @param color the background color
      */
     @Override
     public void setBackground(Color color) {
@@ -362,13 +404,13 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
     /**
      * Overrides this method to customize the styled label.
      *
-     * @param tree
-     * @param value
-     * @param sel
-     * @param expanded
-     * @param leaf
-     * @param row
-     * @param hasFocus
+     * @param tree the tree component
+     * @param value the value
+     * @param sel selected
+     * @param expanded expanded
+     * @param leaf is leaf node
+     * @param row the row
+     * @param hasFocus has focus
      */
     protected void customizeStyledLabel(JTree tree, Object value, boolean sel, boolean expanded, boolean leaf, int row, boolean hasFocus) {
         String stringValue = tree.convertValueToText(value, sel,
@@ -379,6 +421,8 @@ public class StyledTreeCellRenderer extends StyledLabel implements TreeCellRende
 
     /**
      * Paints the value.  The background is filled based on selected.
+     * 
+     * @param g the graphics
      */
     @Override
     public void paint(Graphics g) {

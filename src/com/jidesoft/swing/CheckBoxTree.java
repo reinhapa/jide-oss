@@ -28,7 +28,7 @@ import java.util.Vector;
  * it also allows you select any number of tree nodes in the tree by selecting the check boxes. <p>To select an element,
  * user can mouse click on the check box, or select one or several tree nodes and press SPACE key to toggle the check
  * box selection for all selected tree nodes.
- * <p/>
+ * <p>
  * In order to retrieve which tree paths are selected, you need to call {@link #getCheckBoxTreeSelectionModel()}. It
  * will return the selection model that keeps track of which tree paths have been checked. For example {@link
  * CheckBoxTreeSelectionModel#getSelectionPaths()} will give the list of paths which have been checked.
@@ -271,7 +271,7 @@ public class CheckBoxTree extends JTree {
 
     /**
      * Sets the flag indicating if toggling should select or deselect the partially selected node.
-     * <p/>
+     * <p>
      * By default, the value is true to keep original behavior.
      *
      * @param selectPartialOnToggling the flag
@@ -528,7 +528,7 @@ public class CheckBoxTree extends JTree {
     /**
      * Checks if check box is enabled. There is no setter for it. The only way is to override this method to return true
      * or false.
-     * <p/>
+     * <p>
      * However, in digIn mode, user can still select the disabled node by selecting all children nodes of that node.
      * Also if user selects the parent node, the disabled children nodes will be selected too.
      *
@@ -591,7 +591,7 @@ public class CheckBoxTree extends JTree {
     /**
      * Sets the value of property clickInCheckBoxOnly.
      *
-     * @param clickInCheckBoxOnly see {@Link #isClickInCheckBoxOnly} for more information.
+     * @param clickInCheckBoxOnly see {@link #isClickInCheckBoxOnly()} for more information.
      */
     public void setClickInCheckBoxOnly(boolean clickInCheckBoxOnly) {
         if (clickInCheckBoxOnly != _clickInCheckBoxOnly) {

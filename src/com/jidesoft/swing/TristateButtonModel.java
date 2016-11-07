@@ -50,7 +50,7 @@ public class TristateButtonModel extends JToggleButton.ToggleButtonModel {
     /**
      * We rotate between STATE_UNSELECTED, STATE_SELECTED and STATE_MIXED. Subclass can override this method to tell the
      * check box what next state is. Here is the default implementation.
-     * <code><pre>
+     * <pre>
      * if (current == TristateCheckBox.STATE_UNSELECTED) {
      *     return TristateCheckBox.STATE_SELECTED;
      * }
@@ -60,7 +60,7 @@ public class TristateButtonModel extends JToggleButton.ToggleButtonModel {
      * else if (current == TristateCheckBox.STATE_MIXED) {
      *     return TristateCheckBox.STATE_UNSELECTED;
      * }
-     * </code></pre>
+     * </pre>
      *
      * @param current the current state
      * @return the next state of the current state.
@@ -115,9 +115,9 @@ public class TristateButtonModel extends JToggleButton.ToggleButtonModel {
 
     /**
      * Updates the state when the mouse is clicked. The default implementation is
-     * <pre><code>
+     * <pre>
      * setState(getNextState(getState()));
-     * </code></pre>
+     * </pre>
      */
     protected void updateState() {
         setState(getNextState(getState()));

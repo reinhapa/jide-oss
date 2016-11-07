@@ -12,7 +12,7 @@ import java.util.Vector;
  * An auto completion combobox. It used {@link AutoCompletion} to make the combobox auto-completing. You can use {@link
  * AutoCompletion} directly to make any combobox auto-completing. This class is just a convenient class if all you need
  * is an auto complete combobox.
- * <p/>
+ * <p>
  * Since auto-complete has to listen to the key user types, it has to be editable. If you want to limit user to the list
  * available in the combobox model, you can call {@link #setStrict(boolean)} and set it to true.
  */
@@ -104,7 +104,7 @@ public class AutoCompletionComboBox extends JComboBox {
      * "AR", if this flag is true, it will auto-completed as "Arial". If false, it will be auto-completed as "ARial". Of
      * course, this flag will only make a difference if Searchable is case insensitive.
      *
-     * @param strictCompletion
+     * @param strictCompletion <code>true</code> to activate exact searching, <code>false</code> otherwise
      */
     public void setStrictCompletion(boolean strictCompletion) {
         getAutoCompletion().setStrictCompletion(strictCompletion);

@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
 /**
  * <code>Flashable</code> is a basic interface to enable flashing in any component. Internally it uses {@link Animator}
  * to create the flashing effect.
- * <p/>
+ * <p>
  * Whenever a Flashable is installed to a JComponent, you can always use {@link #isFlashableInstalled(javax.swing.JComponent)}
  * to check if it is installed.
  */

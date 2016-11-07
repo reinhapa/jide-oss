@@ -25,7 +25,7 @@ public class XPUtils {
     /**
      * Checks if the XP style is on. Even on Windows XP OS, user can choose Classic style
      * or XP style. This method will tell you if XP style is on.
-     * <p/>
+     * <p>
      * Please note it will return the correct value only if it's
      * jdk1.4.2 and above. Otherwise it will throw UnsupportedOperationException.
      *
@@ -45,7 +45,7 @@ public class XPUtils {
     /**
      * Gets the color name. On Windows XP, it could be one of the values BLUE, HOMESTEAD or METALLIC. If XP style is not on
      * or the system is not Windows XP at all, it will return null.
-     * <p/>
+     * <p>
      * Please note it will return the correct value only if it's
      * jdk1.4.2 and above. Otherwise it will throw UnsupportedOperationException.
      *

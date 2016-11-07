@@ -22,18 +22,18 @@ import java.util.*;
  * MultiplePageDialog is a StandardDialog which can have multiple AbstractDialogPages. You can choose one from four
  * predefined styles of how to change the page visibility. Those four styles are TAB_STYLE, ICON_STYLE, LIST_STYLE and
  * TREE_STYLE.
- * <p/>
+ * <p>
  * To use this class, just create a PageList of AbstractDialogPage and call setPageList() to set to this dialog. Based
  * on the style, the class will automatically layout those pages correctly and hook up actions to switch based on user
  * selection.
- * <p/>
+ * <p>
  * As AbstractDialogPage extends AbstractPage, so you can always use PageListener to decide what to do when page is
  * opened, closing, closed, activated or deactivated.
- * <p/>
+ * <p>
  * We automatically create a button panel which have three button - OK, Cancel and Apply. The ButtonPanel listens to
  * ButtonEvent from all the pages. You can simply fireButtonEvent in the page to change the state of those buttons. Or
  * if you want to create your own button panel, just override createButtonPanel() method.
- * <p/>
+ * <p>
  * If you choose LIST_STYLE and TREE_STYLE, you can set your own ListCellRenderer and TreeCellRenderer. Just call
  * setListCellRenderer() and setTreeCellRenderer(). The value passed in the renderer is an instance of
  * AbstractDialogPage associated with that list row or tree node.
@@ -779,10 +779,10 @@ public class MultiplePageDialog extends StandardDialog {
      * Creates tree that is used in TREE_STYLE dialog's index panel. Below is the code we used. If you just want to have
      * a different cell renderer, you can just call {@link #setTreeCellRenderer(javax.swing.tree.TreeCellRenderer)} to
      * set a new one.
-     * <pre><code>
+     * <pre>
      * UIManager.put("Tree.hash", Color.white);
      * return new JTree(root);
-     * </code></pre>
+     * </pre>
      *
      * @param root the root of the tree
      * @return tree the created JTree instance
@@ -795,7 +795,7 @@ public class MultiplePageDialog extends StandardDialog {
     /**
      * Configure the JTree used in TREE_STYLE dialog. Subclass can override this method to configure the JTree to the
      * way you want. Below is the default implementation of this method.
-     * <code><pre>
+     * <pre>
      * tree.setToggleClickCount(1);
      * tree.setCellRenderer(createTreeCellRenderer());
      * tree.setRootVisible(false);
@@ -805,7 +805,7 @@ public class MultiplePageDialog extends StandardDialog {
      *         if (tree.getSelectionPath() == null) {
      *             return;
      *         }
-     * <p/>
+     * 
      *         DefaultMutableTreeNode treeNode = (DefaultMutableTreeNode)
      * tree.getSelectionPath().getLastPathComponent();
      *         // comment this while block if you want the parent page shows its own page instead
@@ -821,7 +821,7 @@ public class MultiplePageDialog extends StandardDialog {
      *             SwingUtilities.invokeLater(runnable);
      *             treeNode = (DefaultMutableTreeNode) treeNode.getChildAt(0);
      *         }
-     * <p/>
+     * 
      *         if (treeNode != null) {
      *             Object userObject = treeNode.getUserObject();
      *             if (userObject instanceof AbstractDialogPage) {
@@ -830,7 +830,7 @@ public class MultiplePageDialog extends StandardDialog {
      *         }
      *     }
      * });
-     * </pre></code>
+     * </pre>
      *
      * @param tree the tree to configure
      */
@@ -1017,11 +1017,11 @@ public class MultiplePageDialog extends StandardDialog {
      * Creates list that is used in LIST_STYLE dialog's index panel. Below is the code we used. If you just want to have
      * a different cell renderer, you can just call {@link #setListCellRenderer(javax.swing.ListCellRenderer)} to set a
      * new one.
-     * <pre><code>
+     * <pre>
      * JList list = new JList(listModel);
      * list.setCellRenderer(createListCellRenderer());
      * return list;
-     * </code></pre>
+     * </pre>
      *
      * @param listModel the list model
      * @return list.

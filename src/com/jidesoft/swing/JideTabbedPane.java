@@ -297,7 +297,7 @@ public class JideTabbedPane extends JTabbedPane {
     }
 
     /**
-     * Returns the UI object which implements the L&F for this component.
+     * Returns the UI object which implements the L&amp;F for this component.
      *
      * @return a <code>TabbedPaneUI</code> object
      * @see #setUI
@@ -308,7 +308,7 @@ public class JideTabbedPane extends JTabbedPane {
     }
 
     /**
-     * Sets the UI object which implements the L&F for this component.
+     * Sets the UI object which implements the L&amp;F for this component.
      *
      * @param ui the new UI object
      * @see UIDefaults#getUI
@@ -333,7 +333,7 @@ public class JideTabbedPane extends JTabbedPane {
 
 
     /**
-     * Returns the name of the UI class that implements the L&F for this component.
+     * Returns the name of the UI class that implements the L&amp;F for this component.
      *
      * @return the string "TabbedPaneUI"
      * @see JComponent#getUIClassID
@@ -680,7 +680,7 @@ public class JideTabbedPane extends JTabbedPane {
 
     /**
      * Get the flag that if the trailing component should be hidden while no buttons are visible.
-     * <p/>
+     * <p>
      * Be default, the flag is false. If you want to connect visibility of those two components, please set it to true.
      *
      * @return true if the trailing component would be hidden while no buttons are visible. Otherwise false.
@@ -714,7 +714,7 @@ public class JideTabbedPane extends JTabbedPane {
 
     /**
      * Sets the flag indicating if the trailing component should be layout before the default buttons.
-     * <p/>
+     * <p>
      * The default value is false. If you want your trailing component preceding to the default buttons, please set this
      * flag to true.
      *
@@ -832,7 +832,7 @@ public class JideTabbedPane extends JTabbedPane {
     /**
      * If the return is true, the value set to setShowIconsOnTab() will be ignored.
      *
-     * @return if use default value from UIDefaults in L&F.
+     * @return if use default value from UIDefaults in L&amp;F.
      */
     public boolean isUseDefaultShowIconsOnTab() {
         return _useDefaultShowIconsOnTab;
@@ -882,7 +882,7 @@ public class JideTabbedPane extends JTabbedPane {
     /**
      * If the return is true, the value set to setShowCloseButtonOnTab() will be ignored.
      *
-     * @return if use default value from UIDefaults in L&F.
+     * @return if use default value from UIDefaults in L&amp;F.
      */
     public boolean isUseDefaultShowCloseButtonOnTab() {
         return _useDefaultShowCloseButtonOnTab;
@@ -1116,12 +1116,12 @@ public class JideTabbedPane extends JTabbedPane {
     /**
      * Checks if the tab at tabIndex should show the close button. This is only a valid if showCloseButtonOnTab
      * attribute is true.
-     * <p/>
+     * <p>
      * By default, this method always return true. Subclass can override this method to return a different value.
      *
      * @param tabIndex the tab index
      * @return the flag.
-     * @throws IndexOutOfBoundsException if index is out of range (index < 0 || index >= tab count)
+     * @throws IndexOutOfBoundsException if index is out of range (index &lt; 0 || index &gt;= tab count)
      */
     public boolean isTabClosableAt(int tabIndex) {
         return !_closableSet.contains(getComponentAt(tabIndex));
@@ -1130,14 +1130,14 @@ public class JideTabbedPane extends JTabbedPane {
     /**
      * Checks if the tab at tabIndex should show the close button. This is only a valid if showCloseButtonOnTab
      * attribute is true.
-     * <p/>
+     * <p>
      * By default, this method always return true. Subclass can override this method to return a different value.
-     * <p/>
+     * <p>
      * Please note, this attribute has effect only when {@link #isShowCloseButtonOnTab()} return true.
      *
      * @param tabIndex the tab index
      * @param closable the flag indicating if the tab is closable
-     * @throws IndexOutOfBoundsException if index is out of range (index < 0 || index >= tab count)
+     * @throws IndexOutOfBoundsException if index is out of range (index &lt; 0 || index &gt;= tab count)
      */
     public void setTabClosableAt(int tabIndex, boolean closable) {
         if (closable) {
@@ -1436,7 +1436,7 @@ public class JideTabbedPane extends JTabbedPane {
 
     /**
      * Sets the flag indicating if the close button should only be displayed when the mouse is over the tab.
-     * <p/>
+     * <p>
      * The default value of the flag is false to keep default behavior not changed.
      *
      * @param showCloseButtonOnMouseOverOnly the flag
@@ -1741,7 +1741,7 @@ public class JideTabbedPane extends JTabbedPane {
      * Sets the tab list cell renderer. This renderer is used to render the list in the popup when tab list button is
      * pressed. In this list cell renderer, the value will always be the JideTabbedPane. The index will tell you which
      * tab it is. See below for the default cell renderer we used.
-     * <code><pre>
+     * <pre>
      * public static class TabListCellRenderer extends DefaultListCellRenderer {
      *     public Component getListCellRendererComponent(JList list, Object value, int index,
      * boolean isSelected, boolean cellHasFocus) {
@@ -1760,7 +1760,7 @@ public class JideTabbedPane extends JTabbedPane {
      *         }
      *     }
      * }
-     * </code></pre>
+     * </pre>
      * You can create your own cell renderer either extending {@link TabListCellRenderer} or starting from scratch.
      *
      * @param tabListCellRenderer the cell renderer

@@ -16,19 +16,19 @@ import java.awt.event.FocusListener;
 /**
  * <code>SelectAllUtils</code> is a utility class to select all the text
  * in a text component when the component first time receives focus. It's very easy to use it.
- * <pre><code>
+ * <pre>
  * JTextField field = new JTextField();
  * SelectAllUtils.install(field);
- * </code></pre>
+ * </pre>
  * The component you pass in can be a JTextComponent or any container that contains
  * one or more JTextComponents. All JTextComponents will be installed such a
  * focus listener to select all when it gets focus for the first time. For example,
  * you can install it to an editable JComboBox.
- * <pre><code>
+ * <pre>
  * JComboBox comboBox = new JComboBox();
  * comboBox.setEditable(true);
  * SelectAllUtils.install(comboBox);
- * </code></pre>
+ * </pre>
  * Although JComboBox is not JTextComponent but it contains a JTextField so it
  * will still work. However please make sure call it after the call to
  * comboBox.setEditable(true). Otherwise it will not work because JTextField is not created

@@ -30,7 +30,7 @@ import java.util.List;
 
 /**
  * <code>JidePopup</code> is a popup window which can be resized, dragged and autohide if time out.
- * <p/>
+ * <p>
  * JidePopup uses JWindow as the container in order to show itself. By default, JidePopup is not focusable which means
  * no component in the JidePopup will get focus. For example, if you put a JTextField in JidePopup and the JTextField
  * becomes not editable, this is a result of non-focusable JWindow. So if you want components in JidePopup to be able to
@@ -157,12 +157,12 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
     /**
      * If the popup shows a dialog and you don't want the popup to be hidden when the dialog is shown, you can use this
      * special client property to do it. Here is the code, assuming the dialog is shown from your popup.
-     * <code><pre>
+     * <pre>
      * JComponent c = JideSwingUtilities.getFirstJComponent(dialog);
      *   if(c != null) {
      *       c.putClientProperty(JidePopup.CLIENT_PROPERTY_POPUP_ACTUAL_OWNER, component);
      *   }
-     * </pre></code>
+     * </pre>
      */
     public static final String CLIENT_PROPERTY_POPUP_ACTUAL_OWNER = "JidePopup.actualOwner";
 
@@ -281,7 +281,7 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
         JRootPane pane = new JRootPane();
         // by default, the subclass BorderLayout cause memory leak if isPopupVolatile in AbstractComboBox.
         pane.getContentPane().setLayout(new BorderLayout());
-        pane.setOpaque(false);  // on Nimbus L&F, JRootPane is opaque by default. So we have to set it to false explicitly.
+        pane.setOpaque(false);  // on Nimbus L&amp;F, JRootPane is opaque by default. So we have to set it to false explicitly.
         return pane;
     }
 
@@ -598,7 +598,7 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
 
     /**
      * Get the flag indicating if JidePopup should keep the size last time it was popped up.
-     * <p/>
+     * <p>
      * The default value of this flag is true. If you want the popup to resize based on the changing contents like in
      * IntelliHints, you need set this flag to false.
      *
@@ -620,7 +620,7 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
     /**
      * Get the insets so that when the JidePopup is dragged back to this area, the JidePopup will jump to its original
      * position automatically.
-     * <p/>
+     * <p>
      * By default, the value is {10, 10, 10, 10}. You can disable the jump functionality by setting the insets to {0, 0,
      * 0, 0}.
      *
@@ -2295,11 +2295,11 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
 
     /**
      * Checks if the popup is resizable. By default, resizable option is true.
-     * <p/>
+     * <p>
      * Depending on the detached/attached mode, the resizing behavior may be different. If a popup is detached to a
      * component, it only allows you to resize from bottom, bottom right and right It obviously doesn't make sense to
      * resize from top and top side is aligned with the attached component.
-     * <p/>
+     * <p>
      * (Notes: in the future we will allow resize from different corner if the popup is shown above owner due to not
      * enough space on the screen).
      *
@@ -2346,13 +2346,13 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
 
     /**
      * Checks if the popup is detached.
-     * <p/>
+     * <p>
      * A popup has detached and attached mode. When a popup is in attached, it will act like it's part of the owner
      * (which can be set using {@link #setOwner(java.awt.Component)}. When owner is moved, the popup will be moved. If
      * the owner is hidden, the popup will hidden. In the other word, it is attached with the owner. In detached mode,
      * popup becomes an independent floating window. It will stay at the same location regardless if owner is moved. It
      * could still be visible when owner is hidden.
-     * <p/>
+     * <p>
      *
      * @return true if it's ddetached Otherwise false.
      */
@@ -2459,7 +2459,7 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
     /**
      * Sets the time out value, in milliseconds. If you don't want the popup hide after the time out, set the value to
      * 0. By default it's 0 meaning it will never time out.
-     * <p/>
+     * <p>
      * Typically, you call setTimeOut before the popup is visible. But if you do call setTimeOut when popup is already
      * visible (which means the timer is running), we will restart the timer using the new time out value you just set,
      * even the new time out value is the same as the old one. In the other word, this setTimeOut call will always
@@ -2520,7 +2520,7 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
     /**
      * Adds a <code>PopupMenu</code> listener which will listen to notification messages from the popup portion of the
      * combo box.
-     * <p/>
+     * <p>
      * For all standard look and feels shipped with Java 2, the popup list portion of combo box is implemented as a
      * <code>JPopupMenu</code>. A custom look and feel may not implement it this way and will therefore not receive the
      * notification.
@@ -2553,7 +2553,7 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
 
     /**
      * Notifies <code>PopupMenuListener</code>s that the popup portion of the combo box will become visible.
-     * <p/>
+     * <p>
      * This method is public but should not be called by anything other than the UI delegate.
      *
      * @see #addPopupMenuListener
@@ -2572,7 +2572,7 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
 
     /**
      * Notifies <code>PopupMenuListener</code>s that the popup portion of the combo box has become invisible.
-     * <p/>
+     * <p>
      * This method is public but should not be called by anything other than the UI delegate.
      *
      * @see #addPopupMenuListener
@@ -2591,7 +2591,7 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
 
     /**
      * Notifies <code>PopupMenuListener</code>s that the popup portion of the combo box has been canceled.
-     * <p/>
+     * <p>
      * This method is public but should not be called by anything other than the UI delegate.
      *
      * @see #addPopupMenuListener
@@ -2631,10 +2631,10 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
     /**
      * Adds a component as excluded component. If a component is an excluded component or descendant of an excluded
      * component, clicking on it will not hide the popup.
-     * <p/>
+     * <p>
      * For example, AbstractComboBox uses JidePopup to display the popup. If you want to show a JDialog from the popup,
      * you will have to add the dialog as excluded component. See below for an example.
-     * <pre><code>
+     * <pre>
      * JDialog dialog =new JDialog((Frame) JideSwingUtilities.getWindowForComponent(this), true);
      * dialog.add(new JTable(10, 4));
      * dialog.pack();
@@ -2647,7 +2647,7 @@ public class JidePopup extends JComponent implements Accessible, WindowConstants
      * if(ancestorOfClass instanceof  JidePopup) {
      *     ((JidePopup) ancestorOfClass).removeExcludedComponent(dialog);
      * }
-     * </code></pre>
+     * </pre>
      *
      * @param component the component should be excluded.
      */

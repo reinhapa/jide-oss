@@ -195,7 +195,7 @@ public class ObjectGrouperManager {
     /**
      * Sets autoInit to true or false. If autoInit is true, whenever someone tries to call methods getValue, {@link
      * #initDefaultGrouper()} will be called if it has never be called. By default, autoInit is true.
-     * <p/>
+     * <p>
      * This might affect the behavior if users provide their own groupers and want to overwrite default groupers. In
      * this case, instead of depending on autoInit to initialize default groupers, you should call {@link
      * #initDefaultGrouper()} first, then call registerGrouper to add your own groupers.
@@ -252,7 +252,7 @@ public class ObjectGrouperManager {
     /**
      * Initialize default groupers. Please make sure you call this method before you use any group related classes. By
      * default we register following groupers.
-     * <code><pre>
+     * <pre>
      *   DateYearGrouper dateYearGrouper = new DateYearGrouper();
      *   registerGrouper(Date.class, dateYearGrouper, DateYearGrouper.CONTEXT);
      *   registerGrouper(Calendar.class, dateYearGrouper, DateYearGrouper.CONTEXT);
@@ -261,7 +261,7 @@ public class ObjectGrouperManager {
      *   registerGrouper(Date.class, dateMonthGrouper, DateMonthGrouper.CONTEXT);
      *   registerGrouper(Calendar.class, dateMonthGrouper, DateMonthGrouper.CONTEXT);
      *   registerGrouper(Long.class, dateMonthGrouper, DateMonthGrouper.CONTEXT);
-     * </pre></code>
+     * </pre>
      */
     public static void initDefaultGrouper() {
         if (_inited) {

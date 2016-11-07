@@ -42,7 +42,7 @@ public class PaintPanel extends JPanel {
     /**
      * Sets the Paint that will be used to paint background.
      *
-     * @param backgroundPaint
+     * @param backgroundPaint the paint object
      */
     public void setBackgroundPaint(Paint backgroundPaint) {
         _backgroundPaint = backgroundPaint;
@@ -102,7 +102,7 @@ public class PaintPanel extends JPanel {
     /**
      * Paints the background.
      *
-     * @param g
+     * @param g the graphics object
      */
     @Override
     protected void paintComponent(Graphics g) {

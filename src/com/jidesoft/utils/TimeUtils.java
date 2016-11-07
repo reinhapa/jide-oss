@@ -25,7 +25,7 @@ public class TimeUtils {
      * @param timeString a time string in the format "dd-MMM-yyyy HH:mm:ss" (eg. 05-Dec-1999 20:04:15)
      * @return a <code>Date</code> object corresponding to the date/time in the supplied string.
      *
-     * @throws ParseException
+     * @throws ParseException in case the given time string can not be parsed
      */
     public static Date createTime(String timeString) throws ParseException {
         DateFormat format = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
@@ -33,8 +33,8 @@ public class TimeUtils {
     }
 
     /**
-     * @param c1
-     * @param c2
+     * @param c1 calendar 1
+     * @param c2 calendar 2
      * @return the int field from the Calendar class at which the dates differ. This will be one of YEAR, MONTH,
      *         WEEK_OF_YEAR, DAY_OF_YEAR, HOUR_OF_DAY, MINUTE, SECOND, MILLISECOND, or null if there are no
      *         differences.

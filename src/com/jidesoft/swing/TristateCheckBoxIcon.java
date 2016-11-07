@@ -29,7 +29,7 @@ public class TristateCheckBoxIcon implements Icon, SynthConstants {
 
     /**
      * Check if the class name is a SynthIcon class name.
-     * <p/>
+     * <p>
      * It's an interface reserved in case Sun changes the name or package of the class SynthIcon.
      *
      * @param name the class name to check

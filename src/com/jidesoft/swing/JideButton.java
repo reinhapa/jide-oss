@@ -104,7 +104,7 @@ public class JideButton extends JButton implements Alignable, ButtonStyle, Compo
 
 
     /**
-     * Returns a string that specifies the name of the L&F class that renders this component.
+     * Returns a string that specifies the name of the L&amp;F class that renders this component.
      *
      * @return the string "ButtonUI"
      *
@@ -228,7 +228,7 @@ public class JideButton extends JButton implements Alignable, ButtonStyle, Compo
     /**
      * Sets the property if hyperlink (the underline) should be visible all the time. By default the hyperlink is
      * visible when mouse is over the button. If set to true, the hyperlink will always be visible.
-     * <p/>
+     * <p>
      * Please notes, this is an option only available when button style is set to HYPERLINK_STYLE.
      *
      * @param alwaysShowHyperlink a boolean value. True means the button will always show hyperlink. False means it will
@@ -309,10 +309,10 @@ public class JideButton extends JButton implements Alignable, ButtonStyle, Compo
     /**
      * Gets the background for different states. The states are defined in ThemePainter as constants. Not all states are
      * supported by all components. If the state is not supported or background is never set, it will return null.
-     * <p/>
-     * Please note, each L&F will have its own way to paint the different backgrounds. This method allows you to
+     * <p>
+     * Please note, each L&amp;F will have its own way to paint the different backgrounds. This method allows you to
      * customize it for each component to use a different background. So if you want the background to be used, don't
-     * use a ColorUIResource because UIResource is considered as a setting set by the L&F and any L&F can choose to
+     * use a ColorUIResource because UIResource is considered as a setting set by the L&amp;F and any L&amp;F can choose to
      * ignore it.
      *
      * @param state the button state. Valid values are ThemePainter.STATE_DEFAULT, ThemePainter.STATE_ROLLOVER,
@@ -339,10 +339,10 @@ public class JideButton extends JButton implements Alignable, ButtonStyle, Compo
     /**
      * Sets the background for different states.  The states are defined in ThemePainter as constants. Not all states
      * are supported by all components. If the state is not supported or background is never set, it will return null.
-     * <p/>
-     * Please note, each L&F will have its own way to paint the different backgrounds. This method allows you to
+     * <p>
+     * Please note, each L&amp;F will have its own way to paint the different backgrounds. This method allows you to
      * customize it for each component to use a different background. So if you want the background to be used, don't
-     * use a ColorUIResource because UIResource is considered as a setting set by the L&F and any L&F can choose to
+     * use a ColorUIResource because UIResource is considered as a setting set by the L&amp;F and any L&amp;F can choose to
      * ignore it.
      *
      * @param state the button state. Valid values are ThemePainter.STATE_DEFAULT, ThemePainter.STATE_ROLLOVER,
@@ -369,10 +369,10 @@ public class JideButton extends JButton implements Alignable, ButtonStyle, Compo
     /**
      * Gets the foreground for different states. The states are defined in ThemePainter as constants. Not all states are
      * supported by all components. If the state is not supported or foreground is never set, it will return null.
-     * <p/>
-     * Please note, each L&F will have its own way to paint the different foregrounds. This method allows you to
+     * <p>
+     * Please note, each L&amp;F will have its own way to paint the different foregrounds. This method allows you to
      * customize it for each component to use a different foreground. So if you want the foreground to be used, don't
-     * use a ColorUIResource because UIResource is considered as a setting set by the L&F and any L&F can choose to
+     * use a ColorUIResource because UIResource is considered as a setting set by the L&amp;F and any L&amp;F can choose to
      * ignore it.
      *
      * @param state the button state. Valid values are ThemePainter.STATE_DEFAULT, ThemePainter.STATE_ROLLOVER,
@@ -397,10 +397,10 @@ public class JideButton extends JButton implements Alignable, ButtonStyle, Compo
     /**
      * Sets the foreground for different states.  The states are defined in ThemePainter as constants. Not all states
      * are supported by all components. If the state is not supported or foreground is never set, it will return null.
-     * <p/>
-     * Please note, each L&F will have its own way to paint the different foregrounds. This method allows you to
+     * <p>
+     * Please note, each L&amp;F will have its own way to paint the different foregrounds. This method allows you to
      * customize it for each component to use a different foreground. So if you want the foreground to be used, don't
-     * use a ColorUIResource because UIResource is considered as a setting set by the L&F and any L&F can choose to
+     * use a ColorUIResource because UIResource is considered as a setting set by the L&amp;F and any L&amp;F can choose to
      * ignore it.
      *
      * @param state the button state. Valid values are ThemePainter.STATE_DEFAULT, ThemePainter.STATE_ROLLOVER,

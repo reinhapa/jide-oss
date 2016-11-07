@@ -34,7 +34,7 @@ public class EclipseMetalUtils extends EclipseLookAndFeelExtension {
     /**
      * Initializes class defaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initClassDefaults(UIDefaults table) {
         EclipseLookAndFeelExtension.initClassDefaults(table);
@@ -52,7 +52,7 @@ public class EclipseMetalUtils extends EclipseLookAndFeelExtension {
     /**
      * Initializes components defaults.
      *
-     * @param table
+     * @param table the table defaults
      */
     public static void initComponentDefaults(UIDefaults table) {
         Toolkit toolkit = Toolkit.getDefaultToolkit();

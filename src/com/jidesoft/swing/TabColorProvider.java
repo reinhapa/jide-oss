@@ -10,7 +10,7 @@ import java.awt.*;
 
 /**
  * A Color Provider to provide background and foreground for both {@link JideTabbedPane} and {@link SidePaneItem}.
- * <p/>
+ * <p>
  * It has higher priority than {@link com.jidesoft.swing.JideTabbedPane#getTabColorProvider()}. However, if {@link SidePaneItem#setBackground(java.awt.Color)}
  * or {@link SidePaneItem#setForeground(java.awt.Color)} is invoked, the settings in {@link SidePaneItem} will be respected
  * instead of the color returned by this class.

@@ -14,17 +14,17 @@ import java.awt.*;
  * have rowHeader and columnHeader. However you can't have rowFooter and columnFooter. However rowFooter and
  * columnFooter are very useful in table. For example they can be used to display "total" or "summary" type of
  * information.
- * <p/>
+ * <p>
  * Several methods related to rowFooter and columnFooter are added such as {@link #setRowFooter(javax.swing.JViewport)},
  * and {@link #setColumnFooter(javax.swing.JViewport)} which will set the viewport to rowFooter and columnFooter area
  * respectively. The usage of those methods are exactly the same as {@link JScrollPane#setRowHeader(javax.swing.JViewport)}.
- * <p/>
+ * <p>
  * To fully leverage the power of JideScrollPane, we also create a class called <code>TableScrollPane</code> which is
  * part of JIDE Grids package. It will allow you to easily create table with row header, row footer and column footer.
  * <p><code>JideScrollPane</code> also provides support for scrollbar corners. You can set them using {@link
  * #setScrollBarCorner(String, java.awt.Component)}. Available key for scroll bar corner is defined at {@link
  * JideScrollPaneConstants}  which can be access from <code>JideScrollPane</code>.
- * <p/>
+ * <p>
  * <b>Credit:</b> This implementation of scroll bar corner is based on work from Santhosh Kumar -
  * santhosh@in.fiorano.com.
  */
@@ -524,7 +524,7 @@ public class JideScrollPane extends JScrollPane implements JideScrollPaneConstan
      * JideScrollPane#HORIZONTAL_RIGHT} <li>{@link JideScrollPane#VERTICAL_TOP} <li>{@link
      * JideScrollPane#VERTICAL_BOTTOM} <li>{@link JideScrollPane#HORIZONTAL_LEADING} <li>{@link
      * JideScrollPane#HORIZONTAL_TRAILING} </ul>
-     * <p/>
+     * <p>
      * Although "corner" doesn't match any beans property signature, <code>PropertyChange</code> events are generated
      * with the property name set to the corner key.
      *
@@ -683,10 +683,10 @@ public class JideScrollPane extends JScrollPane implements JideScrollPaneConstan
     /**
      * Get the flag indicating if JideScrollPane should keep the corner visible when it has corner components defined
      * even when the scroll bar is not visible.
-     * <p/>
+     * <p>
      * This flag will take effect only when the scroll bar policy is <code>HORIZONTAL_SCROLLBAR_AS_NEEDED</code> or
      * <code>VERTICAL_SCROLLBAR_AS_NEEDED</code>
-     * <p/>
+     * <p>
      * The default value of this flag is false.
      *
      * @return the flag.
@@ -724,7 +724,7 @@ public class JideScrollPane extends JScrollPane implements JideScrollPaneConstan
 
     /**
      * Sets the flag indicating if the JideScrollPane will layout its view flat without scroll bars.
-     * <p/>
+     * <p>
      * By default, the value is false to keep normal behavior.
      *
      * @param flatLayout the flag
