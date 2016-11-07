@@ -26,7 +26,6 @@ import com.jidesoft.swing.JideTabbedPane;
 import com.jidesoft.utils.ProductNames;
 import com.jidesoft.utils.SecurityUtils;
 import com.jidesoft.utils.SystemInfo;
-import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 
 import javax.swing.*;
 import javax.swing.plaf.BorderUIResource;
@@ -209,6 +208,7 @@ public class LookAndFeelFactory implements ProductNames {
      * Class name of Motif L&F provided by Sun JDK.
      */
     public static final String MOTIF_LNF = "com.sun.java.swing.plaf.motif.MotifLookAndFeel";
+    
 
     /**
      * Class name of Bizlaf L&F provided by Centigrade.
@@ -533,10 +533,11 @@ public class LookAndFeelFactory implements ProductNames {
             if (_defaultStyle == -1) {
                 int suggestedStyle;
                 try {
-                    if (SystemInfo.isWindowsVistaAbove() && UIManager.getLookAndFeel() instanceof WindowsLookAndFeel && SystemInfo.isJdk6Above()) {
+                    String lafClassName = UIManager.getLookAndFeel().getClass().getName();
+					if (SystemInfo.isWindowsVistaAbove() && WINDOWS_LNF.equals(lafClassName) && SystemInfo.isJdk6Above()) {
                         suggestedStyle = EXTENSION_STYLE_OFFICE2007;
                     }
-                    else if (XPUtils.isXPStyleOn() && UIManager.getLookAndFeel() instanceof WindowsLookAndFeel) {
+                    else if (XPUtils.isXPStyleOn() && WINDOWS_LNF.equals(lafClassName)) {
                         suggestedStyle = EXTENSION_STYLE_OFFICE2003;
                     }
                     else {
@@ -845,7 +846,7 @@ public class LookAndFeelFactory implements ProductNames {
                     break;
             }
         }
-        else if (lnf instanceof WindowsLookAndFeel) {
+        else if (lnf.getClass().getName().equals(WINDOWS_LNF)) {
             switch (style) {
                 case EXTENSION_STYLE_OFFICE2007:
                     VsnetWindowsUtils.initComponentDefaultsWithMenu(uiDefaults);
